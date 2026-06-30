@@ -1,4 +1,4 @@
-# BEL — Business Intelligence Copilot
+# VisionIQ
 
 Upload Excel/CSV or connect a database, ask questions in plain English, get **auto-generated dashboards**, KPIs, forecasts, anomalies, and executive insights. Built around the Master System Prompt for an Enterprise BI Copilot.
 
