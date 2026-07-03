@@ -180,9 +180,23 @@ def quality_report(df: pd.DataFrame, semantic_types: dict[str, str]) -> dict:
 # ---------------------------------------------------------------------------
 # Phase 3 — feature engineering
 # ---------------------------------------------------------------------------
-def add_date_features(df: pd.DataFrame, date_cols: list[str]) -> tuple[pd.DataFrame, list[str]]:
-    """Add Year/Quarter/Month/etc derived columns. Returns (df, list of new cols)."""
-    new_cols: list[str] = []
+_FEATURE_DESCRIPTIONS = {
+    "Year": "Calendar year — enables year-over-year comparisons.",
+    "Quarter": "Fiscal / calendar quarter (1-4) — useful for quarterly reporting.",
+    "Month": "Month number (1-12) — supports month-over-month analysis.",
+    "MonthName": "Short month name (Jan, Feb…) — human-readable axis labels.",
+    "Week": "ISO week number (1-53) — for weekly cadence analysis.",
+    "Weekday": "Day of the week — reveals weekday vs weekend patterns.",
+    "YearMonth": "YYYY-MM string — a clean monthly bucket for time series.",
+}
+
+
+def add_date_features(df: pd.DataFrame, date_cols: list[str]) -> tuple[pd.DataFrame, list[dict]]:
+    """
+    Add Year/Quarter/Month/etc derived columns. Returns (df, engineered_metadata)
+    where each metadata entry has {name, source, description}.
+    """
+    engineered: list[dict] = []
     for col in date_cols:
         if col not in df.columns:
             continue
@@ -190,54 +204,135 @@ def add_date_features(df: pd.DataFrame, date_cols: list[str]) -> tuple[pd.DataFr
         if s.notna().sum() == 0:
             continue
         df[col] = s
-        prefix = col
         feats = {
-            f"{prefix}__Year": s.dt.year,
-            f"{prefix}__Quarter": s.dt.quarter,
-            f"{prefix}__Month": s.dt.month,
-            f"{prefix}__MonthName": s.dt.strftime("%b"),
-            f"{prefix}__Week": s.dt.isocalendar().week.astype("Int64"),
-            f"{prefix}__Weekday": s.dt.day_name(),
-            f"{prefix}__YearMonth": s.dt.strftime("%Y-%m"),
+            "Year": s.dt.year,
+            "Quarter": s.dt.quarter,
+            "Month": s.dt.month,
+            "MonthName": s.dt.strftime("%b"),
+            "Week": s.dt.isocalendar().week.astype("Int64"),
+            "Weekday": s.dt.day_name(),
+            "YearMonth": s.dt.strftime("%Y-%m"),
         }
-        for name, values in feats.items():
+        for suffix, values in feats.items():
+            name = f"{col}__{suffix}"
             if name not in df.columns:
                 df[name] = values
-                new_cols.append(name)
-    return df, new_cols
+                engineered.append({
+                    "name": name,
+                    "source": col,
+                    "kind": suffix,
+                    "description": _FEATURE_DESCRIPTIONS.get(suffix, ""),
+                })
+    return df, engineered
 
 
 # ---------------------------------------------------------------------------
 # Phase 2 — business-domain inference & fact/dimension classification
 # ---------------------------------------------------------------------------
 _DOMAIN_KEYWORDS = {
-    "sales": ["sale", "revenue", "order", "customer", "discount", "invoice"],
-    "finance": ["profit", "loss", "margin", "balance", "ledger", "expense", "tax", "asset"],
-    "retail": ["sku", "store", "inventory", "stock", "product", "category"],
-    "healthcare": ["patient", "diagnosis", "treatment", "doctor", "hospital", "medication"],
-    "hr": ["employee", "salary", "department", "hire", "attrition", "leave"],
-    "education": ["student", "course", "grade", "enrollment", "teacher", "school"],
-    "banking": ["account", "deposit", "loan", "credit", "branch", "transaction"],
-    "insurance": ["policy", "claim", "premium", "coverage", "insured"],
-    "manufacturing": ["factory", "production", "defect", "machine", "shift", "yield"],
-    "marketing": ["campaign", "lead", "click", "impression", "conversion", "channel"],
-    "logistics": ["shipment", "delivery", "warehouse", "carrier", "route", "tracking"],
-    "telecom": ["call", "subscriber", "usage", "minutes", "bandwidth", "plan"],
+    "sales": [
+        "sale", "sales", "revenue", "order", "orders", "customer", "client",
+        "discount", "invoice", "amount", "quantity", "unit", "units", "gmv",
+        "aov", "salesperson", "rep", "deal", "booking", "opportunity",
+    ],
+    "finance": [
+        "profit", "loss", "margin", "balance", "ledger", "expense", "expenses",
+        "tax", "asset", "liability", "cashflow", "budget", "actuals", "variance",
+        "gl", "account", "debit", "credit", "ebitda", "coa",
+    ],
+    "retail": [
+        "sku", "store", "inventory", "stock", "product", "products", "category",
+        "categories", "subcategory", "brand", "shelf", "assortment", "boxes",
+        "shipped", "shipment", "warehouse", "backorder", "returns",
+    ],
+    "healthcare": [
+        "patient", "diagnosis", "treatment", "doctor", "hospital", "medication",
+        "physician", "provider", "insurer", "icd", "cpt", "prescription", "lab",
+        "vital", "admission", "discharge",
+    ],
+    "hr": [
+        "employee", "employees", "salary", "wage", "department", "hire",
+        "attrition", "leave", "headcount", "tenure", "manager", "role", "grade",
+        "band", "ctc", "bonus",
+    ],
+    "education": [
+        "student", "course", "grade", "enrollment", "teacher", "school",
+        "class", "semester", "gpa", "attendance", "syllabus", "score",
+    ],
+    "banking": [
+        "account", "deposit", "loan", "credit", "branch", "transaction",
+        "atm", "ifsc", "swift", "interest", "principal", "npa", "kyc",
+    ],
+    "insurance": [
+        "policy", "claim", "premium", "coverage", "insured", "beneficiary",
+        "endorsement", "underwriting", "renewal",
+    ],
+    "manufacturing": [
+        "factory", "plant", "production", "defect", "machine", "shift",
+        "yield", "batch", "throughput", "wastage", "downtime",
+    ],
+    "marketing": [
+        "campaign", "lead", "leads", "click", "clicks", "impression",
+        "impressions", "conversion", "channel", "utm", "ctr", "cpc", "cpm",
+        "roas", "spend",
+    ],
+    "logistics": [
+        "shipment", "shipments", "shipped", "delivery", "deliveries", "warehouse",
+        "carrier", "route", "tracking", "consignment", "eta", "sla", "dispatch",
+    ],
+    "telecom": [
+        "call", "calls", "subscriber", "usage", "minutes", "bandwidth", "plan",
+        "arpu", "churn", "msisdn", "cell", "tower",
+    ],
 }
+
+# Columns that ARE the business signal — these count as strong evidence
+_STRONG_SALES_COLS = {"amount", "revenue", "sales", "profit", "gross", "net",
+                       "orders", "customers", "aov", "gmv"}
 
 
 def infer_domain(columns: list[str]) -> dict:
-    """Return the most likely business domain plus runner-up scores."""
-    text = " ".join(c.lower() for c in columns)
-    scores = {
-        domain: sum(1 for kw in kws if kw in text)
-        for domain, kws in _DOMAIN_KEYWORDS.items()
-    }
+    """
+    Return the most likely business domain plus a confidence.
+    Confidence rises quickly when multiple keywords or strong signal columns
+    appear — a dataset with Amount + Boxes Shipped + Product + Country should
+    hit high confidence, not 25%.
+    """
+    col_lower = [c.lower() for c in columns]
+    col_words: set[str] = set()
+    for c in col_lower:
+        col_words.update(re.split(r"[_\s\-]+", c))
+
+    scores: dict[str, int] = {}
+    for domain, kws in _DOMAIN_KEYWORDS.items():
+        s = 0
+        for kw in kws:
+            # Exact word match on any column-word counts double the substring hit
+            if kw in col_words:
+                s += 2
+            elif any(kw in c for c in col_lower):
+                s += 1
+        scores[domain] = s
+
+    # Extra boost: strong sales-signal columns present
+    strong_hits = sum(1 for w in col_words if w in _STRONG_SALES_COLS)
+    scores["sales"] = scores.get("sales", 0) + strong_hits * 2
+
     ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
     top, top_score = ranked[0]
+    runner_up = ranked[1][1] if len(ranked) > 1 else 0
+
+    if top_score == 0:
+        return {"primary": "general", "confidence": 0.0, "scores": {}}
+
+    # Confidence combines absolute strength (cap at 8 = full) AND
+    # separation from the runner-up (well-separated → higher confidence)
+    abs_conf = min(1.0, top_score / 8)
+    sep = (top_score - runner_up) / max(1, top_score)
+    confidence = round(min(1.0, abs_conf * 0.7 + sep * 0.3), 2)
     return {
-        "primary": top if top_score > 0 else "general",
-        "confidence": min(1.0, top_score / 4),
+        "primary": top,
+        "confidence": confidence,
         "scores": {k: v for k, v in ranked if v > 0},
     }
 
@@ -291,12 +386,16 @@ def profile_dataframe(df: pd.DataFrame, name: str = "Sheet1") -> tuple[dict, pd.
     semantic_types = {col: detect_semantic_type(col, df[col]) for col in df.columns}
     classified = classify_columns(df, semantic_types)
     df, new_features = add_date_features(df, classified["date_columns"])
+    engineered_names = {f["name"] for f in new_features}
 
     # Re-classify newly engineered columns
-    for c in new_features:
-        semantic_types[c] = detect_semantic_type(c, df[c])
+    for f in new_features:
+        semantic_types[f["name"]] = detect_semantic_type(f["name"], df[f["name"]])
 
+    source_column_count = int(len(df.columns) - len(new_features))
     quality = quality_report(df, semantic_types)
+    quality["total_columns_source"] = source_column_count
+    quality["total_columns_with_engineered"] = int(len(df.columns))
     domain = infer_domain(list(df.columns))
 
     columns_meta = []
@@ -311,7 +410,7 @@ def profile_dataframe(df: pd.DataFrame, name: str = "Sheet1") -> tuple[dict, pd.
             "null_count": int(s.isna().sum()),
             "unique_count": int(s.nunique(dropna=True)),
             "sample_values": [safe_val(v) for v in non_null.head(5).tolist()],
-            "engineered": col in new_features,
+            "engineered": col in engineered_names,
         }
         if semantic_types[col] in {"numeric", "currency", "percentage"} and len(non_null):
             meta["stats"] = {
@@ -327,7 +426,8 @@ def profile_dataframe(df: pd.DataFrame, name: str = "Sheet1") -> tuple[dict, pd.
     profile = {
         "name": name,
         "row_count": int(len(df)),
-        "column_count": int(len(df.columns)),
+        "column_count": source_column_count,           # source columns only
+        "column_count_augmented": int(len(df.columns)),
         "columns": columns_meta,
         "semantic_types": semantic_types,
         "classification": classified,

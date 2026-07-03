@@ -1,5 +1,5 @@
 import {
-  Bar, BarChart, CartesianGrid, ComposedChart, Legend, Line, LineChart,
+  Area, Bar, BarChart, CartesianGrid, ComposedChart, Legend, Line, LineChart,
   ResponsiveContainer, Tooltip, XAxis, YAxis,
 } from 'recharts'
 
@@ -86,20 +86,23 @@ function renderChart(chart) {
   const data = chart.data || []
 
   switch (chart.type) {
-    case 'line':
+    case 'line': {
+      const measureName = chart.measure || chart.y || 'Value'
       return (
         <LineChart data={data}>
           <CartesianGrid stroke={GRID} strokeDasharray="3 3" />
-          <XAxis dataKey={chart.x || 'x'} stroke={AXIS} fontSize={11} />
-          <YAxis stroke={AXIS} fontSize={11} />
-          <Tooltip contentStyle={{ background: '#131722', border: '1px solid #262d40' }} />
+          <XAxis dataKey={chart.x || 'x'} stroke={AXIS} fontSize={11} label={{ value: chart.date_col || '', position: 'insideBottom', offset: -2, fill: AXIS, fontSize: 10 }} />
+          <YAxis stroke={AXIS} fontSize={11} tickFormatter={fmtNum} />
+          <Tooltip contentStyle={{ background: '#131722', border: '1px solid #262d40' }}
+                   formatter={(v, n) => [fmtNum(v), n]} />
           <Legend wrapperStyle={{ fontSize: 12 }} />
-          <Line type="monotone" dataKey="y" stroke={COLORS[0]} strokeWidth={2} dot={false} name={chart.y || 'value'} />
+          <Line type="monotone" dataKey="y" stroke={COLORS[0]} strokeWidth={2} dot={false} name={measureName} />
           {data[0]?.moving_avg !== undefined && (
-            <Line type="monotone" dataKey="moving_avg" stroke={COLORS[1]} strokeDasharray="4 3" strokeWidth={1.5} dot={false} name="3-period MA" />
+            <Line type="monotone" dataKey="moving_avg" stroke={COLORS[1]} strokeDasharray="4 3" strokeWidth={1.5} dot={false} name="3-period moving avg" />
           )}
         </LineChart>
       )
+    }
 
     case 'bar': {
       const xKey = chart.x || (data[0] ? Object.keys(data[0])[0] : 'x')
@@ -116,17 +119,19 @@ function renderChart(chart) {
     }
 
     case 'pareto': {
-      // Backend returns items with cum_pct and the measure value
       const xKey = chart.x
       const yKey = chart.y
       return (
         <ComposedChart data={data}>
           <CartesianGrid stroke={GRID} strokeDasharray="3 3" />
-          <XAxis dataKey={xKey} stroke={AXIS} fontSize={11} interval={0} angle={-20} textAnchor="end" height={50} />
-          <YAxis yAxisId="left" stroke={AXIS} fontSize={11} />
+          <XAxis dataKey={xKey} stroke={AXIS} fontSize={11} interval={0} angle={-20} textAnchor="end" height={60} />
+          <YAxis yAxisId="left" stroke={AXIS} fontSize={11} tickFormatter={fmtNum} />
           <YAxis yAxisId="right" orientation="right" stroke={AXIS} fontSize={11} domain={[0, 100]} tickFormatter={(v) => v + '%'} />
-          <Tooltip contentStyle={{ background: '#131722', border: '1px solid #262d40' }} />
-          <Bar yAxisId="left" dataKey={yKey} fill={COLORS[0]} />
+          <Tooltip contentStyle={{ background: '#131722', border: '1px solid #262d40' }}
+                   formatter={(v, n) => [n === 'Cumulative %' || n === 'Contribution %' ? v + '%' : fmtNum(v), n]} />
+          <Legend wrapperStyle={{ fontSize: 12 }} />
+          <Bar yAxisId="left" dataKey={yKey} fill={COLORS[0]} name={chart.measure || yKey} />
+          <Line yAxisId="right" type="monotone" dataKey="contribution_pct" stroke={COLORS[4]} strokeWidth={1.5} dot={false} name="Contribution %" />
           <Line yAxisId="right" type="monotone" dataKey="cum_pct" stroke={COLORS[3]} strokeWidth={2} dot={false} name="Cumulative %" />
         </ComposedChart>
       )
@@ -153,21 +158,48 @@ function renderChart(chart) {
       return <HeatmapTable chart={chart} />
 
     case 'forecast': {
-      const history = (chart.history || []).map((p) => ({ ...p, kind: 'history' }))
-      const forecast = (chart.data || []).map((p) => ({ ...p, kind: 'forecast' }))
-      const merged = [...history, ...forecast]
+      const historyRaw = chart.history || []
+      const forecastRaw = chart.data || []
+      const measureName = chart.measure || 'Measure'
+      const anchor = historyRaw.length - 1
+      const merged = [
+        ...historyRaw.map((p, i) => ({
+          x: p.x,
+          history: p.y,
+          forecast: i === anchor ? p.y : null,
+          forecast_lo: null,
+          forecast_hi: null,
+        })),
+        ...forecastRaw.map((p) => ({
+          x: p.x,
+          history: null,
+          forecast: p.y,
+          forecast_lo: p.y_lo ?? null,
+          forecast_hi: p.y_hi ?? null,
+        })),
+      ]
+      const hasBand = forecastRaw.some((p) => p.y_lo !== undefined && p.y_lo !== null)
       return (
-        <LineChart data={merged}>
+        <ComposedChart data={merged}>
           <CartesianGrid stroke={GRID} strokeDasharray="3 3" />
           <XAxis dataKey="x" stroke={AXIS} fontSize={11} />
-          <YAxis stroke={AXIS} fontSize={11} />
-          <Tooltip contentStyle={{ background: '#131722', border: '1px solid #262d40' }} />
+          <YAxis stroke={AXIS} fontSize={11} tickFormatter={fmtNum} />
+          <Tooltip contentStyle={{ background: '#131722', border: '1px solid #262d40' }}
+                   formatter={(v, n) => [v == null ? '—' : fmtNum(v), n]} />
           <Legend wrapperStyle={{ fontSize: 12 }} />
-          <Line type="monotone" dataKey="y" stroke={COLORS[0]} strokeWidth={2} dot={false} name="History"
-            data={history} />
-          <Line type="monotone" dataKey="y" stroke={COLORS[2]} strokeWidth={2} strokeDasharray="5 3" dot={false} name="Forecast"
-            data={forecast} />
-        </LineChart>
+          {hasBand && (
+            <Area type="monotone" dataKey="forecast_hi" stroke="none"
+                  fill="rgba(255,181,71,0.20)" name="95% upper" />
+          )}
+          {hasBand && (
+            <Area type="monotone" dataKey="forecast_lo" stroke="none"
+                  fill="var(--bg-0)" name="95% lower" />
+          )}
+          <Line type="monotone" dataKey="history" stroke={COLORS[0]} strokeWidth={2} dot={false}
+                name={`${measureName} — history`} connectNulls={false} />
+          <Line type="monotone" dataKey="forecast" stroke={COLORS[2]} strokeWidth={2}
+                strokeDasharray="5 3" dot={false} name={`${measureName} — forecast`} connectNulls={false} />
+        </ComposedChart>
       )
     }
 
@@ -229,24 +261,29 @@ function heatColor(v) {
 
 function AnomalyTable({ rows }) {
   if (!rows.length) return <div className="muted">No anomalies above z=3.</div>
+  // Discover context columns dynamically from the first row
+  const skip = new Set(['index', 'value', 'z', 'reason', 'date'])
+  const contextCols = Object.keys(rows[0]).filter((k) => !skip.has(k))
   return (
-    <div style={{ overflow: 'auto', maxHeight: 240 }}>
+    <div style={{ overflow: 'auto', maxHeight: 320 }}>
       <table style={{ width: '100%', fontSize: 12, borderCollapse: 'collapse' }}>
         <thead>
           <tr style={{ color: AXIS, textAlign: 'left' }}>
-            <th style={{ padding: 4 }}>Index</th>
+            {rows[0]?.date && <th style={{ padding: 4 }}>Date</th>}
+            {contextCols.map((c) => <th key={c} style={{ padding: 4 }}>{c}</th>)}
             <th style={{ padding: 4 }}>Value</th>
             <th style={{ padding: 4 }}>Z-score</th>
-            {rows[0]?.date && <th style={{ padding: 4 }}>Date</th>}
+            <th style={{ padding: 4 }}>Why flagged</th>
           </tr>
         </thead>
         <tbody>
           {rows.slice(0, 50).map((r) => (
             <tr key={r.index} style={{ borderTop: '1px solid ' + GRID }}>
-              <td style={{ padding: 4 }}>{r.index}</td>
-              <td style={{ padding: 4 }}>{fmtNum(r.value)}</td>
-              <td style={{ padding: 4 }}>{r.z}</td>
               {r.date && <td style={{ padding: 4 }}>{String(r.date).slice(0, 10)}</td>}
+              {contextCols.map((c) => <td key={c} style={{ padding: 4 }}>{String(r[c] ?? '—')}</td>)}
+              <td style={{ padding: 4, fontWeight: 500 }}>{fmtNum(r.value)}</td>
+              <td style={{ padding: 4, color: Math.abs(r.z) > 4 ? '#ff5470' : '#ffb547' }}>{r.z}</td>
+              <td style={{ padding: 4, color: AXIS, fontSize: 11 }}>{r.reason}</td>
             </tr>
           ))}
         </tbody>

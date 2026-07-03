@@ -21,6 +21,11 @@ def _id() -> str:
     return uuid.uuid4().hex[:8]
 
 
+def _now_iso() -> str:
+    from datetime import datetime, timezone
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
 def _pick_primary_measure(profile: dict) -> Optional[str]:
     """Prefer revenue/sales/profit/total when present; otherwise first measure."""
     measures = profile["classification"]["measures"]
@@ -76,6 +81,8 @@ def _trend_chart(t: dict) -> dict:
         "title": f"{t['measure']} over time",
         "x": "x",
         "y": "y",
+        "measure": t["measure"],
+        "date_col": t.get("date_col"),
         "series": ["y", "moving_avg"],
         "data": t["series"],
         "why": "Time-series trend lets viewers see momentum and seasonality at a glance.",
@@ -101,25 +108,47 @@ def _pareto_chart(p: dict) -> dict:
         "title": f"Pareto: {p['dimension']} contribution to {p['measure']}",
         "x": p["dimension"],
         "y": p["measure"],
+        "measure": p["measure"],
         "data": p["items"],
-        "summary": f"{p['top_80pct_count']} {p['dimension']} drive 80% of {p['measure']}",
-        "why": "Pareto reveals the vital few that drive most of the total — classic 80/20.",
+        "total_items": p.get("total_items"),
+        "class_counts": p.get("class_counts"),
+        "summary": (
+            f"{p['top_80pct_count']} of {p.get('total_items')} {p['dimension']} "
+            f"({p.get('top_80pct_share_of_items')}%) drive 80% of {p['measure']}"
+        ),
+        "why": (
+            "Pareto reveals the vital few that drive most of the total. "
+            f"Class A: {p.get('class_counts', {}).get('A', 0)} · "
+            f"B: {p.get('class_counts', {}).get('B', 0)} · "
+            f"C: {p.get('class_counts', {}).get('C', 0)}."
+        ),
     }
 
 
 def _correlation_heatmap(corr: dict) -> dict:
+    level = corr.get("level", "by-row")
+    subtitle = {
+        "by-row": "computed per-row (raw)",
+        "by-month": "computed per month",
+    }.get(level, f"computed per {corr.get('aggregate_by') or level}")
     return {
         "id": _id(),
         "type": "heatmap",
-        "title": "Correlation between measures",
+        "title": f"Correlation between measures — {subtitle}",
         "columns": corr["columns"],
         "data": corr["matrix"],
+        "row_level_matrix": corr.get("row_level_matrix"),
+        "level": level,
+        "aggregate_by": corr.get("aggregate_by"),
         "strong_pairs": corr.get("strong_pairs", []),
-        "why": "Highlights which measures move together — useful for finding drivers and proxies.",
+        "why": corr.get("note") or "Highlights which measures move together — useful for finding drivers and proxies.",
     }
 
 
 def _histogram_chart(h: dict) -> dict:
+    interp = h.get("interpretation", {})
+    obs = interp.get("observations", [])
+    summary = " ".join(obs) if obs else "Distribution shape reveals skew, multi-modality, and concentration."
     return {
         "id": _id(),
         "type": "histogram",
@@ -127,7 +156,8 @@ def _histogram_chart(h: dict) -> dict:
         "x": "range",
         "y": "count",
         "data": h["bins"],
-        "why": "Distribution shape reveals skew, multi-modality, and concentration.",
+        "interpretation": interp,
+        "why": summary,
     }
 
 
@@ -152,7 +182,29 @@ def _missing_chart(quality: dict) -> dict:
 # ---------------------------------------------------------------------------
 # Insight & recommendation generators (computed, never fabricated)
 # ---------------------------------------------------------------------------
+def _classify_insight(text: str) -> str:
+    """Simple keyword classifier: 'positive', 'negative', 'warning', 'neutral'."""
+    t = text.lower()
+    if any(w in t for w in ["duplicate", "missing", "anomal", "outlier", "partial", "warning"]):
+        return "warning"
+    if any(w in t for w in ["drag", "decrease", "declin", "drop", "fall", "worst", "hurt", "loss"]):
+        return "negative"
+    if any(w in t for w in ["increas", "grew", "rise", "gain", "leader", "top", "positively correlated", "contribut"]):
+        return "positive"
+    return "neutral"
+
+
+def _tagged(text: str) -> dict:
+    """Wrap an insight string with a category tag."""
+    return {"kind": _classify_insight(text), "text": text}
+
+
 def _build_insights(df: pd.DataFrame, profile: dict, computed: dict) -> list[str]:
+    """
+    Diagnostic insights. Every fact that has a driver should name the driver
+    (which product, country, salesperson caused the change), not just quote
+    the percentage.
+    """
     out: list[str] = []
     q = profile["quality"]
     if q["duplicate_rows"]:
@@ -162,79 +214,312 @@ def _build_insights(df: pd.DataFrame, profile: dict, computed: dict) -> list[str
             out.append(f"`{col}` is missing in {pct}% of rows.")
             break
 
+    # Diagnose each KPI change — attribute to the top contributor
+    date_cols = profile["classification"]["date_columns"]
+    dims = profile["classification"]["dimensions"]
+    root_by_measure = computed.setdefault("root_cause_by_measure", {})
+    primary_dim = dims[0] if dims else None
+    date_col = date_cols[0] if date_cols else None
+
     for kpi in computed.get("kpis", []):
-        if kpi["change_pct"] is not None:
-            direction = "increased" if kpi["change_pct"] > 0 else "decreased"
+        if kpi.get("change_pct") is None:
+            continue
+        m = kpi["name"]
+        direction = "increased" if kpi["change_pct"] > 0 else "decreased"
+        base_line = (
+            f"{m} {direction} {abs(kpi['change_pct'])}% "
+            f"({kpi.get('compare_previous_period', 'prev')} → "
+            f"{kpi.get('compare_current_period', 'latest')})."
+        )
+        rc = None
+        if primary_dim and date_col:
+            try:
+                from . import analytics
+                rc = analytics.root_cause(df, m, primary_dim, date_col=date_col)
+                root_by_measure[m] = rc
+            except Exception:
+                rc = None
+        if rc and rc.get("decliners") and kpi["change_pct"] < 0:
+            worst = rc["decliners"][0]
+            worst_name = worst.get(primary_dim)
             out.append(
-                f"{kpi['name']} {direction} {abs(kpi['change_pct'])}% vs the prior period."
+                f"{base_line} Largest drag: {worst_name} "
+                f"({round(worst.get('delta', 0), 2)})."
             )
+        elif rc and rc.get("gainers") and kpi["change_pct"] > 0:
+            best = rc["gainers"][0]
+            best_name = best.get(primary_dim)
+            out.append(
+                f"{base_line} Largest contributor: {best_name} "
+                f"(+{round(best.get('delta', 0), 2)})."
+            )
+        else:
+            out.append(base_line)
 
     pareto_data = computed.get("pareto")
     if pareto_data and pareto_data.get("top_80pct_count"):
+        items = pareto_data.get("items", [])
+        example = ""
+        if items:
+            names = [str(r.get(pareto_data["dimension"], "")) for r in items[:3]]
+            example = f" Top 3: {', '.join(n for n in names if n)}."
         out.append(
             f"Just {pareto_data['top_80pct_count']} {pareto_data['dimension']} values "
-            f"drive 80% of {pareto_data['measure']}."
+            f"drive 80% of {pareto_data['measure']}.{example}"
         )
 
     corr = computed.get("correlation")
     if corr:
         for pair in corr.get("strong_pairs", [])[:2]:
             sign = "positively" if pair["r"] > 0 else "negatively"
-            out.append(f"`{pair['a']}` and `{pair['b']}` are {sign} correlated (r={pair['r']}).")
+            out.append(
+                f"`{pair['a']}` and `{pair['b']}` are {sign} correlated "
+                f"(r={pair['r']}, level: {corr.get('level', 'per row')})."
+            )
 
     anoms = computed.get("anomalies")
     if anoms and anoms.get("count"):
-        out.append(f"{anoms['count']} anomalies detected in {anoms['measure']} (>3σ).")
+        top = (anoms.get("anomalies") or [])[:1]
+        example = ""
+        if top:
+            first = top[0]
+            bits = [f"{k}={v}" for k, v in first.items()
+                    if k not in {"index", "z"} and v is not None][:3]
+            if bits:
+                example = f" First: {', '.join(bits)}."
+        out.append(f"{anoms['count']} anomalies detected in {anoms['measure']} (|z|>3).{example}")
 
     return out[:8]
 
 
 def _build_recommendations(profile: dict, computed: dict) -> list[str]:
+    """
+    Data-aware recommendations. Every suggestion MUST reference a column that
+    actually exists in the current profile. No hardcoded 'pricing / campaigns /
+    customer cohorts' — those only appear if columns with those names are
+    present.
+    """
     recs: list[str] = []
-    domain = profile["domain"]["primary"]
+    classification = profile["classification"]
+    measures = classification["measures"]
+    dimensions = classification["dimensions"]
+    date_cols = classification["date_columns"]
+
+    # 1. Pareto → focus on the concentrated few
     pareto_data = computed.get("pareto")
     if pareto_data and pareto_data.get("top_80pct_count"):
         recs.append(
-            f"Focus retention & upsell on the top {pareto_data['top_80pct_count']} "
-            f"{pareto_data['dimension']} that drive most {pareto_data['measure']}."
+            f"Focus effort on the {pareto_data['top_80pct_count']} "
+            f"{pareto_data['dimension']} value(s) that drive 80% of "
+            f"{pareto_data['measure']}."
         )
+
+    # 2. KPI declines → diagnostic, using actual column names + attribution
     for kpi in computed.get("kpis", []):
-        if kpi["change_pct"] is not None and kpi["change_pct"] < -5:
+        if kpi.get("change_pct") is None or abs(kpi["change_pct"]) < 5:
+            continue
+        m = kpi["name"]
+        # Attribute using root_cause if available
+        rc = computed.get("root_cause_by_measure", {}).get(m)
+        if rc and rc.get("decliners") and rc["pct_change"] and rc["pct_change"] < 0:
+            worst = rc["decliners"][0]
+            dim = rc.get("dimension")
             recs.append(
-                f"Investigate decline in {kpi['name']} ({kpi['change_pct']}%) — "
-                f"check pricing, channel mix, and recent campaigns."
+                f"{m} fell {abs(kpi['change_pct'])}% "
+                f"({kpi.get('compare_previous_period')} → {kpi.get('compare_current_period')}). "
+                f"Biggest drag: {worst.get(dim)}. Investigate this {dim} first."
+            )
+        elif rc and rc.get("gainers") and rc["pct_change"] and rc["pct_change"] > 0:
+            best = rc["gainers"][0]
+            dim = rc.get("dimension")
+            recs.append(
+                f"{m} rose {kpi['change_pct']}%. Largest contributor was "
+                f"{best.get(dim)} — replicate what worked there elsewhere."
+            )
+        else:
+            direction = "decline" if kpi["change_pct"] < 0 else "gain"
+            recs.append(
+                f"Investigate the {direction} in {m} ({kpi['change_pct']}%) by "
+                f"segmenting on {dimensions[0] if dimensions else 'the largest dimension'}."
             )
 
-    domain_playbook = {
-        "sales": "Run a cohort view to see if new vs returning customers behave differently.",
-        "finance": "Layer in a variance vs budget chart next; raw totals hide overruns.",
-        "retail": "Cross-reference inventory turnover with the top SKUs to avoid stockouts.",
-        "hr": "Slice attrition by department and tenure band to localise the issue.",
-        "marketing": "Compare CAC and conversion by channel before reallocating spend.",
-        "logistics": "Overlay on-time-delivery against carrier to spot underperformers.",
-    }
-    if domain in domain_playbook:
-        recs.append(domain_playbook[domain])
+    # 3. Compare top and bottom performers on the primary dimension
+    if measures and dimensions:
+        recs.append(
+            f"Compare top and bottom {dimensions[0]} on {measures[0]} to see "
+            f"which practices are transferable."
+        )
 
-    if not recs:
-        recs.append("Add a date filter and re-segment by the largest dimension to find the driver.")
-    return recs[:6]
+    # 4. Time-based drill if a date column exists
+    if measures and date_cols:
+        recs.append(
+            f"Break {measures[0]} down by {date_cols[0]} year/quarter/month to "
+            f"spot seasonality."
+        )
+
+    # 5. Cross-dimension slicing if multiple dimensions exist
+    if measures and len(dimensions) >= 2:
+        recs.append(
+            f"Slice {measures[0]} by {dimensions[0]} × {dimensions[1]} to find "
+            f"pockets of over- or under-performance."
+        )
+
+    # 6. Anomaly follow-through — reference the actual measure
+    anoms = computed.get("anomalies")
+    if anoms and anoms.get("count"):
+        recs.append(
+            f"Review the {anoms['count']} flagged {anoms.get('measure', '')} "
+            f"anomalies to confirm whether they're real events or data errors."
+        )
+
+    # Fallback: always give the user something referencing their columns
+    if not recs and measures:
+        recs.append(
+            f"Add a filter on {dimensions[0] if dimensions else 'a dimension'} "
+            f"and re-run to isolate the driver."
+        )
+
+    # De-dupe while preserving order
+    seen = set()
+    unique = []
+    for r in recs:
+        if r not in seen:
+            seen.add(r)
+            unique.append(r)
+    return unique[:6]
 
 
-def _build_suggested_questions(profile: dict) -> list[str]:
+def _build_executive_summary(profile: dict, computed: dict) -> str:
+    """
+    One-paragraph plain-English executive summary composed from computed
+    numbers only — never invented text. Safe to render as an opening quote
+    on the dashboard.
+    """
+    sentences: list[str] = []
+    domain = profile["domain"]["primary"]
+    row_count = profile["quality"]["total_rows"]
+    sentences.append(
+        f"Analysed {row_count:,} rows of {domain} data across "
+        f"{profile['quality'].get('total_columns_source', profile['quality']['total_columns'])} source columns."
+    )
+
+    kpis = computed.get("kpis", [])
+    for kpi in kpis[:2]:
+        if kpi.get("change_pct") is None:
+            continue
+        direction = "up" if kpi["change_pct"] > 0 else "down"
+        sentences.append(
+            f"{kpi['name']} was {kpi.get('current_value')} in "
+            f"{kpi.get('compare_current_period')}, {direction} "
+            f"{abs(kpi['change_pct'])}% ({kpi.get('change_abs'):+}) vs "
+            f"{kpi.get('compare_previous_period')}."
+        )
+
+    root_map = computed.get("root_cause_by_measure", {})
+    for m, rc in list(root_map.items())[:1]:
+        if not rc:
+            continue
+        if rc.get("decliners") and (rc.get("pct_change") or 0) < 0:
+            worst = rc["decliners"][0]
+            dim = rc.get("dimension")
+            sentences.append(
+                f"The largest drag on {m} was {worst.get(dim)} "
+                f"({round(worst.get('delta', 0), 2)})."
+            )
+        elif rc.get("gainers") and (rc.get("pct_change") or 0) > 0:
+            best = rc["gainers"][0]
+            dim = rc.get("dimension")
+            sentences.append(
+                f"The largest contributor to {m} growth was {best.get(dim)} "
+                f"(+{round(best.get('delta', 0), 2)})."
+            )
+
+    pareto = computed.get("pareto")
+    if pareto and pareto.get("top_80pct_count"):
+        sentences.append(
+            f"{pareto['top_80pct_count']} of {pareto.get('total_items')} "
+            f"{pareto['dimension']} concentrate 80% of {pareto['measure']}."
+        )
+
+    anoms = computed.get("anomalies")
+    if anoms and anoms.get("count"):
+        sentences.append(
+            f"{anoms['count']} data points in {anoms['measure']} sit beyond 3σ and warrant review."
+        )
+
+    corr = computed.get("correlation")
+    if corr and corr.get("strong_pairs"):
+        pair = corr["strong_pairs"][0]
+        sign = "positively" if pair["r"] > 0 else "negatively"
+        sentences.append(
+            f"{pair['a']} and {pair['b']} are strongly {sign} related (r={pair['r']})."
+        )
+
+    return " ".join(sentences)
+
+
+def _build_suggested_questions(profile: dict, context: dict | None = None) -> list[str]:
+    """
+    Generate contextual suggestions. If `context` (last intent + computed
+    results) is supplied, produce follow-ups that build on it; otherwise
+    fall back to generic starter questions.
+    """
     measure = _pick_primary_measure(profile)
     dim = _pick_primary_dimension(profile)
     date = _pick_primary_date(profile)
-    suggestions = []
+    dims = profile["classification"]["dimensions"]
+    measures = profile["classification"]["measures"]
+    suggestions: list[str] = []
+
+    if context:
+        op = context.get("op")
+        c_measure = context.get("measure") or measure
+        c_dim = context.get("dimension") or dim
+        if op == "top" and c_measure and c_dim:
+            suggestions.append(f"Why is {c_dim} the biggest driver of {c_measure}?")
+            suggestions.append(f"Show {c_measure} trend for the top {c_dim}")
+            other_dim = next((d for d in dims if d != c_dim), None)
+            if other_dim:
+                suggestions.append(f"Break {c_measure} down by {other_dim}")
+        elif op == "trend" and c_measure and date:
+            suggestions.append(f"Forecast {c_measure} for the next 6 months")
+            suggestions.append(f"Find anomalies in {c_measure}")
+            if c_dim:
+                suggestions.append(f"Which {c_dim} drove the change in {c_measure}?")
+        elif op == "forecast" and c_measure:
+            other_m = next((m for m in measures if m != c_measure), None)
+            if other_m:
+                suggestions.append(f"Forecast {other_m} for the next 6 months")
+            suggestions.append(f"How accurate has {c_measure} forecast been historically?")
+        elif op == "anomaly" and c_measure:
+            if c_dim:
+                suggestions.append(f"Which {c_dim} produced the most anomalies?")
+            suggestions.append(f"Trend of {c_measure} around the anomaly dates")
+        elif op == "correlation":
+            if c_measure and c_dim:
+                suggestions.append(f"Show {c_measure} by {c_dim} for the strongest pair")
+
+    # Always-useful fallbacks
+    generic = []
     if measure and date:
-        suggestions.append(f"Show {measure} trend by month")
-        suggestions.append(f"Forecast {measure} for the next 6 months")
+        generic.append(f"Show {measure} trend by month")
+        generic.append(f"Forecast {measure} for the next 6 months")
     if measure and dim:
-        suggestions.append(f"Top 10 {dim} by {measure}")
-        suggestions.append(f"Why did {measure} change recently?")
-    suggestions.append("Find anomalies in the data")
-    suggestions.append("Show correlations between measures")
-    return suggestions
+        generic.append(f"Top 10 {dim} by {measure}")
+        generic.append(f"Why did {measure} change recently?")
+    generic.append("Find anomalies in the data")
+    generic.append("Show correlations between measures")
+
+    # Merge — contextual first, generic to fill, unique
+    out = []
+    seen = set()
+    for s in suggestions + generic:
+        if s not in seen:
+            seen.add(s)
+            out.append(s)
+        if len(out) >= 6:
+            break
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -272,7 +557,9 @@ def build_executive_overview(df: pd.DataFrame, profile: dict) -> dict:
             charts.append(_pareto_chart(p))
 
     if len(measures) >= 2:
-        corr = analytics.correlation_matrix(df, measures)
+        corr = analytics.correlation_matrix(df, measures,
+                                            date_col=date_col,
+                                            dimension=primary_dim)
         if corr.get("matrix"):
             computed["correlation"] = corr
             charts.append(_correlation_heatmap(corr))
@@ -330,7 +617,9 @@ def build_executive_overview(df: pd.DataFrame, profile: dict) -> dict:
         "quality_panel": {
             "score": profile["quality"]["quality_score"],
             "total_rows": profile["quality"]["total_rows"],
-            "total_columns": profile["quality"]["total_columns"],
+            "total_columns": profile["quality"].get("total_columns_source", profile["quality"]["total_columns"]),
+            "engineered_columns": len(profile.get("engineered_features", [])),
+            "engineered_features": profile.get("engineered_features", []),
             "duplicates": profile["quality"]["duplicate_rows"],
             "issues": profile["quality"]["issues"],
         },
@@ -340,6 +629,8 @@ def build_executive_overview(df: pd.DataFrame, profile: dict) -> dict:
         "drilldowns": drilldowns,
         "insights": _build_insights(df, profile, computed),
         "recommendations": _build_recommendations(profile, computed),
+        "executive_summary": _build_executive_summary(profile, computed),
+        "generated_at": _now_iso(),
         "suggested_questions": _build_suggested_questions(profile),
         "anomalies": computed.get("anomalies", {}),
         "explainability": {
@@ -426,6 +717,7 @@ def build_query_dashboard(
             "id": _id(),
             "type": "forecast",
             "title": f"{measure} forecast — next {periods} months ({f.get('method', 'forecast')})",
+            "measure": measure,
             "history": f.get("history", []),
             "data": f.get("forecast", []),
             "accuracy": f.get("accuracy"),
@@ -490,8 +782,45 @@ def build_query_dashboard(
         else:
             charts.append(_no_measure_card())
 
+    elif op == "root_cause":
+        target_measure = measure or _pick_primary_measure(profile)
+        target_dim = dimension or _pick_primary_dimension(profile)
+        if target_measure and target_dim:
+            rc = analytics.root_cause(df, target_measure, target_dim, date_col=date_col)
+            computed["root_cause"] = rc
+            if date_col:
+                t = analytics.trend(df, date_col, target_measure)
+                if t.get("series"):
+                    charts.append(_trend_chart(t))
+            direction = ("declined" if (rc.get("pct_change") or 0) < 0
+                          else "grew" if (rc.get("pct_change") or 0) > 0 else "was flat")
+            charts.append({
+                "id": _id(),
+                "type": "bar",
+                "title": f"Top {target_dim} that DROVE the change ({rc.get('period_prev')} → {rc.get('period_curr')})",
+                "x": target_dim,
+                "y": "delta",
+                "data": rc.get("gainers", []),
+                "why": f"Values on top gained most; {target_measure} {direction} "
+                       f"{rc.get('pct_change')}% overall.",
+            })
+            charts.append({
+                "id": _id(),
+                "type": "bar",
+                "title": f"Top {target_dim} that HURT the change",
+                "x": target_dim,
+                "y": "delta",
+                "data": rc.get("decliners", []),
+                "why": "Values here fell the most between the two periods.",
+            })
+        else:
+            charts.append(_no_measure_card())
+
     elif op == "correlation":
-        corr = analytics.correlation_matrix(df, profile["classification"]["measures"])
+        corr = analytics.correlation_matrix(
+            df, profile["classification"]["measures"],
+            date_col=date_col, dimension=dimension,
+        )
         if corr.get("matrix"):
             computed["correlation"] = corr
             charts.append(_correlation_heatmap(corr))
@@ -549,6 +878,7 @@ def build_query_dashboard(
         "business_goal": f"Answer: {question}",
         "question": question,
         "intent": intent,
+        "generated_at": _now_iso(),
         "kpis": computed.get("kpis", []),
         "charts": charts,
         "result_preview": query_result_rows[:25],
@@ -556,7 +886,7 @@ def build_query_dashboard(
         "drilldowns": [],
         "insights": insights,
         "recommendations": recommendations,
-        "suggested_questions": _build_suggested_questions(profile),
+        "suggested_questions": _build_suggested_questions(profile, context=intent),
     }
     return spec
 
@@ -617,6 +947,30 @@ def _query_specific_insights(intent: dict, rows: list[dict], computed: dict, df,
         else:
             out.append(f"No anomalies above 3σ in {measure or 'the measure'} — the series is stable.")
 
+    elif op == "root_cause":
+        rc = computed.get("root_cause", {})
+        if rc.get("pct_change") is not None:
+            direction = "declined" if rc["pct_change"] < 0 else "grew"
+            out.append(
+                f"{measure or 'The measure'} {direction} {abs(rc['pct_change'])}% "
+                f"from {rc['period_prev']} to {rc['period_curr']}."
+            )
+        gainers = rc.get("gainers", [])
+        decliners = rc.get("decliners", [])
+        dim = rc.get("dimension") or dimension
+        if gainers:
+            top = gainers[0]
+            out.append(
+                f"Biggest positive contributor: {top.get(dim)} "
+                f"(+{round(top.get('delta', 0), 2)})."
+            )
+        if decliners:
+            worst = decliners[0]
+            out.append(
+                f"Biggest drag: {worst.get(dim)} "
+                f"({round(worst.get('delta', 0), 2)})."
+            )
+
     elif op == "correlation":
         corr = computed.get("correlation", {})
         pairs = corr.get("strong_pairs", [])
@@ -647,23 +1001,59 @@ def _query_specific_insights(intent: dict, rows: list[dict], computed: dict, df,
 
 
 def _query_specific_recs(intent: dict, rows: list[dict], profile: dict) -> list[str]:
+    """
+    Query-specific recommendations. Every string references only fields that
+    actually exist in the current dataset — no invented "pricing / channels /
+    cohorts" concepts.
+    """
     op = intent.get("op")
     measure = intent.get("measure")
     dimension = intent.get("dimension")
+    date_col = intent.get("date_col") or (
+        profile["classification"]["date_columns"][0]
+        if profile["classification"]["date_columns"] else None
+    )
     recs: list[str] = []
 
-    if op == "top" and not intent.get("ascending") and rows and dimension:
-        recs.append(f"Concentrate retention / expansion budget on the leading {dimension}s above.")
-    if op == "top" and intent.get("ascending") and rows and dimension:
-        recs.append(f"Investigate the underperforming {dimension}s — root-cause analysis warranted.")
-    if op == "forecast":
-        recs.append(f"Compare this forecast against budget and plan capacity accordingly.")
-    if op == "anomaly":
-        recs.append("Open each flagged anomaly to confirm whether it's a data issue or a real event.")
-    if op == "correlation":
-        recs.append("Use the strongest correlated pair as a leading indicator in your KPI tree.")
-    if op == "trend":
-        recs.append("Layer a moving average on top to separate signal from monthly noise.")
+    if op == "top" and rows and dimension and measure:
+        if intent.get("ascending"):
+            worst = rows[0].get(dimension)
+            recs.append(
+                f"Investigate {worst}: it has the lowest {measure}. "
+                f"Compare against the top {dimension} to identify what's different."
+            )
+        else:
+            best = rows[0].get(dimension)
+            recs.append(
+                f"Study {best}: it leads on {measure}. Look at what makes it work "
+                f"and test replicating in other {dimension}s."
+            )
+    elif op == "forecast":
+        recs.append(
+            f"Track the forecast weekly against actual {measure or 'values'}; "
+            f"if variance exceeds the reported MAPE, revisit the model."
+        )
+    elif op == "anomaly" and rows:
+        example = rows[0]
+        example_bits = ", ".join(
+            f"{k}={v}" for k, v in example.items()
+            if k not in {"index", "z"} and v is not None
+        )
+        recs.append(
+            f"Start with the first flagged row ({example_bits}) — confirm it's real "
+            f"before broader changes."
+        )
+    elif op == "correlation":
+        if measure and dimension:
+            recs.append(
+                f"Aggregate {measure} by {dimension} before drawing conclusions — "
+                f"row-level correlation can hide relationships."
+            )
+    elif op == "trend" and measure and date_col:
+        recs.append(
+            f"Overlay a moving average on {measure} over {date_col} to smooth "
+            f"noise and confirm the direction."
+        )
 
     if not recs:
         recs = _build_recommendations(profile, {})

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import { api } from '../api.js'
 import ChartCard from '../components/ChartCard.jsx'
+import FilterPanel from '../components/FilterPanel.jsx'
 import InsightsPanel from '../components/InsightsPanel.jsx'
 import KpiCard from '../components/KpiCard.jsx'
 import QualityPanel from '../components/QualityPanel.jsx'
@@ -123,6 +124,11 @@ export default function DashboardPage() {
       </div>
 
       {spec.business_goal && <p className="muted" style={{ marginTop: 0 }}>{spec.business_goal}</p>}
+      {spec.generated_at && (
+        <div className="muted" style={{ fontSize: 11, marginBottom: 12 }}>
+          Last updated: {new Date(spec.generated_at).toLocaleString()}
+        </div>
+      )}
 
       {spec.active_filters && spec.active_filters.length > 0 && (
         <div className="card no-print" style={{ marginBottom: 12, padding: '10px 14px', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
@@ -158,7 +164,18 @@ export default function DashboardPage() {
         </div>
       )}
 
-      <QualityPanel panel={spec.quality_panel} domain={spec.domain} />
+      {spec.executive_summary && (
+        <div className="card" style={{ marginBottom: 12, borderLeft: '3px solid var(--accent)' }}>
+          <div className="muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+            Executive summary
+          </div>
+          <div style={{ fontSize: 14, lineHeight: 1.65 }}>{spec.executive_summary}</div>
+        </div>
+      )}
+
+      <QualityPanel panel={spec.quality_panel} domain={spec.domain} profile={profile} />
+
+      <FilterPanel spec={spec} profile={profile} onApply={ask} activeFilters={spec.active_filters} />
 
       <div className="query-box no-print">
         <input

@@ -1,28 +1,142 @@
+# =============================================================================
+# VisionIQ — .gitignore
+# NEVER commit anything that could leak API keys, credentials, or user data.
+# =============================================================================
+
+# --- Secrets & environment files (highest priority) --------------------------
 .env
 .env.*
 !.env.example
+*.env
+backend/.env
+backend/.env.*
+!backend/.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+credentials.json
+service-account*.json
+secrets.*
+*_secret*
+*_secrets*
+*.secret
 
-# Python
+# --- API-key / token dumps that people accidentally save ---------------------
+*openrouter*key*
+*groq*key*
+*anthropic*key*
+*openai*key*
+*api_key*
+*apikey*
+
+# --- User-uploaded data & runtime artefacts ---------------------------------
+backend/uploads/
+uploads/
+*.xlsx
+*.xls
+*.csv
+*.tsv
+*.parquet
+*.db
+*.sqlite
+*.sqlite3
+# ...but keep any tracked sample fixtures the smoke test needs
+!backend/tests/**/*.csv
+!backend/tests/**/*.xlsx
+
+# --- Generated dashboard exports & reports ----------------------------------
+*_dashboard.json
+*_report.html
+*_report.pdf
+exports/
+reports/
+
+# --- Python -----------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 .Python
 *.egg-info/
-dist/
+*.egg
 build/
+dist/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments (all common names)
 .venv/
 venv/
 env/
+ENV/
+.virtualenv/
+backend/venv/
+backend/.venv/
 
-# Uploads / data
-backend/uploads/
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+coverage.xml
+*.cover
 
-# Node
+# Type checkers
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# --- Node / Frontend --------------------------------------------------------
 node_modules/
+frontend/node_modules/
 .next/
-dist/
+.nuxt/
+.vite/
+.turbo/
+.parcel-cache/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# OS
+# --- IDE / editor state -----------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.history/
+
+# --- OS junk ----------------------------------------------------------------
 .DS_Store
 Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+
+# --- Logs -------------------------------------------------------------------
+*.log
+logs/
+backend/logs/
+
+# --- Local scratch ----------------------------------------------------------
+scratch/
+tmp/
+temp/
+*.tmp
+*.bak

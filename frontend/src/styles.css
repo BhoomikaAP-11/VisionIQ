@@ -185,6 +185,27 @@ input:focus, textarea:focus {
 
 @media (max-width: 900px) {
   .row.two, .row.even, .row.three { grid-template-columns: 1fr; }
+  .app { padding: 16px; }
+  .topbar { flex-wrap: wrap; gap: 8px; }
+  .topbar h1 { font-size: 18px; }
+  .dropzone { padding: 60px 20px; }
+  .dropzone h2 { font-size: 18px; }
+  .kpi .value { font-size: 22px; }
+  .chart-card { padding: 12px 14px; }
+  .card { padding: 14px 16px; }
+}
+
+@media (max-width: 600px) {
+  .app { padding: 12px; }
+  .topbar h1 { font-size: 16px; }
+  .kpi-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
+  .kpi { padding: 12px 12px 10px; }
+  .kpi .value { font-size: 20px; }
+  .query-box { flex-direction: column; }
+  .query-box input { width: 100%; }
+  .query-box button { width: 100%; }
+  .suggested button { font-size: 11px; padding: 4px 8px; }
+  .chart-card h3 { font-size: 13px; }
 }
 
 .chart-card {

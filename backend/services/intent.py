@@ -69,12 +69,22 @@ _INSIGHT_PATTERNS = [
 
 _EXPLAIN_PATTERNS = [
     r"explain this",
-    r"why is this",
     r"what does this (?:mean|show)",
     r"interpret",
     r"explain the chart",
     r"explain (?:the )?(?:dashboard|result)",
     r"what(?:'?s| is)? going on",
+]
+
+# "Why did X change" — root-cause questions
+_ROOT_CAUSE_PATTERNS = [
+    r"^why\b",
+    r"what (?:caused|drove|led to|is behind)",
+    r"reason(?:s)? (?:for|behind)",
+    r"root cause",
+    r"drivers? of",
+    r"contribut(?:or|ors|ed) to",
+    r"explain (?:the )?(?:drop|decline|rise|jump|increase|decrease|change)",
 ]
 
 _BEST_PATTERNS = [
@@ -454,7 +464,10 @@ def parse(question: str, profile: dict) -> dict:
     op_confidence = 0.4  # default summary fallback
 
     # Meta-question patterns first — they outrank keyword hits
-    if any(re.search(p, q) for p in _OVERVIEW_PATTERNS):
+    if any(re.search(p, q) for p in _ROOT_CAUSE_PATTERNS):
+        out["op"] = "root_cause"
+        op_confidence = 0.92
+    elif any(re.search(p, q) for p in _OVERVIEW_PATTERNS):
         out["op"] = "overview"
         op_confidence = 0.9
     elif any(re.search(p, q) for p in _INSIGHT_PATTERNS):
