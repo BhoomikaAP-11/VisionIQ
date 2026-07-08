@@ -21,12 +21,15 @@ router = APIRouter(prefix="/api/db", tags=["database"])
 
 
 class ConnectBody(BaseModel):
-    type: str = Field(..., description="mysql | postgresql | sqlite | sqlserver")
+    type: str = Field(..., description="mysql | postgresql | sqlite | sqlserver | mongodb")
     host: str | None = "localhost"
     port: int | None = None
     user: str | None = ""
     password: SecretStr | None = None
     database: str = Field(..., min_length=1)
+    # MongoDB-only: full connection URI (mongodb://... or mongodb+srv://... for Atlas).
+    # When provided, host/port/user/password are ignored.
+    uri: str | None = None
 
 
 class LoadBody(BaseModel):
@@ -44,6 +47,8 @@ def connect(body: ConnectBody):
     config = body.model_dump()
     if body.password is not None:
         config["password"] = body.password.get_secret_value()
+    if body.uri:
+        config["uri"] = body.uri
     connection_id = uuid.uuid4().hex[:8]
     try:
         db_service.connect(connection_id, config)

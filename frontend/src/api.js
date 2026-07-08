@@ -51,4 +51,29 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ question, sheet }),
     }),
+
+  // ---- Database ----
+  dbConnect: (config) =>
+    request(`/api/db/connect`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(config),
+    }),
+
+  dbLoadTable: (sessionId, table, limit = 5000) =>
+    request(`/api/db/${sessionId}/load`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ table, limit }),
+    }),
+
+  dbRawQuery: (sessionId, sql, limit = 1000) =>
+    request(`/api/db/${sessionId}/query`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sql, limit }),
+    }),
+
+  dbDisconnect: (sessionId) =>
+    request(`/api/db/${sessionId}`, { method: 'DELETE' }),
 }

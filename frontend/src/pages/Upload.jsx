@@ -1,10 +1,12 @@
 import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { api } from '../api.js'
+import DbConnect from '../components/DbConnect.jsx'
 
 const ACCEPT = '.xlsx,.xls,.csv'
 
 export default function UploadPage() {
+  const [mode, setMode] = useState('file') // 'file' | 'db'
   const [dragging, setDragging] = useState(false)
   const [uploading, setUploading] = useState(false)
   const [error, setError] = useState('')
@@ -32,32 +34,54 @@ export default function UploadPage() {
 
   return (
     <div>
-      <div
-        className={`dropzone ${dragging ? 'active' : ''}`}
-        onDragEnter={(e) => { e.preventDefault(); setDragging(true) }}
-        onDragOver={(e) => { e.preventDefault(); setDragging(true) }}
-        onDragLeave={() => setDragging(false)}
-        onDrop={(e) => {
-          e.preventDefault()
-          setDragging(false)
-          if (e.dataTransfer.files?.[0]) handleFile(e.dataTransfer.files[0])
-        }}
-        onClick={() => fileRef.current?.click()}
-        role="button"
-        tabIndex={0}
-      >
-        <h2>{uploading ? <><span className="spinner" /> Profiling your data…</> : 'Drop your dataset here'}</h2>
-        <p>or click to browse. Supports .xlsx, .xls, .csv up to 500 MB.</p>
-        <input
-          ref={fileRef}
-          type="file"
-          accept={ACCEPT}
-          style={{ display: 'none' }}
-          onChange={(e) => handleFile(e.target.files?.[0])}
-        />
+      <div style={{ display: 'flex', gap: 6, marginBottom: 18, justifyContent: 'center' }}>
+        <button
+          className={mode === 'file' ? '' : 'secondary'}
+          onClick={() => setMode('file')}
+          style={{ padding: '8px 20px' }}
+        >
+          Upload file
+        </button>
+        <button
+          className={mode === 'db' ? '' : 'secondary'}
+          onClick={() => setMode('db')}
+          style={{ padding: '8px 20px' }}
+        >
+          Connect database
+        </button>
       </div>
 
-      {error && <div className="error">{error}</div>}
+      {mode === 'file' && (
+        <>
+          <div
+            className={`dropzone ${dragging ? 'active' : ''}`}
+            onDragEnter={(e) => { e.preventDefault(); setDragging(true) }}
+            onDragOver={(e) => { e.preventDefault(); setDragging(true) }}
+            onDragLeave={() => setDragging(false)}
+            onDrop={(e) => {
+              e.preventDefault()
+              setDragging(false)
+              if (e.dataTransfer.files?.[0]) handleFile(e.dataTransfer.files[0])
+            }}
+            onClick={() => fileRef.current?.click()}
+            role="button"
+            tabIndex={0}
+          >
+            <h2>{uploading ? <><span className="spinner" /> Profiling your data…</> : 'Drop your dataset here'}</h2>
+            <p>or click to browse. Supports .xlsx, .xls, .csv up to 500 MB.</p>
+            <input
+              ref={fileRef}
+              type="file"
+              accept={ACCEPT}
+              style={{ display: 'none' }}
+              onChange={(e) => handleFile(e.target.files?.[0])}
+            />
+          </div>
+          {error && <div className="error">{error}</div>}
+        </>
+      )}
+
+      {mode === 'db' && <DbConnect />}
     </div>
   )
 }

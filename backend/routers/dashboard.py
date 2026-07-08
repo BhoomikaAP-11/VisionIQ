@@ -27,7 +27,7 @@ def overview(session_id: str, sheet: str | None = None):
     session = store.get(session_id)
     if not session:
         raise HTTPException(404, "Session not found or expired")
-    if session.kind == "db" and not session.data.get("dataframe"):
+    if session.kind == "db" and session.data.get("dataframe") is None:
         raise HTTPException(400, "Load a table first via POST /api/db/{id}/load")
 
     df = store.get_dataframe(session_id, sheet)
@@ -46,7 +46,7 @@ async def query(session_id: str, body: QueryBody):
     session = store.get(session_id)
     if not session:
         raise HTTPException(404, "Session not found or expired")
-    if session.kind == "db" and not session.data.get("dataframe"):
+    if session.kind == "db" and session.data.get("dataframe") is None:
         raise HTTPException(400, "Load a table first via POST /api/db/{id}/load")
 
     df = store.get_dataframe(session_id, body.sheet)

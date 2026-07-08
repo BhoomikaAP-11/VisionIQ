@@ -22,6 +22,7 @@ sqlalchemy>=2.0.35
 pymysql>=1.1.1
 psycopg2-binary>=2.9.9
 pyodbc>=5.1.0
+pymongo>=4.8.0
 
 # Utilities
 aiofiles>=24.1.0
