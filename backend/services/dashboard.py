@@ -813,6 +813,7 @@ def build_query_dashboard(
                 "data": rc.get("decliners", []),
                 "why": "Values here fell the most between the two periods.",
             })
+            computed["narrative"] = _root_cause_narrative(rc, target_measure, target_dim)
         else:
             charts.append(_no_measure_card())
 
@@ -886,6 +887,7 @@ def build_query_dashboard(
         "drilldowns": [],
         "insights": insights,
         "recommendations": recommendations,
+        "narrative": computed.get("narrative"),
         "suggested_questions": _build_suggested_questions(profile, context=intent),
     }
     return spec
@@ -895,6 +897,87 @@ def _ord_suffix(n: int) -> str:
     if 10 <= n % 100 <= 20:
         return "th"
     return {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+
+
+def _root_cause_narrative(rc: dict, measure: str, dimension: str) -> str:
+    """
+    Compose a paragraph-form executive narrative from the root-cause result.
+    Purely template + computed values — no LLM, no invented facts.
+    """
+    prev_p = rc.get("period_prev", "the prior period")
+    curr_p = rc.get("period_curr", "the current period")
+    pct = rc.get("pct_change")
+    prev_total = rc.get("prev_total")
+    curr_total = rc.get("curr_total")
+    delta_total = rc.get("delta_total")
+    gainers = rc.get("gainers", []) or []
+    decliners = rc.get("decliners", []) or []
+
+    if pct is None:
+        return (
+            f"Unable to compute a period-over-period narrative for {measure} "
+            "because the dataset lacks two complete comparison periods."
+        )
+
+    direction_word = "declined" if pct < 0 else "grew" if pct > 0 else "was flat"
+    magnitude = f"{abs(pct)}%" if pct is not None else ""
+    delta_str = (f"{'+' if (delta_total or 0) > 0 else ''}"
+                  f"{round(delta_total, 2)}") if delta_total is not None else ""
+
+    parts: list[str] = []
+
+    parts.append(
+        f"Between {prev_p} and {curr_p}, {measure} {direction_word} "
+        f"{magnitude} ({delta_str}), moving from {prev_total} to {curr_total}."
+    )
+
+    if pct != 0:
+        if pct < 0 and decliners:
+            worst = decliners[0]
+            worst_name = worst.get(dimension)
+            worst_delta = round(worst.get("delta", 0), 2)
+            parts.append(
+                f"The single biggest drag on the change was {dimension} "
+                f"'{worst_name}', which contributed a swing of {worst_delta} "
+                f"({round(worst.get(measure + '_prev', 0), 2)} → "
+                f"{round(worst.get(measure + '_curr', 0), 2)})."
+            )
+            if len(decliners) >= 2:
+                names = ", ".join(f"'{d.get(dimension)}'" for d in decliners[:3]
+                                    if d.get(dimension))
+                parts.append(
+                    f"Other {dimension} values with notable declines include {names}. "
+                    f"Investigating these three first is likely the highest-impact use of time."
+                )
+        elif pct > 0 and gainers:
+            best = gainers[0]
+            best_name = best.get(dimension)
+            best_delta = round(best.get("delta", 0), 2)
+            parts.append(
+                f"The largest contributor to the gain was {dimension} '{best_name}', "
+                f"which added {best_delta} to {measure} "
+                f"({round(best.get(measure + '_prev', 0), 2)} → "
+                f"{round(best.get(measure + '_curr', 0), 2)})."
+            )
+            if len(gainers) >= 2:
+                names = ", ".join(f"'{d.get(dimension)}'" for d in gainers[:3]
+                                    if d.get(dimension))
+                parts.append(
+                    f"Other strong contributors include {names}. Understanding "
+                    f"what worked here can inform where to double down."
+                )
+
+    if gainers and decliners and pct is not None:
+        top_gain = gainers[0].get("delta", 0) or 0
+        top_drag = decliners[0].get("delta", 0) or 0
+        if abs(top_gain) > abs(delta_total or 0) * 0.5 or abs(top_drag) > abs(delta_total or 0) * 0.5:
+            parts.append(
+                f"The overall movement is concentrated in a small number of "
+                f"{dimension} values rather than being spread evenly — a targeted "
+                f"intervention will therefore likely outperform broad changes."
+            )
+
+    return " ".join(parts)
 
 
 def _no_measure_card() -> dict:

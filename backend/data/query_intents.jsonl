@@ -1,0 +1,2395 @@
+{"question": "year over year comparison", "label": "refinement"}
+{"question": "reasons for the slump", "label": "root_cause"}
+{"question": "show the source data", "label": "raw_data"}
+{"question": "compare to previous year", "label": "refinement"}
+{"question": "explain the reason for the sales decrease", "label": "root_cause"}
+{"question": "suspicious values", "label": "anomaly"}
+{"question": "do price and quantity move together", "label": "correlation"}
+{"question": "how's everything going", "label": "smalltalk"}
+{"question": "karnataka please", "label": "refinement"}
+{"question": "electronics filter on", "label": "refinement"}
+{"question": "what is 2 plus 2", "label": "unclear"}
+{"question": "what r the correlations between these fields?", "label": "correlation"}
+{"question": "exclusively india", "label": "refinement"}
+{"question": "what's the most notable aspect of this", "label": "insights"}
+{"question": "nice chatting with you", "label": "smalltalk"}
+{"question": "show me sales by month", "label": "trend"}
+{"question": "analyse the relationship between these metrics", "label": "correlation"}
+{"question": "predict the outcome for 2028 sales", "label": "forecast"}
+{"question": "hey, whats up", "label": "smalltalk"}
+{"question": "show me sales over time", "label": "trend"}
+{"question": "which products ar underperforming the most", "label": "top_bottom"}
+{"question": "exclude returns", "label": "refinement"}
+{"question": "hello, great to meet you", "label": "smalltalk"}
+{"question": "price vs quantity: what's the relationship", "label": "correlation"}
+{"question": "display the data set", "label": "raw_data"}
+{"question": "forecasting revenue growth over the next 5 years", "label": "forecast"}
+{"question": "whats the time in new york", "label": "unclear"}
+{"question": "visualize amount over years", "label": "trend"}
+{"question": "show me the regions with the poorest performance", "label": "top_bottom"}
+{"question": "interesting trends to explore", "label": "insights"}
+{"question": "line graph of website traffic by month", "label": "trend"}
+{"question": "nice to see you", "label": "smalltalk"}
+{"question": "factors contributing to the decline", "label": "root_cause"}
+{"question": "just india", "label": "refinement"}
+{"question": "find the odd one out", "label": "anomaly"}
+{"question": "forecast the amount of profit in 2029", "label": "forecast"}
+{"question": "what does this dashboard data mean exactly?", "label": "explain"}
+{"question": "how do i interpret these results", "label": "explain"}
+{"question": "do changes in price affect quantity", "label": "correlation"}
+{"question": "categories with lowest sales figures", "label": "top_bottom"}
+{"question": "rank all products by performance from lowest to highest", "label": "top_bottom"}
+{"question": "i need help understanding this visualization", "label": "explain"}
+{"question": "see you around", "label": "smalltalk"}
+{"question": "how r u", "label": "smalltalk"}
+{"question": "can you show me the regions with the lowest earning", "label": "top_bottom"}
+{"question": "what are the poorest performing regions in terms of revenue", "label": "top_bottom"}
+{"question": "i need to know whats gonna happen with revenue next quarter", "label": "forecast"}
+{"question": "time series analysis of website traffic", "label": "trend"}
+{"question": "can you give me a summary of the interesting bits", "label": "insights"}
+{"question": "category a and nothing else", "label": "refinement"}
+{"question": "can someone tell me whats goin on here", "label": "explain"}
+{"question": "filter out japan", "label": "refinement"}
+{"question": "what are the most interesting statistics", "label": "insights"}
+{"question": "show the entire raw dataset", "label": "raw_data"}
+{"question": "can you point out something notable", "label": "insights"}
+{"question": "what do you think about music", "label": "unclear"}
+{"question": "just show electronics", "label": "refinement"}
+{"question": "add category electronics", "label": "refinement"}
+{"question": "can someone tell me whats the current time", "label": "unclear"}
+{"question": "display raw data", "label": "raw_data"}
+{"question": "i wanna see our progress ovir time", "label": "trend"}
+{"question": "predictive analysis for 2026 revenue", "label": "forecast"}
+{"question": "what's the meaning of life", "label": "unclear"}
+{"question": "whats the reason for the decrease", "label": "root_cause"}
+{"question": "what caused the surge", "label": "root_cause"}
+{"question": "what drives the relationship between price and quantity", "label": "correlation"}
+{"question": "sales fluctuation over time", "label": "trend"}
+{"question": "can someone write me a poem", "label": "unclear"}
+{"question": "provide a brief summary of our activites", "label": "overview"}
+{"question": "it was nice talkin to u", "label": "smalltalk"}
+{"question": "current stock price of tesla", "label": "unclear"}
+{"question": "give me the big picture", "label": "overview"}
+{"question": "what does this show", "label": "explain"}
+{"question": "show electronics", "label": "refinement"}
+{"question": "can you estimate future demand", "label": "forecast"}
+{"question": "how about a random fact", "label": "unclear"}
+{"question": "can i get a birds eye view?", "label": "overview"}
+{"question": "have a fantastic day", "label": "smalltalk"}
+{"question": "what can you tell me that's noteworthy", "label": "insights"}
+{"question": "why have orders decreased", "label": "root_cause"}
+{"question": "i need to see all the entries", "label": "raw_data"}
+{"question": "thankyou", "label": "smalltalk"}
+{"question": "reset filter to india", "label": "refinement"}
+{"question": "do u no the time", "label": "unclear"}
+{"question": "revenue by region: what are the smallest ones", "label": "top_bottom"}
+{"question": "can you write a play", "label": "unclear"}
+{"question": "can you identify the top drivers of sales revenue?", "label": "correlation"}
+{"question": "monthly sales trend for orders", "label": "trend"}
+{"question": "can you give me a top level view", "label": "overview"}
+{"question": "i need to no whats the time now", "label": "unclear"}
+{"question": "trend analysis by quarter", "label": "trend"}
+{"question": "thank you", "label": "smalltalk"}
+{"question": "thaks", "label": "smalltalk"}
+{"question": "what day is today", "label": "unclear"}
+{"question": "yearly trend of market share", "label": "trend"}
+{"question": "electronic products only", "label": "refinement"}
+{"question": "predicting revenue streams for the next decade", "label": "forecast"}
+{"question": "how are you doing", "label": "smalltalk"}
+{"question": "refine to 2024", "label": "refinement"}
+{"question": "can you show me the correlation between marketing spend and sales?", "label": "correlation"}
+{"question": "hi", "label": "smalltalk"}
+{"question": "can i see the raw info", "label": "raw_data"}
+{"question": "last qtr only", "label": "refinement"}
+{"question": "estimate the sales for the next 12 month period", "label": "forecast"}
+{"question": "whats the monthly trend of new signups", "label": "trend"}
+{"question": "leading brands", "label": "top_bottom"}
+{"question": "can you show me the relationships between different kpis", "label": "correlation"}
+{"question": "can you identfy the key driver", "label": "root_cause"}
+{"question": "can you provide me with a summary of our key perfomance indicators?", "label": "overview"}
+{"question": "predict revenue growth over the next 2 years", "label": "forecast"}
+{"question": "highlight unusual activity", "label": "anomaly"}
+{"question": "can you walk me through this data", "label": "explain"}
+{"question": "monthly sales trend analysis", "label": "trend"}
+{"question": "i need assistance", "label": "unclear"}
+{"question": "anything intresting going on", "label": "insights"}
+{"question": "show the raw data table", "label": "raw_data"}
+{"question": "news today", "label": "unclear"}
+{"question": "identify data points that are outside the norm", "label": "anomaly"}
+{"question": "only show non returns", "label": "refinement"}
+{"question": "odd trends in the numbers", "label": "anomaly"}
+{"question": "identify the trend of customer complaints over time", "label": "trend"}
+{"question": "hello, how are you doing", "label": "smalltalk"}
+{"question": "filter to 2024", "label": "refinement"}
+{"question": "how's our company doing as a whole", "label": "overview"}
+{"question": "what are the abnormal values", "label": "anomaly"}
+{"question": "amount changed - what's the reason for that", "label": "root_cause"}
+{"question": "filter to just category a", "label": "refinement"}
+{"question": "what's the bigger picture here", "label": "explain"}
+{"question": "locate the outlier in the dataset", "label": "anomaly"}
+{"question": "can you determine the factors that contribute to sales fluctuations?", "label": "correlation"}
+{"question": "filter by electronics", "label": "refinement"}
+{"question": "what is the relationship between the amount of units sold and revenue generated", "label": "correlation"}
+{"question": "how does it change over the years", "label": "trend"}
+{"question": "what's the meaning of this dashboard", "label": "explain"}
+{"question": "what r the top 10 amounts?", "label": "top_bottom"}
+{"question": "what are some interesting observations", "label": "insights"}
+{"question": "what's the overall performance look like", "label": "overview"}
+{"question": "identify unusual patterns in the data", "label": "anomaly"}
+{"question": "whats the meaning of life", "label": "unclear"}
+{"question": "i need to see the big picture, whats going on?", "label": "overview"}
+{"question": "revenue pattern over months", "label": "trend"}
+{"question": "provide a brief overview of our key metrics", "label": "overview"}
+{"question": "may the rest of your day be awesome", "label": "smalltalk"}
+{"question": "list the best 3 products by amount sold", "label": "top_bottom"}
+{"question": "need help understanding this visualisation", "label": "explain"}
+{"question": "later dude", "label": "smalltalk"}
+{"question": "give me a brief on our current performance", "label": "overview"}
+{"question": "i need help understanding this business intelligence chart", "label": "explain"}
+{"question": "hey, hows it going?", "label": "smalltalk"}
+{"question": "what r the top brandz", "label": "top_bottom"}
+{"question": "what is the predicted revenue for the upcoming quarter?", "label": "forecast"}
+{"question": "can you show me the main dashboard", "label": "overview"}
+{"question": "what do these numbers mean", "label": "explain"}
+{"question": "display entire dataset", "label": "refinement"}
+{"question": "can you give me a insight view of this data?", "label": "insights"}
+{"question": "can u show me sum sample rows?", "label": "raw_data"}
+{"question": "what's the main thing i should take away", "label": "insights"}
+{"question": "i need a brief overview of our current status", "label": "overview"}
+{"question": "what is this chart supposed to show", "label": "explain"}
+{"question": "what does this chart mean", "label": "explain"}
+{"question": "what happened to sales recently", "label": "root_cause"}
+{"question": "why did amount go up", "label": "root_cause"}
+{"question": "what are some suprising insights", "label": "insights"}
+{"question": "can you list the regions with the worst outcomes", "label": "top_bottom"}
+{"question": "explain this graph to me like i'm 5", "label": "explain"}
+{"question": "what are the projected revenues for the upcoming quarter?", "label": "forecast"}
+{"question": "can you analyze the dependence between sales and pricing strategy?", "label": "correlation"}
+{"question": "i dont get it, can you explain?", "label": "explain"}
+{"question": "can u help me with the time", "label": "unclear"}
+{"question": "summary of key findings", "label": "insights"}
+{"question": "clear filters completely", "label": "refinement"}
+{"question": "what are the top countries by amount?", "label": "top_bottom"}
+{"question": "how do these variables relate to each other?", "label": "correlation"}
+{"question": "attribute the drop in revenue", "label": "root_cause"}
+{"question": "whats the main takeaway from this visualisation?", "label": "explain"}
+{"question": "how has profit changed yearly", "label": "trend"}
+{"question": "top 10 sales performers", "label": "top_bottom"}
+{"question": "rank products by amount, show me the top 3", "label": "top_bottom"}
+{"question": "hey, nice to meet ya", "label": "smalltalk"}
+{"question": "main points of intrest", "label": "insights"}
+{"question": "can you explain the concept of time", "label": "unclear"}
+{"question": "provide a summary overview", "label": "overview"}
+{"question": "what's the projeciton for the companys revenue next year", "label": "forecast"}
+{"question": "what's goin on with the weather", "label": "unclear"}
+{"question": "i need a summary of our key stats", "label": "overview"}
+{"question": "i need a dashboard of key perfomance indicators", "label": "overview"}
+{"question": "thnx", "label": "smalltalk"}
+{"question": "give me a general idea of how we're doing", "label": "overview"}
+{"question": "correlation between amount and boxes shipped", "label": "correlation"}
+{"question": "can you give me a snapshot of our progress", "label": "overview"}
+{"question": "whats worth looking at in this analysis", "label": "insights"}
+{"question": "what's the yearly trend in sales performance", "label": "trend"}
+{"question": "how has revenue grown over the yrs", "label": "trend"}
+{"question": "what is our current overall perfomance", "label": "overview"}
+{"question": "what insights can we gain from this dashboard?", "label": "explain"}
+{"question": "revenue prognosis for the next 2 quarters", "label": "forecast"}
+{"question": "do these figures correlate", "label": "correlation"}
+{"question": "can u pls tell me the time", "label": "unclear"}
+{"question": "hello there, how are you doing today?", "label": "smalltalk"}
+{"question": "causes of revenue slump", "label": "root_cause"}
+{"question": "list the 10 highest amounts", "label": "top_bottom"}
+{"question": "why did the numbers go up so significently", "label": "root_cause"}
+{"question": "find the abnormal ones", "label": "anomaly"}
+{"question": "flag abnormal orders", "label": "anomaly"}
+{"question": "can you determine the correlation betwen amount and boxes shipped", "label": "correlation"}
+{"question": "what does this graph represent?", "label": "explain"}
+{"question": "show me a list of correlated variables in my data", "label": "correlation"}
+{"question": "give me the database rows", "label": "raw_data"}
+{"question": "give me a general overview of our busniess perfomance", "label": "overview"}
+{"question": "monthly pattern of orders", "label": "trend"}
+{"question": "can u show me the data rows", "label": "raw_data"}
+{"question": "what is the secret to making the perfect grilled cheese", "label": "unclear"}
+{"question": "revenue rankings: what are the lowest regions", "label": "top_bottom"}
+{"question": "find data that dont fit the norm", "label": "anomaly"}
+{"question": "is there a yearly trend?", "label": "trend"}
+{"question": "what's behind the significent rise in numbers", "label": "root_cause"}
+{"question": "products with the highest and lowest sales", "label": "top_bottom"}
+{"question": "what's the main reason for the sales downturn", "label": "root_cause"}
+{"question": "give me the sales projection for next quarter, pls", "label": "forecast"}
+{"question": "show amount by year", "label": "trend"}
+{"question": "i need to see the key performance indicators", "label": "overview"}
+{"question": "what's the predicted profit for the next 2 years?", "label": "forecast"}
+{"question": "product with the most sales", "label": "top_bottom"}
+{"question": "forecast the next quarter", "label": "forecast"}
+{"question": "show data points that are way off", "label": "anomaly"}
+{"question": "do you have a favorite food", "label": "unclear"}
+{"question": "hey, take care", "label": "smalltalk"}
+{"question": "last quarter, dont show other quarters", "label": "refinement"}
+{"question": "whats driving our expenses", "label": "correlation"}
+{"question": "what are the worst perfoming regions this quarter", "label": "top_bottom"}
+{"question": "uncovering hidden anomalies in the system", "label": "anomaly"}
+{"question": "i need a summary of our companys performance", "label": "overview"}
+{"question": "data points that are off the charts", "label": "anomaly"}
+{"question": "for 2024 only", "label": "refinement"}
+{"question": "hello, whats up?", "label": "smalltalk"}
+{"question": "filter by this year", "label": "refinement"}
+{"question": "reason for the fluctuation", "label": "root_cause"}
+{"question": "is it hot or cold outside", "label": "unclear"}
+{"question": "amount's increase - what's the root cause", "label": "root_cause"}
+{"question": "what are the worst selling items", "label": "top_bottom"}
+{"question": "take care now", "label": "smalltalk"}
+{"question": "how do you make a paper plane", "label": "unclear"}
+{"question": "abnormal usage patterns in our app", "label": "anomaly"}
+{"question": "summarize our progress so far", "label": "overview"}
+{"question": "projected revenue for the upcoming fiscal year", "label": "forecast"}
+{"question": "how do sales change by year", "label": "trend"}
+{"question": "what's the correllation between these", "label": "correlation"}
+{"question": "scope to category a", "label": "refinement"}
+{"question": "which countries have the most?", "label": "top_bottom"}
+{"question": "next year sales prediction", "label": "forecast"}
+{"question": "what's new with u?", "label": "smalltalk"}
+{"question": "predict sales for the upcoming year", "label": "forecast"}
+{"question": "what's the bottom line?", "label": "insights"}
+{"question": "predict the revenue for the next 5 quarters", "label": "forecast"}
+{"question": "explain the meaning of this chart please", "label": "explain"}
+{"question": "what are the overall numbers looking like", "label": "overview"}
+{"question": "can you give me a quick overview of our company's perfomance?", "label": "overview"}
+{"question": "i dont get it, can you explain", "label": "explain"}
+{"question": "give me an overview of whats goin on", "label": "insights"}
+{"question": "how do product features impact sales?", "label": "correlation"}
+{"question": "what's the pattern of usage over time", "label": "trend"}
+{"question": "predicting sales for the next quarter, what's the outlook?", "label": "forecast"}
+{"question": "electronic products only please", "label": "refinement"}
+{"question": "what's the general outlook for our business", "label": "overview"}
+{"question": "provide a brief update", "label": "overview"}
+{"question": "what is this plot trying to show", "label": "explain"}
+{"question": "what role does seasonality play in sales trends?", "label": "correlation"}
+{"question": "hey there", "label": "smalltalk"}
+{"question": "hey long time no talk", "label": "smalltalk"}
+{"question": "give me the amount trend", "label": "trend"}
+{"question": "show me electronics as well", "label": "refinement"}
+{"question": "what's the root cause of the improvment", "label": "root_cause"}
+{"question": "india alone", "label": "refinement"}
+{"question": "hey long time no see", "label": "smalltalk"}
+{"question": "find data points that are way off", "label": "anomaly"}
+{"question": "hey, what's new", "label": "smalltalk"}
+{"question": "show me the raw dataset", "label": "raw_data"}
+{"question": "can you break down this graph for me", "label": "explain"}
+{"question": "hmm", "label": "unclear"}
+{"question": "can you provide an executive dashboard", "label": "overview"}
+{"question": "what stands out in these numbers", "label": "insights"}
+{"question": "pinpoint anomalies in the dataset", "label": "anomaly"}
+{"question": "how much revenue can we expect in the next 3 months?", "label": "forecast"}
+{"question": "rank items by profitability, show me the worst", "label": "top_bottom"}
+{"question": "identify the factors that effect stock price", "label": "correlation"}
+{"question": "raw dataset please", "label": "raw_data"}
+{"question": "display income trend from 2010 onwards", "label": "trend"}
+{"question": "recent amount change - what's the cause", "label": "root_cause"}
+{"question": "what caused the decline in revenue", "label": "root_cause"}
+{"question": "what are the underlying factors", "label": "root_cause"}
+{"question": "can you make me laugh", "label": "unclear"}
+{"question": "show all data points", "label": "refinement"}
+{"question": "what are the key insights here", "label": "insights"}
+{"question": "exclude any returns", "label": "refinement"}
+{"question": "you're the best", "label": "smalltalk"}
+{"question": "what is the relationship like between units and revenue", "label": "correlation"}
+{"question": "how does it change by month?", "label": "trend"}
+{"question": "can you tell me if it's cloudy", "label": "unclear"}
+{"question": "tell me somthing thats worth knowing", "label": "insights"}
+{"question": "how do i bake a cake", "label": "unclear"}
+{"question": "does temperature affect sales", "label": "correlation"}
+{"question": "is there a statistical correlation between units and revenue", "label": "correlation"}
+{"question": "what's gonna be the revenue forecast for the next 12 months", "label": "forecast"}
+{"question": "how's your week been", "label": "smalltalk"}
+{"question": "give me a bird's eye view", "label": "overview"}
+{"question": "what is the predicted revenue for the upcoming fiscal year", "label": "forecast"}
+{"question": "sales figures over the years", "label": "trend"}
+{"question": "reset to category a", "label": "refinement"}
+{"question": "is there a pattern in our yearly losses", "label": "trend"}
+{"question": "leave out japan", "label": "refinement"}
+{"question": "forecasting the next 2 years", "label": "forecast"}
+{"question": "what's new with you", "label": "smalltalk"}
+{"question": "point out somethin unusual", "label": "insights"}
+{"question": "good evening", "label": "smalltalk"}
+{"question": "bye bye", "label": "smalltalk"}
+{"question": "overall performance", "label": "overview"}
+{"question": "what are some key takeaways", "label": "insights"}
+{"question": "what are the key factors that influence revenue?", "label": "correlation"}
+{"question": "it was nice chatting", "label": "smalltalk"}
+{"question": "show me the data", "label": "raw_data"}
+{"question": "filter results by electronics", "label": "refinement"}
+{"question": "find me the variables that are closely related", "label": "correlation"}
+{"question": "display the original table", "label": "raw_data"}
+{"question": "whats the most insightful thing you can tell me", "label": "insights"}
+{"question": "rank products by sales, top to bottom", "label": "top_bottom"}
+{"question": "can you provide some interesting statistics", "label": "insights"}
+{"question": "only show category a", "label": "refinement"}
+{"question": "show electronic items only", "label": "refinement"}
+{"question": "show me the anomalies in the results", "label": "anomaly"}
+{"question": "what about last quarter?", "label": "refinement"}
+{"question": "do you have any pet videos", "label": "unclear"}
+{"question": "i need the unfiltered records", "label": "raw_data"}
+{"question": "anything interesting", "label": "insights"}
+{"question": "give me a rundown of the dashboard", "label": "explain"}
+{"question": "trend of revenue by year", "label": "trend"}
+{"question": "what does it all mean, can you give me a summary", "label": "explain"}
+{"question": "provide a high level overview of our current performance", "label": "overview"}
+{"question": "can you describe a sunset", "label": "unclear"}
+{"question": "can you decipher this data for me", "label": "explain"}
+{"question": "what's causing our sales to go down?", "label": "root_cause"}
+{"question": "whats the connection between employee engagement and customer satisfaction", "label": "correlation"}
+{"question": "estimate the income for the coming year", "label": "forecast"}
+{"question": "what", "label": "unclear"}
+{"question": "i need the complete picture", "label": "refinement"}
+{"question": "forecast next year", "label": "forecast"}
+{"question": "stats that are just plain weird", "label": "anomaly"}
+{"question": "dont inclue japan", "label": "refinement"}
+{"question": "what is the dependance of revenue on units sold", "label": "correlation"}
+{"question": "which are the best 15 products by revenue?", "label": "top_bottom"}
+{"question": "quantity and price: how do they relate", "label": "correlation"}
+{"question": "find outliers in the data", "label": "anomaly"}
+{"question": "i want to learn how to cook", "label": "unclear"}
+{"question": "good afternoon, how are you?", "label": "smalltalk"}
+{"question": "what's the overall outlook like?", "label": "overview"}
+{"question": "how are we perfoming as a whole", "label": "overview"}
+{"question": "i'd like to know whats worth notising", "label": "insights"}
+{"question": "provide a high level overview of the business", "label": "overview"}
+{"question": "forecasting next years sales", "label": "forecast"}
+{"question": "show me the products with the lowest profit", "label": "top_bottom"}
+{"question": "show me the data points that are off the charts", "label": "anomaly"}
+{"question": "see you later", "label": "smalltalk"}
+{"question": "what's the monthly trend of amount", "label": "trend"}
+{"question": "what story is this data trying to tell", "label": "explain"}
+{"question": "i need a quick snapshot", "label": "overview"}
+{"question": "i appreciate that", "label": "smalltalk"}
+{"question": "give me a prediction of sales for the next 3 months", "label": "forecast"}
+{"question": "take care and bye", "label": "smalltalk"}
+{"question": "stuff that's out of whack", "label": "anomaly"}
+{"question": "can you break down what this chart is telling us?", "label": "explain"}
+{"question": "break down the data for me", "label": "explain"}
+{"question": "what's the temperature like today", "label": "unclear"}
+{"question": "rank all items by profit and show me the bottom 5", "label": "top_bottom"}
+{"question": "tell me about the forecast", "label": "unclear"}
+{"question": "can you provide a high-level dashboard view", "label": "overview"}
+{"question": "time series of sales", "label": "trend"}
+{"question": "i'm looking for some valuable insights", "label": "insights"}
+{"question": "show me the unusual trends", "label": "anomaly"}
+{"question": "which products have the least amount, show me the bottom 3", "label": "top_bottom"}
+{"question": "only category a", "label": "refinement"}
+{"question": "filter by last 2 years", "label": "refinement"}
+{"question": "can you show me something interesting", "label": "insights"}
+{"question": "show the database contents", "label": "raw_data"}
+{"question": "who invented the chair", "label": "unclear"}
+{"question": "determine why revenue isnt rising", "label": "root_cause"}
+{"question": "can you predict the future trends for us", "label": "forecast"}
+{"question": "anything i should be aware of", "label": "insights"}
+{"question": "what's the root cause of our sales problem", "label": "root_cause"}
+{"question": "i'm confuseed by this plot, can you explain", "label": "explain"}
+{"question": "which 3 products made the most amount?", "label": "top_bottom"}
+{"question": "can i get a high level summary?", "label": "overview"}
+{"question": "future outlook for order intake", "label": "forecast"}
+{"question": "filter to include only 2024", "label": "refinement"}
+{"question": "year on year revenue comparision", "label": "trend"}
+{"question": "filter to just last quarter", "label": "refinement"}
+{"question": "show performance summary", "label": "overview"}
+{"question": "identify correlations with customer engagement", "label": "correlation"}
+{"question": "display the first hundred rows", "label": "raw_data"}
+{"question": "i forgot my phone at home whats the time", "label": "unclear"}
+{"question": "why did we see a spike", "label": "root_cause"}
+{"question": "what's the sales forecast look like for next quarter?", "label": "forecast"}
+{"question": "what's the weather like in london", "label": "unclear"}
+{"question": "just show karnataka state", "label": "refinement"}
+{"question": "can you rank our customers by spend", "label": "top_bottom"}
+{"question": "can i get a glimpse of the db table", "label": "raw_data"}
+{"question": "are there any interesting trends", "label": "insights"}
+{"question": "examine the relationship between units and revenue", "label": "correlation"}
+{"question": "you too", "label": "smalltalk"}
+{"question": "give me a high level overview of performance", "label": "overview"}
+{"question": "exceptions to the norm", "label": "anomaly"}
+{"question": "raw data pleez", "label": "raw_data"}
+{"question": "rank the worst 5 customers by sales", "label": "top_bottom"}
+{"question": "say something funny", "label": "unclear"}
+{"question": "can you identify any data points that are not normal", "label": "anomaly"}
+{"question": "get me unfiltered results", "label": "refinement"}
+{"question": "show me the main perfomance metrics", "label": "overview"}
+{"question": "can you share some insights with me", "label": "insights"}
+{"question": "the reason behing the declin", "label": "root_cause"}
+{"question": "display our top and bottom 5 customers", "label": "top_bottom"}
+{"question": "show karnataka now", "label": "refinement"}
+{"question": "its great to talk to you", "label": "smalltalk"}
+{"question": "what dont i know that i should", "label": "insights"}
+{"question": "why are orders falling", "label": "root_cause"}
+{"question": "the raw info please", "label": "raw_data"}
+{"question": "apply electronics filter", "label": "refinement"}
+{"question": "what are the main points to take away", "label": "insights"}
+{"question": "why is it growing so fast", "label": "root_cause"}
+{"question": "take care and talk to you soon", "label": "smalltalk"}
+{"question": "forecast sales for the next year using machine learning", "label": "forecast"}
+{"question": "does our revenue have a seasonal trend?", "label": "trend"}
+{"question": "hey long time", "label": "smalltalk"}
+{"question": "orders have decreased, what's the root cause", "label": "root_cause"}
+{"question": "take out japan", "label": "refinement"}
+{"question": "can you highlight something suprising", "label": "insights"}
+{"question": "just the current year", "label": "refinement"}
+{"question": "plot the seasonal trend", "label": "trend"}
+{"question": "what's the trend in profits over the years", "label": "trend"}
+{"question": "nice talking to you", "label": "smalltalk"}
+{"question": "how much will we have in 6 months time", "label": "forecast"}
+{"question": "just show india", "label": "refinement"}
+{"question": "list the least 12 popular ones", "label": "top_bottom"}
+{"question": "give me the 3 products with the highest amount", "label": "top_bottom"}
+{"question": "projekt the amount of money we will make in 2027", "label": "forecast"}
+{"question": "future revenue forecast", "label": "forecast"}
+{"question": "can you give me a brief update", "label": "overview"}
+{"question": "how do i plan a vacation", "label": "unclear"}
+{"question": "highest earning salesperson", "label": "top_bottom"}
+{"question": "what will be the revenue next quarter", "label": "forecast"}
+{"question": "can you give me a brief overview", "label": "overview"}
+{"question": "reset to 2024", "label": "refinement"}
+{"question": "i'm having trouble understanding the insights", "label": "explain"}
+{"question": "can you decode this chart for me", "label": "explain"}
+{"question": "list the products with the lowest revenue", "label": "top_bottom"}
+{"question": "show outlier transactions", "label": "anomaly"}
+{"question": "show outliers", "label": "anomaly"}
+{"question": "forecasting sales growth over the next 3 years", "label": "forecast"}
+{"question": "can i get a dashboard", "label": "overview"}
+{"question": "growth pattern of profitability by year", "label": "trend"}
+{"question": "what are the actual rows?", "label": "raw_data"}
+{"question": "show me the key indicators", "label": "overview"}
+{"question": "find the top 5 most unusual data points", "label": "anomaly"}
+{"question": "give me 2024", "label": "refinement"}
+{"question": "find anomalies in the dataset", "label": "anomaly"}
+{"question": "what should i be aware of?", "label": "insights"}
+{"question": "quarterly sales trend analisis", "label": "trend"}
+{"question": "display the raw data", "label": "raw_data"}
+{"question": "can you summarize our key metrics", "label": "overview"}
+{"question": "explane whats goin on in this chart", "label": "explain"}
+{"question": "i need an executive summary, asap", "label": "overview"}
+{"question": "forecast the value of stock in 2028", "label": "forecast"}
+{"question": "categories that dont sell well", "label": "top_bottom"}
+{"question": "thanks", "label": "smalltalk"}
+{"question": "show me this years", "label": "refinement"}
+{"question": "what am i suppost to be seeing in this chart", "label": "explain"}
+{"question": "nice to catch up with you", "label": "smalltalk"}
+{"question": "can i get electronics too", "label": "refinement"}
+{"question": "how strong is the correlation between units and revenue", "label": "correlation"}
+{"question": "walk me through the numbers", "label": "explain"}
+{"question": "what is the expected growth rate for the next 2 years", "label": "forecast"}
+{"question": "identify the root cause of the change", "label": "root_cause"}
+{"question": "for the last quarter alone", "label": "refinement"}
+{"question": "can you estimate the total for 2026", "label": "forecast"}
+{"question": "add electronics to results", "label": "refinement"}
+{"question": "is it sunny or rainy", "label": "unclear"}
+{"question": "give me a sample of 100 records", "label": "raw_data"}
+{"question": "what does the underlying data look like", "label": "raw_data"}
+{"question": "tell me a joke", "label": "unclear"}
+{"question": "analyse the drop in revenue", "label": "root_cause"}
+{"question": "thanks so much", "label": "smalltalk"}
+{"question": "can you determine the correlation between these metrics?", "label": "correlation"}
+{"question": "can you show me whats intresting", "label": "insights"}
+{"question": "predicting the stock price in the upcoming quarter", "label": "forecast"}
+{"question": "the 5 regions with the smallest revenue r", "label": "top_bottom"}
+{"question": "what's somthing that jumps out at you", "label": "insights"}
+{"question": "forecasting sales for the next quarter", "label": "forecast"}
+{"question": "show me the key metrics", "label": "overview"}
+{"question": "trend of product demand by quarter", "label": "trend"}
+{"question": "give me a list of our best and worst customers", "label": "top_bottom"}
+{"question": "can i see the first 100 entries", "label": "raw_data"}
+{"question": "can you plot the trend by week", "label": "trend"}
+{"question": "what are the most important things to know", "label": "insights"}
+{"question": "anything that jumps out at you", "label": "insights"}
+{"question": "how do i grow a garden", "label": "unclear"}
+{"question": "show me the difference from 2023", "label": "refinement"}
+{"question": "returns should not be included", "label": "refinement"}
+{"question": "hi, hows it going", "label": "smalltalk"}
+{"question": "how are things going", "label": "smalltalk"}
+{"question": "show me all data without filters", "label": "refinement"}
+{"question": "investigate reasons for revenue decline", "label": "root_cause"}
+{"question": "what are the outliers in our data", "label": "anomaly"}
+{"question": "show me how its changed since last year", "label": "refinement"}
+{"question": "show the top and bottom 5 items by sales", "label": "top_bottom"}
+{"question": "reset filters", "label": "refinement"}
+{"question": "add electronics category", "label": "refinement"}
+{"question": "give me the raw table", "label": "raw_data"}
+{"question": "only catagory a from now on", "label": "refinement"}
+{"question": "country amount - biggest to smallest", "label": "top_bottom"}
+{"question": "largest amount by country", "label": "top_bottom"}
+{"question": "i dont understand this visualization, can you explain", "label": "explain"}
+{"question": "orders by month trend", "label": "trend"}
+{"question": "can you show me the original data", "label": "raw_data"}
+{"question": "what are the key drivers of growth", "label": "correlation"}
+{"question": "can you offer some analysis of the results", "label": "explain"}
+{"question": "take it easy", "label": "smalltalk"}
+{"question": "who's doing the worst", "label": "top_bottom"}
+{"question": "good to see u", "label": "smalltalk"}
+{"question": "show me what moves with revenue", "label": "correlation"}
+{"question": "estimate revenue for the upcoming year", "label": "forecast"}
+{"question": "what's our overall status?", "label": "overview"}
+{"question": "analyze trend by quarter", "label": "trend"}
+{"question": "can you give me a rundown of this chart", "label": "explain"}
+{"question": "bye for now", "label": "smalltalk"}
+{"question": "expected roi for the upcoming investment", "label": "forecast"}
+{"question": "what's the significance of this dashboard", "label": "explain"}
+{"question": "does sales increse during holidays", "label": "trend"}
+{"question": "exclude all but category a", "label": "refinement"}
+{"question": "hi, how was your day?", "label": "smalltalk"}
+{"question": "what are the outlier values in this dataset", "label": "anomaly"}
+{"question": "why is amount increasing so rapidly", "label": "root_cause"}
+{"question": "can you show me whats notable", "label": "insights"}
+{"question": "i dont get what this chart is saying", "label": "explain"}
+{"question": "what's the big picture", "label": "overview"}
+{"question": "revenue and units sold: correlated or not", "label": "correlation"}
+{"question": "can you diagnoze the reason for the increase", "label": "root_cause"}
+{"question": "give me an overview of our sales and revenue", "label": "overview"}
+{"question": "i need to know which fields are dependent on each other", "label": "correlation"}
+{"question": "what's the forecasted revenue for 2028", "label": "forecast"}
+{"question": "what's behing the upward trend", "label": "root_cause"}
+{"question": "can you highlight some key points", "label": "insights"}
+{"question": "can you summarize the main points", "label": "insights"}
+{"question": "spotting anomalies in the figures", "label": "anomaly"}
+{"question": "how does price relate to quantity", "label": "correlation"}
+{"question": "what's the historic trend of amount", "label": "trend"}
+{"question": "show me amount over time", "label": "trend"}
+{"question": "underlying cause of the drop", "label": "root_cause"}
+{"question": "what are the main contributors to productivity", "label": "correlation"}
+{"question": "predict the trend for the next 3 quarters", "label": "forecast"}
+{"question": "what's the best pizza topping", "label": "unclear"}
+{"question": "limit to category a", "label": "refinement"}
+{"question": "whats goin on today", "label": "unclear"}
+{"question": "quarterly projection of customer acquisition costs", "label": "forecast"}
+{"question": "can u show me the data", "label": "raw_data"}
+{"question": "which metrics have a strong correlation?", "label": "correlation"}
+{"question": "future predictions for our industry", "label": "forecast"}
+{"question": "what are the 5 worst products by profit?", "label": "top_bottom"}
+{"question": "give me a quick rundown", "label": "overview"}
+{"question": "give me the key statistics", "label": "overview"}
+{"question": "rank the products by revenue, show me the bottom 8", "label": "top_bottom"}
+{"question": "how does weather affect sales patterns?", "label": "correlation"}
+{"question": "explane the significent increase", "label": "root_cause"}
+{"question": "thanks a ton", "label": "smalltalk"}
+{"question": "what are the top brands", "label": "top_bottom"}
+{"question": "show unusual trends", "label": "anomaly"}
+{"question": "its great to finally meet you", "label": "smalltalk"}
+{"question": "what's going on in this graph", "label": "explain"}
+{"question": "it's great to see you, how are you?", "label": "smalltalk"}
+{"question": "what are the topline numbers?", "label": "overview"}
+{"question": "can you provide context for this chart", "label": "explain"}
+{"question": "irregularities in the figures", "label": "anomaly"}
+{"question": "what's notable about this situation?", "label": "insights"}
+{"question": "what are the charts trying to say", "label": "explain"}
+{"question": "sales peack in wich month", "label": "trend"}
+{"question": "future outlook for our company's profits", "label": "forecast"}
+{"question": "predicting future revenue based on historical data", "label": "forecast"}
+{"question": "what is the weather today", "label": "unclear"}
+{"question": "can you give me a peek at the raw data", "label": "raw_data"}
+{"question": "top countrys by amount", "label": "top_bottom"}
+{"question": "hey friend", "label": "smalltalk"}
+{"question": "amount's been changing alot lately - why", "label": "root_cause"}
+{"question": "find data that dont fit the pattern", "label": "anomaly"}
+{"question": "i need to see the overall perfomance", "label": "overview"}
+{"question": "who r the top 5 worst customers", "label": "top_bottom"}
+{"question": "bottom 5 categories by sales", "label": "top_bottom"}
+{"question": "what's causing the rise", "label": "root_cause"}
+{"question": "you too, bye", "label": "smalltalk"}
+{"question": "what pushed revenue up", "label": "root_cause"}
+{"question": "how do different variables affect sales performance?", "label": "correlation"}
+{"question": "diagnose the reason for falling orders", "label": "root_cause"}
+{"question": "what are the top 3 customers this quarter", "label": "top_bottom"}
+{"question": "what does the data in this chart suggest?", "label": "explain"}
+{"question": "i need to know if i should bring an umbrella", "label": "unclear"}
+{"question": "who is responsible for the decline", "label": "root_cause"}
+{"question": "clear all the filter options", "label": "refinement"}
+{"question": "first 20 records", "label": "raw_data"}
+{"question": "i dont get whats going on in this chart", "label": "explain"}
+{"question": "i'm having trouble grasping this information, can you clarify", "label": "explain"}
+{"question": "what is the main reason for the increse in", "label": "root_cause"}
+{"question": "show me the underlying records", "label": "raw_data"}
+{"question": "can u tell me the current time", "label": "unclear"}
+{"question": "current year data", "label": "refinement"}
+{"question": "thanks alot", "label": "smalltalk"}
+{"question": "identify the abnormal behavior", "label": "anomaly"}
+{"question": "most amounts by country, ranked", "label": "top_bottom"}
+{"question": "can you walk me through what this report is showing?", "label": "explain"}
+{"question": "can you display the table", "label": "raw_data"}
+{"question": "give me a data table", "label": "raw_data"}
+{"question": "can you break down the findings", "label": "explain"}
+{"question": "compare 2023 and 2024", "label": "refinement"}
+{"question": "correlation and drivers of the data", "label": "correlation"}
+{"question": "its been real", "label": "smalltalk"}
+{"question": "data from this year", "label": "refinement"}
+{"question": "can you write a poem about trees", "label": "unclear"}
+{"question": "can you give me the overall status?", "label": "overview"}
+{"question": "show me everything", "label": "refinement"}
+{"question": "display the complete recordset", "label": "raw_data"}
+{"question": "i want a summary of everythin", "label": "overview"}
+{"question": "how do i cook ramen noodles", "label": "unclear"}
+{"question": "i need a distraction", "label": "unclear"}
+{"question": "i need a high level dashboard", "label": "overview"}
+{"question": "what's the predicted revenue in 2027", "label": "forecast"}
+{"question": "dependencies and correlations", "label": "correlation"}
+{"question": "show me all the raw data", "label": "raw_data"}
+{"question": "can you walk me through this", "label": "explain"}
+{"question": "give me a sample of the data", "label": "raw_data"}
+{"question": "can someone elaborate on this graphic?", "label": "explain"}
+{"question": "i dont care about data", "label": "unclear"}
+{"question": "trend for orders each month", "label": "trend"}
+{"question": "what are the predicted values for the upcoming year", "label": "forecast"}
+{"question": "why is there a decline in orders", "label": "root_cause"}
+{"question": "how's everything", "label": "smalltalk"}
+{"question": "compare with last year", "label": "refinement"}
+{"question": "country with the most, ranked list", "label": "top_bottom"}
+{"question": "give me a birds eye view", "label": "overview"}
+{"question": "what's the monthly trend in sales", "label": "trend"}
+{"question": "what are the key insights", "label": "insights"}
+{"question": "exclude the outlier month", "label": "refinement"}
+{"question": "without japan data", "label": "refinement"}
+{"question": "monthly revenue trend", "label": "trend"}
+{"question": "tell a story thats not related to work", "label": "unclear"}
+{"question": "what's the time series pattern of amount", "label": "trend"}
+{"question": "need to see the raw data rows", "label": "raw_data"}
+{"question": "can you describe a rainbow", "label": "unclear"}
+{"question": "what are the underlying reasons for the increas", "label": "root_cause"}
+{"question": "estimated orders for the next 3 years", "label": "forecast"}
+{"question": "can you diagnose the reason for the change", "label": "root_cause"}
+{"question": "last quarter, nothing else", "label": "refinement"}
+{"question": "what are the top level insights here?", "label": "insights"}
+{"question": "what caused the orders to drop", "label": "root_cause"}
+{"question": "give me the short version", "label": "overview"}
+{"question": "rank the top 5 nations by highest gdp per capita", "label": "top_bottom"}
+{"question": "highlight data thats off the charts", "label": "anomaly"}
+{"question": "how's amount doing, is it going up or down", "label": "trend"}
+{"question": "time series analysis of profit", "label": "trend"}
+{"question": "explain this to me like i'm 5", "label": "explain"}
+{"question": "can you show me the bottom 10 customers", "label": "top_bottom"}
+{"question": "yearly sales trend", "label": "trend"}
+{"question": "find unusual activity", "label": "anomaly"}
+{"question": "i want to watch a movie recomendation", "label": "unclear"}
+{"question": "give me a sample of the table", "label": "raw_data"}
+{"question": "what are the best 3 products by amount?", "label": "top_bottom"}
+{"question": "are there any unusual patterns", "label": "anomaly"}
+{"question": "what's the story behind this data", "label": "explain"}
+{"question": "identify data spikes", "label": "anomaly"}
+{"question": "estimated market value in 5 years", "label": "forecast"}
+{"question": "what is the dependence of amount on boxes shipped", "label": "correlation"}
+{"question": "all the best", "label": "smalltalk"}
+{"question": "sales perfomance over time, plz", "label": "trend"}
+{"question": "diagnose revenue decline", "label": "root_cause"}
+{"question": "find me some weird numbers", "label": "anomaly"}
+{"question": "detect anomolies in the system", "label": "anomaly"}
+{"question": "what's the worst region in terms of perfomance?", "label": "top_bottom"}
+{"question": "can you display the raw data for me", "label": "raw_data"}
+{"question": "good morning, how's everything?", "label": "smalltalk"}
+{"question": "what's the most suprising thing", "label": "insights"}
+{"question": "identify spikes in the dataset", "label": "anomaly"}
+{"question": "long term trend of net profits", "label": "trend"}
+{"question": "what's your favorite color", "label": "unclear"}
+{"question": "what's the situation at a glance", "label": "overview"}
+{"question": "display the worst 10 customers in our system", "label": "top_bottom"}
+{"question": "i'm confused, can you clarify", "label": "explain"}
+{"question": "do i need a coat", "label": "unclear"}
+{"question": "what is important here", "label": "insights"}
+{"question": "unusual trends in sales figures", "label": "anomaly"}
+{"question": "insights view", "label": "insights"}
+{"question": "what should i be paying attention to", "label": "insights"}
+{"question": "locate outliers in the stats", "label": "anomaly"}
+{"question": "anything that stands out to you", "label": "insights"}
+{"question": "give a rundown of the key findings", "label": "explain"}
+{"question": "what's up?", "label": "smalltalk"}
+{"question": "hey whats up", "label": "smalltalk"}
+{"question": "i need to see the trend of website traffic", "label": "trend"}
+{"question": "bottom 5 countries by amount", "label": "top_bottom"}
+{"question": "show me the complete dataset", "label": "refinement"}
+{"question": "correlation analysis between variables", "label": "correlation"}
+{"question": "is there a seasonal trend in orders", "label": "trend"}
+{"question": "how do i cook an egg", "label": "unclear"}
+{"question": "why is amount lower this month", "label": "root_cause"}
+{"question": "forecasting the future of our company's revenue", "label": "forecast"}
+{"question": "can u help me with somethin", "label": "unclear"}
+{"question": "what affects our bottom line", "label": "correlation"}
+{"question": "predict the outcome of our next quarterly earnings", "label": "forecast"}
+{"question": "whats the time on the east coast", "label": "unclear"}
+{"question": "what's the pattern of sales over months", "label": "trend"}
+{"question": "how come the numbers increaed", "label": "root_cause"}
+{"question": "what is the purpose of this dashboard?", "label": "explain"}
+{"question": "can you display the data records", "label": "raw_data"}
+{"question": "revenue fell - whats the reason", "label": "root_cause"}
+{"question": "what are the best and worst brand performers this year", "label": "top_bottom"}
+{"question": "can you show me the pattern of expenditure over time", "label": "trend"}
+{"question": "show every single row", "label": "refinement"}
+{"question": "hi, how are things?", "label": "smalltalk"}
+{"question": "can you provide a dashboard of key metrics?", "label": "overview"}
+{"question": "what's the sales pattern like by quarter", "label": "trend"}
+{"question": "do you have any travelling tips", "label": "unclear"}
+{"question": "can you give me the 10,000 ft view?", "label": "overview"}
+{"question": "whats the main reason for the growth", "label": "root_cause"}
+{"question": "can i see the base data?", "label": "raw_data"}
+{"question": "what is the correlation between sales and revenue", "label": "correlation"}
+{"question": "what are the unusual values in this chart", "label": "anomaly"}
+{"question": "walk me through this dashboard", "label": "explain"}
+{"question": "is there a relationship between price and quantity purchased", "label": "correlation"}
+{"question": "display the sample data", "label": "raw_data"}
+{"question": "i need a coffe break", "label": "unclear"}
+{"question": "display every single record", "label": "raw_data"}
+{"question": "can you include electronics", "label": "refinement"}
+{"question": "cause of the reduction", "label": "root_cause"}
+{"question": "show the original data", "label": "raw_data"}
+{"question": "sales trend for the last 5 years", "label": "trend"}
+{"question": "ignore japan", "label": "refinement"}
+{"question": "what's the connection between sales and online reviews?", "label": "correlation"}
+{"question": "whats goin on with the weather outside", "label": "unclear"}
+{"question": "whats new with you", "label": "smalltalk"}
+{"question": "can you determine the cause of the spike", "label": "root_cause"}
+{"question": "lowest selling categories", "label": "top_bottom"}
+{"question": "can you decipher this for me", "label": "explain"}
+{"question": "give me the lowdown on whats going on", "label": "insights"}
+{"question": "whats the meaning of life, lol", "label": "unclear"}
+{"question": "is there a link between units sold and total revenue", "label": "correlation"}
+{"question": "what are the insights i should have", "label": "insights"}
+{"question": "what is the secret to happiness", "label": "unclear"}
+{"question": "i want to view the records", "label": "raw_data"}
+{"question": "orders trend per month", "label": "trend"}
+{"question": "okay", "label": "unclear"}
+{"question": "only show data from this year and last", "label": "refinement"}
+{"question": "give me a interesting perspective", "label": "insights"}
+{"question": "analyse the time series data of customer complaints", "label": "trend"}
+{"question": "whats goin on in the world", "label": "unclear"}
+{"question": "identify patterns in daily website visits", "label": "trend"}
+{"question": "what's the relationship between sales and economic indicators?", "label": "correlation"}
+{"question": "what's the expected revenue for q1 2024", "label": "forecast"}
+{"question": "boxes shipped vs amount: correlation analysis", "label": "correlation"}
+{"question": "what insights can we gain from this data visualization?", "label": "explain"}
+{"question": "identify transactions that dont add up", "label": "anomaly"}
+{"question": "plot the time series of website traffic", "label": "trend"}
+{"question": "can you plot our daily revenue", "label": "trend"}
+{"question": "what's driving the decline in orders", "label": "root_cause"}
+{"question": "give me some key findings", "label": "insights"}
+{"question": "what's behind the shift", "label": "root_cause"}
+{"question": "good luck", "label": "smalltalk"}
+{"question": "hello, how are you doing today?", "label": "smalltalk"}
+{"question": "pattern of sales by quarter", "label": "trend"}
+{"question": "why did numbers go up", "label": "root_cause"}
+{"question": "can you highlight something important", "label": "insights"}
+{"question": "show me the metrics over time", "label": "trend"}
+{"question": "whats the expected amount for 2026", "label": "forecast"}
+{"question": "explain the decline in orders", "label": "root_cause"}
+{"question": "can you show me the sales curve", "label": "trend"}
+{"question": "what are the top 3 accounts by size", "label": "top_bottom"}
+{"question": "revenue stream over time", "label": "trend"}
+{"question": "give me the entire dataset", "label": "refinement"}
+{"question": "bottom performers", "label": "top_bottom"}
+{"question": "can you give me the cliffs notes version?", "label": "overview"}
+{"question": "hi, how are you?", "label": "smalltalk"}
+{"question": "restrict to category a only", "label": "refinement"}
+{"question": "predicting demand for our products in 2024", "label": "forecast"}
+{"question": "whats the big picture take away", "label": "insights"}
+{"question": "show me all the raw records", "label": "raw_data"}
+{"question": "nice to meet you, hows it going", "label": "smalltalk"}
+{"question": "projected earnings for next fiscal year", "label": "forecast"}
+{"question": "time series of price by quarter", "label": "trend"}
+{"question": "i want to see whats intresting about this", "label": "insights"}
+{"question": "what's the trend in customer complaints over time", "label": "trend"}
+{"question": "i forgot my password", "label": "unclear"}
+{"question": "explain to me like im 5 what this chart is saying", "label": "explain"}
+{"question": "can you decrypt this graph for me?", "label": "explain"}
+{"question": "how many rainbows can fit inside a unicorn", "label": "unclear"}
+{"question": "talk to you when you get back", "label": "smalltalk"}
+{"question": "only 2024 pls", "label": "refinement"}
+{"question": "what's the general outlook?", "label": "overview"}
+{"question": "display the underlying table", "label": "raw_data"}
+{"question": "amount and boxes shipped: what's the relationship like", "label": "correlation"}
+{"question": "can someone walk me through this dashboard", "label": "explain"}
+{"question": "what's the connection between metrics", "label": "correlation"}
+{"question": "spikes in the data", "label": "anomaly"}
+{"question": "analyze seasonality of demand", "label": "trend"}
+{"question": "notable trends", "label": "insights"}
+{"question": "can you break down the data for me", "label": "explain"}
+{"question": "whatss the point of this", "label": "unclear"}
+{"question": "time series analysis of customer acquisition", "label": "trend"}
+{"question": "detect spikes in user engagement", "label": "anomaly"}
+{"question": "what's the pattern of amount by month", "label": "trend"}
+{"question": "show me the table with all the rows", "label": "raw_data"}
+{"question": "morning", "label": "smalltalk"}
+{"question": "what's the key takeaway from this dashboard", "label": "explain"}
+{"question": "what led to the fall", "label": "root_cause"}
+{"question": "can you tell me something", "label": "unclear"}
+{"question": "what are the projected earnings for 2024", "label": "forecast"}
+{"question": "what is the correlation coeficient between amount and boxes", "label": "correlation"}
+{"question": "hey hows it going", "label": "smalltalk"}
+{"question": "hello how r u", "label": "smalltalk"}
+{"question": "do you no any good jokes", "label": "unclear"}
+{"question": "take off all filters", "label": "refinement"}
+{"question": "ditch all the filters", "label": "refinement"}
+{"question": "show quantity by month and year", "label": "trend"}
+{"question": "list the top 15 best selling products by revenue", "label": "top_bottom"}
+{"question": "i wanna know the sales forecast for next quarter, thx", "label": "forecast"}
+{"question": "next 3 quarters forecast, can you show me", "label": "forecast"}
+{"question": "what is the airspeed velocity of an unladen swallow", "label": "unclear"}
+{"question": "what's the sales trend lookin like", "label": "trend"}
+{"question": "what's the current situation?", "label": "overview"}
+{"question": "i need to talk about my cat", "label": "unclear"}
+{"question": "i want to know what's significant", "label": "insights"}
+{"question": "give me a bird's eye view of the data", "label": "overview"}
+{"question": "what are the underlying rows", "label": "raw_data"}
+{"question": "can you project sales figures for the upcoming month?", "label": "forecast"}
+{"question": "walk me through this data", "label": "explain"}
+{"question": "spot unusual changes in web traffic", "label": "anomaly"}
+{"question": "show me the predicted trend for the next 12 months", "label": "forecast"}
+{"question": "which brand is number one", "label": "top_bottom"}
+{"question": "identify the correlations between different data elements", "label": "correlation"}
+{"question": "can you show me the outliers", "label": "anomaly"}
+{"question": "many thanks", "label": "smalltalk"}
+{"question": "whats the key thing to understand", "label": "insights"}
+{"question": "what's the forcast look like", "label": "unclear"}
+{"question": "projected earnings for the next fiscal year", "label": "forecast"}
+{"question": "what will our future profits look like", "label": "forecast"}
+{"question": "projection for the future", "label": "forecast"}
+{"question": "thanks for everything", "label": "smalltalk"}
+{"question": "predict future orders", "label": "forecast"}
+{"question": "whats the product with the lowest sales, and the highest", "label": "top_bottom"}
+{"question": "revenue growth by quarter", "label": "trend"}
+{"question": "show me the sample data", "label": "raw_data"}
+{"question": "show some sample data", "label": "raw_data"}
+{"question": "what are the projections for the upcoming quarter", "label": "forecast"}
+{"question": "amount, whats the pattern like", "label": "trend"}
+{"question": "how do i get rid of a headache", "label": "unclear"}
+{"question": "identify the root of the problem", "label": "root_cause"}
+{"question": "i'm confused, can you clarify whats going on", "label": "explain"}
+{"question": "find unusual data points", "label": "anomaly"}
+{"question": "i'm having trouble grasping this chart's meaning", "label": "explain"}
+{"question": "give me the weather", "label": "unclear"}
+{"question": "can you recommend a good book", "label": "unclear"}
+{"question": "narrow down to category a", "label": "refinement"}
+{"question": "what's causing the drop in sales", "label": "root_cause"}
+{"question": "investigate if there is a correlation between units and revenue", "label": "correlation"}
+{"question": "can someone tell me whats happening here", "label": "explain"}
+{"question": "can you estimate the forecast for q1, q2 and q3", "label": "forecast"}
+{"question": "show me the best 10 with the highest amounts", "label": "top_bottom"}
+{"question": "what's the weird stuff in our metrics", "label": "anomaly"}
+{"question": "show raw data please", "label": "raw_data"}
+{"question": "rank our customers from top to bottom by revenue", "label": "top_bottom"}
+{"question": "what are some interesting trends", "label": "insights"}
+{"question": "what's the top 10 by amount?", "label": "top_bottom"}
+{"question": "what are the top level metrics i should be aware of?", "label": "overview"}
+{"question": "this year's data only", "label": "refinement"}
+{"question": "can i get a quick rundown", "label": "overview"}
+{"question": "how does profit change by season", "label": "trend"}
+{"question": "what's behind the decline in sales figures?", "label": "root_cause"}
+{"question": "how's everything going in general?", "label": "overview"}
+{"question": "display the 7 products with the lowest revenue", "label": "top_bottom"}
+{"question": "can u show me the worst customers", "label": "top_bottom"}
+{"question": "consider only india", "label": "refinement"}
+{"question": "which region is struggling the most", "label": "top_bottom"}
+{"question": "monthly fluctuations in product demand", "label": "trend"}
+{"question": "i have a meeting whats the time", "label": "unclear"}
+{"question": "is there a yearly trend in revenue", "label": "trend"}
+{"question": "is there seasonality in our data", "label": "trend"}
+{"question": "can you explain the reason for the increse", "label": "root_cause"}
+{"question": "can you show me the main highlights", "label": "overview"}
+{"question": "is ther anything notable", "label": "insights"}
+{"question": "can you tell me why sales have dropped", "label": "root_cause"}
+{"question": "do units sold impact total revenue", "label": "correlation"}
+{"question": "what are the main predictors of sales growth?", "label": "correlation"}
+{"question": "i need a quick rundown of our perfomance", "label": "overview"}
+{"question": "i need help understanding this report", "label": "explain"}
+{"question": "overall perfomance please", "label": "overview"}
+{"question": "monthly fluctuation in turnover", "label": "trend"}
+{"question": "show me the categories with the lowest sales volume", "label": "top_bottom"}
+{"question": "model future demand", "label": "forecast"}
+{"question": "why did amount jump up", "label": "root_cause"}
+{"question": "do you like pizza", "label": "unclear"}
+{"question": "can you describe a cat", "label": "unclear"}
+{"question": "display the bottom 5 customer list", "label": "top_bottom"}
+{"question": "show me all of it", "label": "refinement"}
+{"question": "excluding only japan", "label": "refinement"}
+{"question": "hope you're doing well", "label": "smalltalk"}
+{"question": "show me a sample of the data", "label": "raw_data"}
+{"question": "can you summarize the key findings?", "label": "overview"}
+{"question": "year over year growth", "label": "trend"}
+{"question": "what's the most noticable thing", "label": "insights"}
+{"question": "what will be the predicted value in 2027", "label": "forecast"}
+{"question": "long time no see", "label": "smalltalk"}
+{"question": "can you recommend a good restaurant", "label": "unclear"}
+{"question": "i dont wanna talk about data", "label": "unclear"}
+{"question": "no filters should be applied", "label": "refinement"}
+{"question": "give a brief summary of perfomance", "label": "overview"}
+{"question": "what insights can we gain from this", "label": "explain"}
+{"question": "whats the story behind this plot", "label": "explain"}
+{"question": "its been a pleasue talking to you", "label": "smalltalk"}
+{"question": "also show me electronics", "label": "refinement"}
+{"question": "you're welcome", "label": "smalltalk"}
+{"question": "hope you had a great weekend", "label": "smalltalk"}
+{"question": "what led to the decrease in sales revenue", "label": "root_cause"}
+{"question": "find the irregularities in the figures", "label": "anomaly"}
+{"question": "what's the dependence of quantity on price", "label": "correlation"}
+{"question": "monthly and yearly pattern", "label": "trend"}
+{"question": "can you break it down for me", "label": "explain"}
+{"question": "i'll catch you on the flip side", "label": "smalltalk"}
+{"question": "what's your favorite book", "label": "unclear"}
+{"question": "what contributed to the jump", "label": "root_cause"}
+{"question": "show the entire dataset", "label": "raw_data"}
+{"question": "can you estimate the future demand for our product", "label": "forecast"}
+{"question": "filter reset please", "label": "refinement"}
+{"question": "reasons why its not working", "label": "root_cause"}
+{"question": "you too, thanks", "label": "smalltalk"}
+{"question": "seasonal variation in product demand", "label": "trend"}
+{"question": "what drives the relationship between these metrics", "label": "correlation"}
+{"question": "how do product sales affect revenue", "label": "correlation"}
+{"question": "predict sales for next quarter", "label": "forecast"}
+{"question": "sales worst perfoming categories", "label": "top_bottom"}
+{"question": "refine by electronics", "label": "refinement"}
+{"question": "display full results", "label": "refinement"}
+{"question": "analyze the correlation between product sales and revenue", "label": "correlation"}
+{"question": "list countries from largest to smallest", "label": "top_bottom"}
+{"question": "can you create a short story", "label": "unclear"}
+{"question": "the least successful ones", "label": "top_bottom"}
+{"question": "what's the overall situation?", "label": "overview"}
+{"question": "what are the best and worst regions", "label": "top_bottom"}
+{"question": "walk me through the results", "label": "explain"}
+{"question": "can you give me some notable trends?", "label": "insights"}
+{"question": "seasonal fluctuations in revenue", "label": "trend"}
+{"question": "how do i get started with nothing", "label": "unclear"}
+{"question": "can you write a script for a movie", "label": "unclear"}
+{"question": "what is the underlying cause of the growth spurt", "label": "root_cause"}
+{"question": "why has revenue been falling", "label": "root_cause"}
+{"question": "hi hows it going", "label": "smalltalk"}
+{"question": "can you put the results into perspective", "label": "explain"}
+{"question": "erase all filter criteria", "label": "refinement"}
+{"question": "hello, nice to meet u too", "label": "smalltalk"}
+{"question": "show me the top findings", "label": "insights"}
+{"question": "how do different factors impact sales performance", "label": "correlation"}
+{"question": "why did we see an increase in", "label": "root_cause"}
+{"question": "high level overview of whats important", "label": "insights"}
+{"question": "what made it go down", "label": "root_cause"}
+{"question": "filter by 2024", "label": "refinement"}
+{"question": "exclude all return entries", "label": "refinement"}
+{"question": "prediction of employee turnover rate for the next 6 months", "label": "forecast"}
+{"question": "what's the big picture?", "label": "overview"}
+{"question": "what are the bottom 5 sales performers", "label": "top_bottom"}
+{"question": "refine to karnataka", "label": "refinement"}
+{"question": "what's the main thing that stands out?", "label": "insights"}
+{"question": "projecting the future sales", "label": "forecast"}
+{"question": "explain this chart to me", "label": "explain"}
+{"question": "display records", "label": "raw_data"}
+{"question": "show only 2024", "label": "refinement"}
+{"question": "pattern of user retention over time", "label": "trend"}
+{"question": "amount's down - what's the reason", "label": "root_cause"}
+{"question": "next year's predicted expenses", "label": "forecast"}
+{"question": "estimating future expenses", "label": "forecast"}
+{"question": "estimate the numbers for 2024", "label": "forecast"}
+{"question": "what's the weather suppost to be", "label": "unclear"}
+{"question": "relationship between measures", "label": "correlation"}
+{"question": "surprise me", "label": "insights"}
+{"question": "year over year growth rate", "label": "trend"}
+{"question": "what does the chart indicate", "label": "explain"}
+{"question": "how are the metrics connected", "label": "correlation"}
+{"question": "hi, how was your week?", "label": "smalltalk"}
+{"question": "what does this data represent", "label": "explain"}
+{"question": "high level overview of whats interesting", "label": "insights"}
+{"question": "show me revenue over time", "label": "trend"}
+{"question": "i'm confused about everything", "label": "unclear"}
+{"question": "why did our sales numbers go down?", "label": "root_cause"}
+{"question": "how are you doing today", "label": "smalltalk"}
+{"question": "show me the projected numbers for the next 3 quarters", "label": "forecast"}
+{"question": "whats the worst product we have", "label": "top_bottom"}
+{"question": "describe what i'm looking at", "label": "explain"}
+{"question": "i need help with my homework", "label": "unclear"}
+{"question": "what drove the increase", "label": "root_cause"}
+{"question": "i want to know whats intresting", "label": "insights"}
+{"question": "show me the raw data", "label": "raw_data"}
+{"question": "can you analize the corelation between amount and boxes shipped", "label": "correlation"}
+{"question": "what are the 10 worst cities by traffic congestion", "label": "top_bottom"}
+{"question": "list the bottom 5 items by sales", "label": "top_bottom"}
+{"question": "what's the story behind the stats", "label": "explain"}
+{"question": "show me the raw data set", "label": "raw_data"}
+{"question": "how do i find out the time", "label": "unclear"}
+{"question": "what's the predicted outlook for q1, q2, and q3", "label": "forecast"}
+{"question": "i need a summary of the important stuff", "label": "overview"}
+{"question": "what does the fox say", "label": "unclear"}
+{"question": "month by month revenue pattern", "label": "trend"}
+{"question": "how much will the kpi be in a year", "label": "forecast"}
+{"question": "interpret this dashboard", "label": "explain"}
+{"question": "can you draw a picture", "label": "unclear"}
+{"question": "what's the top level view?", "label": "overview"}
+{"question": "list all records", "label": "raw_data"}
+{"question": "what are all the records", "label": "raw_data"}
+{"question": "forecasting order intake for the upcoming quarter", "label": "forecast"}
+{"question": "nice to meet you, thanks for chatting", "label": "smalltalk"}
+{"question": "explane the visualizations", "label": "explain"}
+{"question": "how's life treating you", "label": "smalltalk"}
+{"question": "whats worth knowing about this", "label": "insights"}
+{"question": "what's catchin my attention", "label": "insights"}
+{"question": "predict future trends", "label": "forecast"}
+{"question": "can you tell me a joke about chickens", "label": "unclear"}
+{"question": "hi, how are you doing today", "label": "smalltalk"}
+{"question": "japan shouldnt be in the results", "label": "refinement"}
+{"question": "remove all returns from view", "label": "refinement"}
+{"question": "display a sample of the orginal data", "label": "raw_data"}
+{"question": "elaborate on the key takeways", "label": "explain"}
+{"question": "what are some interesting facts here", "label": "insights"}
+{"question": "can you shed some light on these numbers", "label": "explain"}
+{"question": "hello, how r u?", "label": "smalltalk"}
+{"question": "give me india data", "label": "refinement"}
+{"question": "whats the projected forecast for the next 3 quarters", "label": "forecast"}
+{"question": "give me an update on our progress", "label": "overview"}
+{"question": "i want to see the top level metrics", "label": "overview"}
+{"question": "monthly breakdown of orders", "label": "trend"}
+{"question": "can you provide a high-level overview", "label": "overview"}
+{"question": "give me a projection of our expenses for next year", "label": "forecast"}
+{"question": "give me the table", "label": "raw_data"}
+{"question": "what will be the sales like in the comming year", "label": "forecast"}
+{"question": "identify the root cause of the decline", "label": "root_cause"}
+{"question": "highlight spikes in the data", "label": "anomaly"}
+{"question": "what's worth noting in the data", "label": "insights"}
+{"question": "can you highlite some key observations?", "label": "insights"}
+{"question": "display the data sample", "label": "raw_data"}
+{"question": "measures that affect each other", "label": "correlation"}
+{"question": "can you highlight whats important", "label": "insights"}
+{"question": "whats the main story here?", "label": "overview"}
+{"question": "is price dependent on quantity", "label": "correlation"}
+{"question": "can someone walk me thru this chart", "label": "explain"}
+{"question": "gracias", "label": "smalltalk"}
+{"question": "hi, nice to finally meet you in person", "label": "smalltalk"}
+{"question": "what's the relationship between customer satisfaction and sales?", "label": "correlation"}
+{"question": "i'm looking for a new hairstyle", "label": "unclear"}
+{"question": "i'm looking for a joke", "label": "unclear"}
+{"question": "what are the main points i should know", "label": "overview"}
+{"question": "what is the currnt situaton?", "label": "overview"}
+{"question": "can you predict the next quarter and two after that", "label": "forecast"}
+{"question": "list the 10 bottom performing customers", "label": "top_bottom"}
+{"question": "thanks again", "label": "smalltalk"}
+{"question": "trend of orders over time", "label": "trend"}
+{"question": "how can we make sense of these figures on the screen?", "label": "explain"}
+{"question": "anomalous behaviour in customer purchases", "label": "anomaly"}
+{"question": "can you shed some light on this dashboard's data", "label": "explain"}
+{"question": "can you point out somethin interesting?", "label": "insights"}
+{"question": "country amount rankings, top and bottom", "label": "top_bottom"}
+{"question": "identify freak data points", "label": "anomaly"}
+{"question": "whats the most interesting thing", "label": "insights"}
+{"question": "i need help with somethin else", "label": "unclear"}
+{"question": "thansk alot", "label": "smalltalk"}
+{"question": "analyze the reason for the decline in order numbers", "label": "root_cause"}
+{"question": "how will the numbers look like next year", "label": "forecast"}
+{"question": "what are the predicted values for the next 3 quarters", "label": "forecast"}
+{"question": "what are the key metrics looking like", "label": "overview"}
+{"question": "what's the difference between a cat and dog", "label": "unclear"}
+{"question": "forecasting model for future customer behavior", "label": "forecast"}
+{"question": "the reason behing the decrease", "label": "root_cause"}
+{"question": "what insights can be gained from the visualization", "label": "explain"}
+{"question": "what are the outliers in this set", "label": "anomaly"}
+{"question": "how do i make sense of this", "label": "explain"}
+{"question": "reset to electronics section", "label": "refinement"}
+{"question": "factors that led to the growth", "label": "root_cause"}
+{"question": "great to meet you in person", "label": "smalltalk"}
+{"question": "units sold and revenue: is there a connection", "label": "correlation"}
+{"question": "i want to see the unfiltered data", "label": "raw_data"}
+{"question": "i'm not sure what i'm lookin at, can you help", "label": "explain"}
+{"question": "good morning, nice to meet you", "label": "smalltalk"}
+{"question": "thanks a lot", "label": "smalltalk"}
+{"question": "provide a general overview of the business", "label": "overview"}
+{"question": "can you provide a summary report", "label": "overview"}
+{"question": "only last year and this year please", "label": "refinement"}
+{"question": "unusual patterns in the data", "label": "anomaly"}
+{"question": "smallest revenue by region", "label": "top_bottom"}
+{"question": "good morning, hope you're doing well", "label": "smalltalk"}
+{"question": "root cause of the change", "label": "root_cause"}
+{"question": "what's the significance of this data point", "label": "explain"}
+{"question": "how was your week", "label": "smalltalk"}
+{"question": "list the 5 worst selling items", "label": "top_bottom"}
+{"question": "which variables have a significant correlation?", "label": "correlation"}
+{"question": "display the base records", "label": "raw_data"}
+{"question": "what does this dashboard mean", "label": "explain"}
+{"question": "forecast the next 3 quarters", "label": "forecast"}
+{"question": "display the raw database table", "label": "raw_data"}
+{"question": "what's the meaning of this graph", "label": "explain"}
+{"question": "what to expect in the upcoming year", "label": "forecast"}
+{"question": "show me the main dashboard please", "label": "overview"}
+{"question": "2024 data only", "label": "refinement"}
+{"question": "i need to know about any abnormal data", "label": "anomaly"}
+{"question": "remove all applied filters", "label": "refinement"}
+{"question": "which product sells the most units", "label": "top_bottom"}
+{"question": "trends in customer purchases by season", "label": "trend"}
+{"question": "what are the predicted sales for next year", "label": "forecast"}
+{"question": "can u show me the 3 largest accounts", "label": "top_bottom"}
+{"question": "identify data that stands out", "label": "anomaly"}
+{"question": "how's everything going, in general?", "label": "overview"}
+{"question": "nice to meet you, have a great day", "label": "smalltalk"}
+{"question": "what's the relationship like between quantity and price", "label": "correlation"}
+{"question": "uncover abnormal patterns", "label": "anomaly"}
+{"question": "make a prediction about the next 3 quarters of data", "label": "forecast"}
+{"question": "exceptions to the usual trend", "label": "anomaly"}
+{"question": "what color is the sky", "label": "unclear"}
+{"question": "what's worth noting in this context", "label": "insights"}
+{"question": "can you summarize our current position", "label": "overview"}
+{"question": "give me a sample data set", "label": "raw_data"}
+{"question": "what's the pattern of revenue by month", "label": "trend"}
+{"question": "how has the population grown over decades", "label": "trend"}
+{"question": "what's the story behind this chart", "label": "explain"}
+{"question": "what drives the relationship between units and revenue", "label": "correlation"}
+{"question": "how's everything doing overall?", "label": "overview"}
+{"question": "any suprizes in the numbers", "label": "insights"}
+{"question": "what's the current status", "label": "overview"}
+{"question": "i dont no whats goin on", "label": "unclear"}
+{"question": "which variables are correlated", "label": "correlation"}
+{"question": "correlation between amount shipped and number of boxes", "label": "correlation"}
+{"question": "how's your day going so far?", "label": "smalltalk"}
+{"question": "i want to see the bigger picture", "label": "overview"}
+{"question": "whats the story behind this dashboard", "label": "explain"}
+{"question": "what are you doing", "label": "smalltalk"}
+{"question": "karnataka only from now", "label": "refinement"}
+{"question": "can you translate this data into something understandable?", "label": "explain"}
+{"question": "hey, long time no see", "label": "smalltalk"}
+{"question": "good to meet you, thanks", "label": "smalltalk"}
+{"question": "show the first 100 rows", "label": "raw_data"}
+{"question": "i'd like to see some key takeaways", "label": "insights"}
+{"question": "filter to show only electronic items", "label": "refinement"}
+{"question": "amount has decreased - what's causing it", "label": "root_cause"}
+{"question": "help me understand the dashboard", "label": "explain"}
+{"question": "can you show me whats worth noting?", "label": "insights"}
+{"question": "summary of the most important findings", "label": "insights"}
+{"question": "how does our stock price change over the years", "label": "trend"}
+{"question": "good bye for now", "label": "smalltalk"}
+{"question": "hello", "label": "smalltalk"}
+{"question": "what happened to cause the fall", "label": "root_cause"}
+{"question": "best countries by amount, top 10", "label": "top_bottom"}
+{"question": "whats up", "label": "smalltalk"}
+{"question": "what is this dashboard showing us?", "label": "explain"}
+{"question": "filter to show only karnataka", "label": "refinement"}
+{"question": "i need help interpreting this data", "label": "explain"}
+{"question": "what are the main points of this graph?", "label": "explain"}
+{"question": "what's the big picture here?", "label": "insights"}
+{"question": "need to view the raw table", "label": "raw_data"}
+{"question": "the worst products we have to offer", "label": "top_bottom"}
+{"question": "what's the weather like", "label": "unclear"}
+{"question": "why are the numbers lowering", "label": "root_cause"}
+{"question": "explain the results", "label": "explain"}
+{"question": "give me a prediction of the amount for next month", "label": "forecast"}
+{"question": "i need a joke", "label": "unclear"}
+{"question": "who are the best performers in terms of revenue", "label": "top_bottom"}
+{"question": "can you provide some context", "label": "explain"}
+{"question": "japan should be excluded", "label": "refinement"}
+{"question": "start with no filters", "label": "refinement"}
+{"question": "values that dont seem rite", "label": "anomaly"}
+{"question": "how are we performing as a whole?", "label": "overview"}
+{"question": "how has customer count changed by month", "label": "trend"}
+{"question": "projected market trends for the upcoming year", "label": "forecast"}
+{"question": "can you show me the correlation between price and quantity", "label": "correlation"}
+{"question": "hi, doing alright?", "label": "smalltalk"}
+{"question": "excluding japan completely", "label": "refinement"}
+{"question": "how does quantity impact price", "label": "correlation"}
+{"question": "whats worthy of my attention", "label": "insights"}
+{"question": "the best revenue performers", "label": "top_bottom"}
+{"question": "what's the best part", "label": "insights"}
+{"question": "give me a rundown of our perfomance", "label": "overview"}
+{"question": "monthly revenue pattern", "label": "trend"}
+{"question": "what's the most important thing to know?", "label": "insights"}
+{"question": "can you describe the plot of my favorite movie", "label": "unclear"}
+{"question": "whats good", "label": "smalltalk"}
+{"question": "anticipated future business performance", "label": "forecast"}
+{"question": "show me the dashboard", "label": "overview"}
+{"question": "give me the headline figures", "label": "overview"}
+{"question": "understanding the correlations between data points", "label": "correlation"}
+{"question": "i need last quarter", "label": "refinement"}
+{"question": "detecting freak occurrences in the data", "label": "anomaly"}
+{"question": "what are the most interesting points?", "label": "insights"}
+{"question": "i want to see the big picture, whats going on?", "label": "overview"}
+{"question": "can you list the top brands in the industry", "label": "top_bottom"}
+{"question": "what do the numbers mean", "label": "explain"}
+{"question": "can you put this info into plain english", "label": "explain"}
+{"question": "can you decipher what this table is telling us?", "label": "explain"}
+{"question": "hello there", "label": "smalltalk"}
+{"question": "how do i interperet this data", "label": "explain"}
+{"question": "can you identify the root cause of decreasing sales", "label": "root_cause"}
+{"question": "forecasting future demand", "label": "forecast"}
+{"question": "give me the lowdown on this data", "label": "explain"}
+{"question": "can you show me the master dashboard?", "label": "overview"}
+{"question": "list the best customers by region", "label": "top_bottom"}
+{"question": "get rid of existing filters", "label": "refinement"}
+{"question": "i need a brief rundown", "label": "overview"}
+{"question": "give me the bottom 5 products with the lowest sales", "label": "top_bottom"}
+{"question": "hello, how are you", "label": "smalltalk"}
+{"question": "find spikes in the graph", "label": "anomaly"}
+{"question": "what's worth mentioning", "label": "insights"}
+{"question": "what led to the rise in", "label": "root_cause"}
+{"question": "can you analyze the correlation between social media presence and brand awareness", "label": "correlation"}
+{"question": "hey, hows life", "label": "smalltalk"}
+{"question": "amount trend by season", "label": "trend"}
+{"question": "i want to see all the rows", "label": "raw_data"}
+{"question": "how do i interpret this chart", "label": "explain"}
+{"question": "give me a rundown of whats happening here", "label": "explain"}
+{"question": "can we discus the weather", "label": "unclear"}
+{"question": "compare with prev year", "label": "refinement"}
+{"question": "what can we expect in terms of roi next year", "label": "forecast"}
+{"question": "what's the secret to happiness", "label": "unclear"}
+{"question": "give me an overview of the data", "label": "explain"}
+{"question": "display all records please", "label": "raw_data"}
+{"question": "data that's off the charts", "label": "anomaly"}
+{"question": "what's behind the sales slump?", "label": "root_cause"}
+{"question": "provide an overall performance report", "label": "overview"}
+{"question": "show the top 10 by amount please", "label": "top_bottom"}
+{"question": "i want to see the main highlights", "label": "overview"}
+{"question": "thanks for everythin", "label": "smalltalk"}
+{"question": "how do metrics relate to each other", "label": "correlation"}
+{"question": "what's the trend in electricity consumption", "label": "trend"}
+{"question": "give me a snapshot of our current situation", "label": "overview"}
+{"question": "the best 20 items in desc order", "label": "top_bottom"}
+{"question": "find me the abnormal values", "label": "anomaly"}
+{"question": "i need help understanding this data", "label": "explain"}
+{"question": "can i get a forecast of the next quarter and the two after", "label": "forecast"}
+{"question": "show me the core data", "label": "raw_data"}
+{"question": "can you write a song about heartbreak", "label": "unclear"}
+{"question": "orders forecast for the next 5 years", "label": "forecast"}
+{"question": "forecasted earnings for the next 12 months", "label": "forecast"}
+{"question": "show me the big picture view", "label": "overview"}
+{"question": "elaborate on the insights from this graphic", "label": "explain"}
+{"question": "how do you interpret this visualisation?", "label": "explain"}
+{"question": "can you write a short story about a talking eggplant", "label": "unclear"}
+{"question": "how do you interprete the chart", "label": "explain"}
+{"question": "hi, hows it going?", "label": "smalltalk"}
+{"question": "categories that have the lowest sales numbers", "label": "top_bottom"}
+{"question": "detecting abnormal behaviour", "label": "anomaly"}
+{"question": "why did sales fall off a cliff?", "label": "root_cause"}
+{"question": "yearly trend of customer retention", "label": "trend"}
+{"question": "what's driving the growth in amount", "label": "root_cause"}
+{"question": "weather forecast please", "label": "unclear"}
+{"question": "just this year", "label": "refinement"}
+{"question": "is the earth round or flat, idk", "label": "unclear"}
+{"question": "what's the story behind this plot", "label": "explain"}
+{"question": "what are the sales figures by month", "label": "trend"}
+{"question": "measures that influence one another", "label": "correlation"}
+{"question": "show electronics products", "label": "refinement"}
+{"question": "i'm confused, can you explain this in simpler terms", "label": "explain"}
+{"question": "show me data thats out of the ordinary", "label": "anomaly"}
+{"question": "how has customer count changed yearly", "label": "trend"}
+{"question": "do i need to wear a jacket", "label": "unclear"}
+{"question": "what's the top level view", "label": "overview"}
+{"question": "i want to learn how to dance", "label": "unclear"}
+{"question": "only 2024 data", "label": "refinement"}
+{"question": "which factors influence profit", "label": "correlation"}
+{"question": "revenue has dropped - why", "label": "root_cause"}
+{"question": "can u explain the concept of time travel", "label": "unclear"}
+{"question": "can u tell me whats the deal with cats", "label": "unclear"}
+{"question": "any hidden gems in the data", "label": "insights"}
+{"question": "can you show me sales by season", "label": "trend"}
+{"question": "i dont get it, can you break it down", "label": "explain"}
+{"question": "explanations for the drop", "label": "root_cause"}
+{"question": "does amount shipped depend on boxes shipped", "label": "correlation"}
+{"question": "wipe out all filters", "label": "refinement"}
+{"question": "can you summarize our current position in the market?", "label": "overview"}
+{"question": "sales figures over the last 5 years", "label": "trend"}
+{"question": "what's the forecast look like for q2", "label": "forecast"}
+{"question": "what's the headline news", "label": "overview"}
+{"question": "can you walk me thru the key findings", "label": "explain"}
+{"question": "i need a general idea of how we're doing", "label": "overview"}
+{"question": "predictive analytics for future orders", "label": "forecast"}
+{"question": "which products are the top and bottom sellers", "label": "top_bottom"}
+{"question": "can you identify correlated variables in my dataset?", "label": "correlation"}
+{"question": "what are the worst selling products", "label": "top_bottom"}
+{"question": "worst perfoming units", "label": "top_bottom"}
+{"question": "what r the least profitable stuff", "label": "top_bottom"}
+{"question": "can you give me some notable trends", "label": "insights"}
+{"question": "show me amount trend from 2010 to 2020", "label": "trend"}
+{"question": "what's interesting to know", "label": "insights"}
+{"question": "estimated sales for the upcoming year", "label": "forecast"}
+{"question": "give me a bird's eye view of our perfomance", "label": "overview"}
+{"question": "show me raw sample data", "label": "raw_data"}
+{"question": "can you explain the decrease in order volume", "label": "root_cause"}
+{"question": "i need to see the raw records", "label": "raw_data"}
+{"question": "show me only electronics", "label": "refinement"}
+{"question": "can you spot any unusual activity", "label": "anomaly"}
+{"question": "i need to know the worst region", "label": "top_bottom"}
+{"question": "monthly trend of orders placed", "label": "trend"}
+{"question": "detect unusual patterns", "label": "anomaly"}
+{"question": "monthly pattern of user engagement", "label": "trend"}
+{"question": "can i get a glimpse of the data", "label": "raw_data"}
+{"question": "provide a brief summary of our status", "label": "overview"}
+{"question": "can you share some interesting observations", "label": "insights"}
+{"question": "can you forecast our orders for the next 2 years", "label": "forecast"}
+{"question": "predicting the future of our business's financials", "label": "forecast"}
+{"question": "whats up with that thing", "label": "unclear"}
+{"question": "what factors contributed to the sales drop", "label": "root_cause"}
+{"question": "can you explain the sudden increase", "label": "root_cause"}
+{"question": "list the bottom 10%", "label": "top_bottom"}
+{"question": "what are some intriguing trends", "label": "insights"}
+{"question": "what does the data look like", "label": "overview"}
+{"question": "trend of sales by month", "label": "trend"}
+{"question": "remove every filter", "label": "refinement"}
+{"question": "need to know info", "label": "insights"}
+{"question": "can we determine if units and revenue are related", "label": "correlation"}
+{"question": "show me only non return data", "label": "refinement"}
+{"question": "why have sales been falling off?", "label": "root_cause"}
+{"question": "how does our revenue change over time", "label": "trend"}
+{"question": "can u forecast the sales 4 next quarter?", "label": "forecast"}
+{"question": "can someone interprete this for me", "label": "explain"}
+{"question": "is amount seasonal, show me the pattern", "label": "trend"}
+{"question": "i need a general overview of perfomance", "label": "overview"}
+{"question": "find data that seems fishy", "label": "anomaly"}
+{"question": "i need to see the worst performing regions", "label": "top_bottom"}
+{"question": "show the worst 3 products by amount", "label": "top_bottom"}
+{"question": "why did the numbers go up", "label": "root_cause"}
+{"question": "i need help with my english essay", "label": "unclear"}
+{"question": "sales trend over the past year", "label": "trend"}
+{"question": "bottom 5 products with poorest performance", "label": "top_bottom"}
+{"question": "how do i become a millionaire", "label": "unclear"}
+{"question": "how does this chart relate to our business", "label": "explain"}
+{"question": "how strong is the correlation between price and quantity", "label": "correlation"}
+{"question": "export as table", "label": "raw_data"}
+{"question": "display the data table", "label": "raw_data"}
+{"question": "what's the statistical relationship between price and quantity", "label": "correlation"}
+{"question": "laters", "label": "smalltalk"}
+{"question": "how many planets are in our galaxie", "label": "unclear"}
+{"question": "locate data points that are off the charts", "label": "anomaly"}
+{"question": "unusual data points", "label": "anomaly"}
+{"question": "what's the monthly order trend", "label": "trend"}
+{"question": "no filters at all", "label": "refinement"}
+{"question": "what are the key takeaways from this graph", "label": "explain"}
+{"question": "i need a dashboard view of our performance", "label": "overview"}
+{"question": "can i get a high level summary", "label": "overview"}
+{"question": "how does this graph relate to our goals", "label": "explain"}
+{"question": "what's the story behind these numbers", "label": "explain"}
+{"question": "what's causing the blip in our stats", "label": "anomaly"}
+{"question": "i'm confused, can you explain", "label": "explain"}
+{"question": "outlier detection in financial reports", "label": "anomaly"}
+{"question": "see you tomorrow", "label": "smalltalk"}
+{"question": "spot anomalies in the numbers", "label": "anomaly"}
+{"question": "predicted order volume for q1", "label": "forecast"}
+{"question": "why the sudden jump", "label": "root_cause"}
+{"question": "visualize customer growth by year", "label": "trend"}
+{"question": "give me a fast overview of the key points", "label": "overview"}
+{"question": "can you show me the correlation between amount and boxes", "label": "correlation"}
+{"question": "what does the raw data look like", "label": "raw_data"}
+{"question": "dependencies between metrics", "label": "correlation"}
+{"question": "what's the pattern of revenue by quarter", "label": "trend"}
+{"question": "is there a link between price and volume", "label": "correlation"}
+{"question": "give me a quick rundown of our situation", "label": "overview"}
+{"question": "determine if units and revenue are correlated or independent", "label": "correlation"}
+{"question": "reset and compare with previous year", "label": "refinement"}
+{"question": "can you give me some notable insights", "label": "insights"}
+{"question": "nice to see you again", "label": "smalltalk"}
+{"question": "i could use a break from all this data", "label": "unclear"}
+{"question": "why did revenue take a hit", "label": "root_cause"}
+{"question": "i want to know whats going on", "label": "insights"}
+{"question": "can you tell me a story", "label": "unclear"}
+{"question": "is there a link between social media engagement and sales?", "label": "correlation"}
+{"question": "what are some surprising facts", "label": "insights"}
+{"question": "expected growth rate of our user base", "label": "forecast"}
+{"question": "whats the corelation between sales and customer demographics?", "label": "correlation"}
+{"question": "list the top 8 products with the highest revenue", "label": "top_bottom"}
+{"question": "i hope you have a great week", "label": "smalltalk"}
+{"question": "predicting future sales performance", "label": "forecast"}
+{"question": "appreciate it", "label": "smalltalk"}
+{"question": "rank customers by profitability", "label": "top_bottom"}
+{"question": "how does monthly revenue change", "label": "trend"}
+{"question": "test", "label": "unclear"}
+{"question": "plot the historic data of stock prices", "label": "trend"}
+{"question": "anything worth noting in the numbers", "label": "insights"}
+{"question": "category a exclusively", "label": "refinement"}
+{"question": "any unusual data points", "label": "anomaly"}
+{"question": "which country has the largest amount?", "label": "top_bottom"}
+{"question": "what's the current state of affairs?", "label": "overview"}
+{"question": "i like pizza", "label": "unclear"}
+{"question": "can you highlight whats notable", "label": "insights"}
+{"question": "revert to no filters", "label": "refinement"}
+{"question": "prediction of future growth", "label": "forecast"}
+{"question": "can you break down this data for me", "label": "explain"}
+{"question": "give me a top level view of our perfomance", "label": "overview"}
+{"question": "what's the point of this", "label": "unclear"}
+{"question": "its lovely to meet you", "label": "smalltalk"}
+{"question": "how are we doing comparied to last year", "label": "overview"}
+{"question": "give me the most important info", "label": "insights"}
+{"question": "reset filters to this year", "label": "refinement"}
+{"question": "what drives customer purchasing behavior?", "label": "correlation"}
+{"question": "reason for amount's recent drop", "label": "root_cause"}
+{"question": "disply the orginal rows", "label": "raw_data"}
+{"question": "i need a summary", "label": "overview"}
+{"question": "what are the main factors behind the growth", "label": "root_cause"}
+{"question": "i want to see whats poppin", "label": "insights"}
+{"question": "do you think artificial intelligence will surpass human intelligence", "label": "unclear"}
+{"question": "dont filter anything", "label": "refinement"}
+{"question": "long term forecast for stock prices", "label": "forecast"}
+{"question": "un.expected values in the db", "label": "anomaly"}
+{"question": "can you point out any surprises", "label": "insights"}
+{"question": "what's the unusual values", "label": "anomaly"}
+{"question": "see you when i see you", "label": "smalltalk"}
+{"question": "data points that dont fit", "label": "anomaly"}
+{"question": "diagnose the reason for the slump in sales", "label": "root_cause"}
+{"question": "anything notable in the statistics", "label": "insights"}
+{"question": "show me the most interesting stuff", "label": "insights"}
+{"question": "hey, hows everything going", "label": "smalltalk"}
+{"question": "whats the most important thing to know", "label": "insights"}
+{"question": "rank everything by profit, whats at the bottom", "label": "top_bottom"}
+{"question": "predicted income for the next 18 months", "label": "forecast"}
+{"question": "find anomalies in amount", "label": "anomaly"}
+{"question": "unexplained changes in the data", "label": "anomaly"}
+{"question": "i want to see it all", "label": "refinement"}
+{"question": "its been a while, how are things", "label": "smalltalk"}
+{"question": "i want to see the big picture", "label": "overview"}
+{"question": "bye for now, take care", "label": "smalltalk"}
+{"question": "sales over time", "label": "trend"}
+{"question": "what are the key performance indicators", "label": "overview"}
+{"question": "see the orginal dataset", "label": "raw_data"}
+{"question": "can you give me a brief rundown", "label": "overview"}
+{"question": "how's everything going on?", "label": "smalltalk"}
+{"question": "whats the expected amount of revenue for next quater", "label": "forecast"}
+{"question": "is it morning yet", "label": "unclear"}
+{"question": "what's worth knowing about this data", "label": "insights"}
+{"question": "how much revenue can we expect in the next quarter?", "label": "forecast"}
+{"question": "key observations", "label": "insights"}
+{"question": "how's everything going so far", "label": "overview"}
+{"question": "need to predict the next 3 quarters of sales", "label": "forecast"}
+{"question": "nice to meet u, tc", "label": "smalltalk"}
+{"question": "projection of future market conditions", "label": "forecast"}
+{"question": "has amount increased or decreased over time", "label": "trend"}
+{"question": "how does it look vs last year", "label": "refinement"}
+{"question": "which are the top 10 with the highest amount?", "label": "top_bottom"}
+{"question": "estimate future revenue", "label": "forecast"}
+{"question": "can you tell me whats going on with this graph", "label": "explain"}
+{"question": "what happend to cause the change", "label": "root_cause"}
+{"question": "the least sucessful sales peoples", "label": "top_bottom"}
+{"question": "can you explain why amount dropped", "label": "root_cause"}
+{"question": "amount, how has it changed over the years", "label": "trend"}
+{"question": "tell me whats goin on", "label": "insights"}
+{"question": "what are the projected earnings for the next 3 months?", "label": "forecast"}
+{"question": "can you tell me why amount's changing", "label": "root_cause"}
+{"question": "limit to 2024", "label": "refinement"}
+{"question": "give me a list of the top 12 products by revenue", "label": "top_bottom"}
+{"question": "monthly sales fluctuations", "label": "trend"}
+{"question": "can you give me a perfomance update?", "label": "overview"}
+{"question": "compared to the year before", "label": "refinement"}
+{"question": "hi, hows everything", "label": "smalltalk"}
+{"question": "filter by year 2024", "label": "refinement"}
+{"question": "visualize quarterly earnings trend", "label": "trend"}
+{"question": "give me a snapshot", "label": "overview"}
+{"question": "overall perfomance stats", "label": "overview"}
+{"question": "evening", "label": "smalltalk"}
+{"question": "track down weird discrepensies in the numbers", "label": "anomaly"}
+{"question": "why the numbers are down", "label": "root_cause"}
+{"question": "what is the pattern of sales over time", "label": "trend"}
+{"question": "thank you very much", "label": "smalltalk"}
+{"question": "seasonality of sales", "label": "trend"}
+{"question": "which customer is the most valuable", "label": "top_bottom"}
+{"question": "nice", "label": "smalltalk"}
+{"question": "provide a summary of our key metrics and perfomance", "label": "overview"}
+{"question": "show me the regions thats performing the worst", "label": "top_bottom"}
+{"question": "what are the main insights", "label": "insights"}
+{"question": "who are you", "label": "smalltalk"}
+{"question": "need a quick update on everythin", "label": "overview"}
+{"question": "are units and revenue related", "label": "correlation"}
+{"question": "can you recommand a movie", "label": "unclear"}
+{"question": "i need help with my math homework, but not really", "label": "unclear"}
+{"question": "list the 10 customers with the lowest sales figures", "label": "top_bottom"}
+{"question": "what are the key takeaways from this?", "label": "insights"}
+{"question": "how do sales fluctuate seasonally", "label": "trend"}
+{"question": "what drives the amount shipped in relation to boxes", "label": "correlation"}
+{"question": "give me the main points", "label": "overview"}
+{"question": "whats the weird data point", "label": "anomaly"}
+{"question": "what are the predicted sales for next quarter", "label": "forecast"}
+{"question": "amount's rising fast - what's behind it", "label": "root_cause"}
+{"question": "what are the outliers", "label": "anomaly"}
+{"question": "what can we learn from this data", "label": "insights"}
+{"question": "price and quantity: are they connected", "label": "correlation"}
+{"question": "until next time", "label": "smalltalk"}
+{"question": "nice to talk to you", "label": "smalltalk"}
+{"question": "tell me something i dont know", "label": "insights"}
+{"question": "show me the main dashboard", "label": "overview"}
+{"question": "show me the underlying rows", "label": "raw_data"}
+{"question": "detect unusual activity", "label": "anomaly"}
+{"question": "hey, whats going on?", "label": "smalltalk"}
+{"question": "give me the lowdown on the current metrics", "label": "explain"}
+{"question": "filter to current year", "label": "refinement"}
+{"question": "what story is this data trying to tell us?", "label": "explain"}
+{"question": "what are the main insights i should know", "label": "insights"}
+{"question": "refine to category a", "label": "refinement"}
+{"question": "i need to know everythin", "label": "unclear"}
+{"question": "i need to see the underlying records", "label": "raw_data"}
+{"question": "what's the most importent thing to know", "label": "insights"}
+{"question": "tell me about cats", "label": "unclear"}
+{"question": "is there a seasonal pattern in customer purchases", "label": "trend"}
+{"question": "estimated future profits", "label": "forecast"}
+{"question": "why the sudden drop in revenue", "label": "root_cause"}
+{"question": "can you write a poem about summer", "label": "unclear"}
+{"question": "the top ten with the most amount", "label": "top_bottom"}
+{"question": "tell me what's interesting here", "label": "insights"}
+{"question": "2024 only please", "label": "refinement"}
+{"question": "do you like music", "label": "unclear"}
+{"question": "values that are way off", "label": "anomaly"}
+{"question": "sales growth over the last year", "label": "trend"}
+{"question": "can you give me a quick rundown?", "label": "overview"}
+{"question": "show me the raw info", "label": "raw_data"}
+{"question": "can you summarize the key points?", "label": "overview"}
+{"question": "flagging suspicious account activty", "label": "anomaly"}
+{"question": "show me india", "label": "refinement"}
+{"question": "show the dataset", "label": "raw_data"}
+{"question": "summarize the highlights for me", "label": "insights"}
+{"question": "what are the reasons behind the drop in sales", "label": "root_cause"}
+{"question": "what's the overall insight from this data?", "label": "insights"}
+{"question": "i need the best 8 items", "label": "top_bottom"}
+{"question": "discover abnormal trends", "label": "anomaly"}
+{"question": "why did orders go down", "label": "root_cause"}
+{"question": "show the base data", "label": "raw_data"}
+{"question": "trend of sales over the last decade", "label": "trend"}
+{"question": "i want to see the outliers in this data", "label": "anomaly"}
+{"question": "brands that are doing the best", "label": "top_bottom"}
+{"question": "i dont get it, can you elaborate", "label": "explain"}
+{"question": "why is sales revenue decreasing?", "label": "root_cause"}
+{"question": "what are the raw rows", "label": "raw_data"}
+{"question": "relationship betweeen datas", "label": "correlation"}
+{"question": "how does amount correlate with boxes shipped", "label": "correlation"}
+{"question": "show revenue trend by month", "label": "trend"}
+{"question": "dont show returns", "label": "refinement"}
+{"question": "help me understand this", "label": "explain"}
+{"question": "tell me somethin interesting", "label": "insights"}
+{"question": "find the unusual values in the table", "label": "anomaly"}
+{"question": "diagnose the reason for the change", "label": "root_cause"}
+{"question": "what are some intersting trends in this data?", "label": "insights"}
+{"question": "can you explain this graph to me", "label": "explain"}
+{"question": "see you soon", "label": "smalltalk"}
+{"question": "good day", "label": "smalltalk"}
+{"question": "show me the worst and best selling products", "label": "top_bottom"}
+{"question": "analyze the trend of user retention rate", "label": "trend"}
+{"question": "find the weird data points for me", "label": "anomaly"}
+{"question": "projected earnings for next quarter", "label": "forecast"}
+{"question": "which are the 15 lowest ranked universities by student satisfaction", "label": "top_bottom"}
+{"question": "can you determine the relationship between marketing spend and revenue", "label": "correlation"}
+{"question": "what's the most notable aspect", "label": "insights"}
+{"question": "i want the sample data", "label": "raw_data"}
+{"question": "year over year comparision of revenue", "label": "trend"}
+{"question": "display sample records", "label": "raw_data"}
+{"question": "the worst brands to invest in", "label": "top_bottom"}
+{"question": "show unfiltered results", "label": "refinement"}
+{"question": "can you provide some actionable insights?", "label": "insights"}
+{"question": "long time no talk", "label": "smalltalk"}
+{"question": "how's everything going, give me a quick rundown", "label": "overview"}
+{"question": "show revenue by quarter", "label": "trend"}
+{"question": "thx for everythin", "label": "smalltalk"}
+{"question": "provide me with general info", "label": "unclear"}
+{"question": "anything worth knowing in this report", "label": "insights"}
+{"question": "last quarter data please", "label": "refinement"}
+{"question": "projection of income for the upcoming year", "label": "forecast"}
+{"question": "stuff thats actually worth looking at", "label": "insights"}
+{"question": "whats goin on with these numbers on the screen?", "label": "explain"}
+{"question": "what are the most interesting aspects", "label": "insights"}
+{"question": "i need help understanding the data", "label": "explain"}
+{"question": "any interesting trends or patterns", "label": "insights"}
+{"question": "find the salesperson with the lowest earnings", "label": "top_bottom"}
+{"question": "why did the metric rise so sharply", "label": "root_cause"}
+{"question": "begin with a clean slate", "label": "refinement"}
+{"question": "i have no idea whats happening", "label": "unclear"}
+{"question": "hey, hows everything", "label": "smalltalk"}
+{"question": "i need help with my math homework", "label": "unclear"}
+{"question": "is revenue dependent on the number of units sold", "label": "correlation"}
+{"question": "projected revenue for the upcoming year", "label": "forecast"}
+{"question": "what are the projected sales figures for next quarter", "label": "forecast"}
+{"question": "show me the table", "label": "raw_data"}
+{"question": "why is revenue down", "label": "root_cause"}
+{"question": "what are the exceptional values", "label": "anomaly"}
+{"question": "reasons for revenue drop", "label": "root_cause"}
+{"question": "display the 8 worst performing stocks by value", "label": "top_bottom"}
+{"question": "japan exclusion", "label": "refinement"}
+{"question": "what's the deal with turtles", "label": "unclear"}
+{"question": "i want to see whats surprising", "label": "insights"}
+{"question": "how do these stats relate to each other", "label": "explain"}
+{"question": "are there any surprises in the data", "label": "insights"}
+{"question": "how much money will we make in the next 3 years", "label": "forecast"}
+{"question": "finding data that is out of place", "label": "anomaly"}
+{"question": "what is your favret food", "label": "unclear"}
+{"question": "do amount and boxes shipped have a strong correlation", "label": "correlation"}
+{"question": "give me a list of regions from top to bottom", "label": "top_bottom"}
+{"question": "can u find me some correlated fields?", "label": "correlation"}
+{"question": "what's the reason for the increase", "label": "root_cause"}
+{"question": "predicting future order trends", "label": "forecast"}
+{"question": "something that dont add up", "label": "insights"}
+{"question": "could you estimate the figures for the next half year", "label": "forecast"}
+{"question": "can you show me the raw records?", "label": "raw_data"}
+{"question": "detect anomalies in this data set", "label": "anomaly"}
+{"question": "determine the root cause of the trend", "label": "root_cause"}
+{"question": "show the data without any aggregation", "label": "raw_data"}
+{"question": "i want to know how we're doing overall", "label": "overview"}
+{"question": "2024 only thanks", "label": "refinement"}
+{"question": "the bottom of the barrel: worst selling categories", "label": "top_bottom"}
+{"question": "forecast for next 3 quaters, whats it look like", "label": "forecast"}
+{"question": "can you give me a rundown of the key findings?", "label": "explain"}
+{"question": "what are the top 15 products with the most sales", "label": "top_bottom"}
+{"question": "give me an overview", "label": "overview"}
+{"question": "can you explane a meme to me", "label": "unclear"}
+{"question": "start fresh with no filters", "label": "refinement"}
+{"question": "hello, hope you're doing great", "label": "smalltalk"}
+{"question": "what is the meaning of this data visualization", "label": "explain"}
+{"question": "can you forecast the growth of our market share", "label": "forecast"}
+{"question": "show me sales trend", "label": "trend"}
+{"question": "wishing you a wonderful day", "label": "smalltalk"}
+{"question": "what's the main point of this visualization", "label": "explain"}
+{"question": "how many orders can we expect in the next 12 months", "label": "forecast"}
+{"question": "what's the factor behind the growth", "label": "root_cause"}
+{"question": "sales by month - is there a pattern?", "label": "trend"}
+{"question": "what does this chart indicate about our perfomance", "label": "explain"}
+{"question": "it's been a while, how have you been doing", "label": "smalltalk"}
+{"question": "only show 2024", "label": "refinement"}
+{"question": "how does revenue change by month", "label": "trend"}
+{"question": "where do we stand right now", "label": "overview"}
+{"question": "estimated revenue for the next fiscal year", "label": "forecast"}
+{"question": "find the black swans in the data", "label": "anomaly"}
+{"question": "can you describe what i'm looking at here", "label": "explain"}
+{"question": "what is the relationship between amount shipped and boxes", "label": "correlation"}
+{"question": "dont apply any filters", "label": "refinement"}
+{"question": "i want to examine the sample data", "label": "raw_data"}
+{"question": "what's the story behind the numbers", "label": "insights"}
+{"question": "show sample rows", "label": "raw_data"}
+{"question": "identify abnormal values", "label": "anomaly"}
+{"question": "why the growth stopped", "label": "root_cause"}
+{"question": "cheers mate", "label": "smalltalk"}
+{"question": "give me the lowdown on whats happening", "label": "insights"}
+{"question": "can you help me identify some weird data", "label": "anomaly"}
+{"question": "can you list the products with the highest and lowest sales", "label": "top_bottom"}
+{"question": "what does this visualization mean", "label": "explain"}
+{"question": "can you add electronics to the list", "label": "refinement"}
+{"question": "can you describe the atmospheric conditions", "label": "unclear"}
+{"question": "can you provide some context for this chart", "label": "explain"}
+{"question": "i really appreciate that", "label": "smalltalk"}
+{"question": "what's the best movie ever", "label": "unclear"}
+{"question": "filterless search", "label": "refinement"}
+{"question": "how do i interpret this data visualization", "label": "explain"}
+{"question": "show the first 100 records", "label": "raw_data"}
+{"question": "explain the cause of the decine", "label": "root_cause"}
+{"question": "factor analysis", "label": "correlation"}
+{"question": "why has there been a drop off in orders", "label": "root_cause"}
+{"question": "how do i set my watch", "label": "unclear"}
+{"question": "estimating the forecast for the next 3 quarters", "label": "forecast"}
+{"question": "forecast revenue for next year", "label": "forecast"}
+{"question": "can you provide a short summary of our acheivements", "label": "overview"}
+{"question": "can you provide context for this visualization?", "label": "explain"}
+{"question": "identify the correlations between data", "label": "correlation"}
+{"question": "what are the key insights from this data", "label": "insights"}
+{"question": "values that are way out of range", "label": "anomaly"}
+{"question": "restrict to india", "label": "refinement"}
+{"question": "any interesting patterns emerge", "label": "insights"}
+{"question": "investigate the cause of the orders decline", "label": "root_cause"}
+{"question": "can you show the raw table", "label": "raw_data"}
+{"question": "show data for karnataka", "label": "refinement"}
+{"question": "no filters please", "label": "refinement"}
+{"question": "give me a summary of our performance", "label": "overview"}
+{"question": "what jumps out", "label": "insights"}
+{"question": "what's the reason for the orders downturn", "label": "root_cause"}
+{"question": "give me an estimate of the next 3 quarter's performance", "label": "forecast"}
+{"question": "have a fantastic day ahead", "label": "smalltalk"}
+{"question": "clear all of them", "label": "refinement"}
+{"question": "identify the root cause of declining orders", "label": "root_cause"}
+{"question": "hey whats new", "label": "smalltalk"}
+{"question": "what values are far away from the mean", "label": "anomaly"}
+{"question": "hey, how's it going", "label": "smalltalk"}
+{"question": "projecting earnings per share for the next year", "label": "forecast"}
+{"question": "i need the original records", "label": "raw_data"}
+{"question": "thanks, catch you later", "label": "smalltalk"}
+{"question": "future outlook for the company's profits", "label": "forecast"}
+{"question": "what stands out in the analysis", "label": "insights"}
+{"question": "only 2025", "label": "refinement"}
+{"question": "good day to you", "label": "smalltalk"}
+{"question": "what's the pattern of sales by month", "label": "trend"}
+{"question": "highlight any strange occurrences", "label": "anomaly"}
+{"question": "without japan", "label": "refinement"}
+{"question": "narrow down to electronics", "label": "refinement"}
+{"question": "goodbye, see you later", "label": "smalltalk"}
+{"question": "what's the most interesting aspect of this", "label": "insights"}
+{"question": "which regions are at the bottom in terms of performance", "label": "top_bottom"}
+{"question": "identify data points that are way off", "label": "anomaly"}
+{"question": "can you give me some key insights?", "label": "insights"}
+{"question": "why did it go up", "label": "root_cause"}
+{"question": "what variables impact customer satisfaction", "label": "correlation"}
+{"question": "can you give me a rundown of this report", "label": "explain"}
+{"question": "can you recomend a book", "label": "unclear"}
+{"question": "what region is doing the worst", "label": "top_bottom"}
+{"question": "can you give me a summary of whats intresting", "label": "insights"}
+{"question": "i dont understand the trend on this graph, can you explain?", "label": "explain"}
+{"question": "whats the weather like", "label": "unclear"}
+{"question": "key things to take away", "label": "insights"}
+{"question": "apply filter for this year", "label": "refinement"}
+{"question": "give me some direction please", "label": "unclear"}
+{"question": "who are the least valuable customers", "label": "top_bottom"}
+{"question": "give me a snapshot of our perfomance", "label": "overview"}
+{"question": "play music", "label": "unclear"}
+{"question": "give me an estimate of future growth", "label": "forecast"}
+{"question": "i wanna see the whole table", "label": "raw_data"}
+{"question": "what's behind the downturn in orders", "label": "root_cause"}
+{"question": "estimated earnings per share for q2", "label": "forecast"}
+{"question": "show me the trend in revenue", "label": "trend"}
+{"question": "next years sales forecast", "label": "forecast"}
+{"question": "brands with the highest revenue", "label": "top_bottom"}
+{"question": "hello again", "label": "smalltalk"}
+{"question": "i want to discuss the weather", "label": "unclear"}
+{"question": "what will our revenue be in 2025", "label": "forecast"}
+{"question": "can i see the overall perfomance indicators", "label": "overview"}
+{"question": "categories with the poorest sales performance", "label": "top_bottom"}
+{"question": "how are we doing", "label": "overview"}
+{"question": "what values are outside the norm", "label": "anomaly"}
+{"question": "revenue leaders", "label": "top_bottom"}
+{"question": "?", "label": "unclear"}
+{"question": "predictive analysis for the next 6 months", "label": "forecast"}
+{"question": "predict revenue for next 3 quarters please", "label": "forecast"}
+{"question": "can you put into plain words what this data means?", "label": "explain"}
+{"question": "break this down for me", "label": "explain"}
+{"question": "you're a lifesaver", "label": "smalltalk"}
+{"question": "need to see the top 25 and worst 10", "label": "top_bottom"}
+{"question": "rank the top 3 products by amount made", "label": "top_bottom"}
+{"question": "highlight the most significent findings", "label": "insights"}
+{"question": "can you recommend a restaurant", "label": "unclear"}
+{"question": "how do sales change over the years", "label": "trend"}
+{"question": "can you share some insightful information", "label": "insights"}
+{"question": "anticipated customer acquisition costs", "label": "forecast"}
+{"question": "restrict to karnataka", "label": "refinement"}
+{"question": "trend analysis of revenue by quarter", "label": "trend"}
+{"question": "irregular transactions", "label": "anomaly"}
+{"question": "unusual fluctuations in the data", "label": "anomaly"}
+{"question": "show the base data now", "label": "raw_data"}
+{"question": "how does the world work", "label": "unclear"}
+{"question": "what led to the decrease in orders", "label": "root_cause"}
+{"question": "what does this chart represent", "label": "explain"}
+{"question": "show me the anomalies", "label": "anomaly"}
+{"question": "can you put this data into perspective", "label": "explain"}
+{"question": "clarify this chart", "label": "explain"}
+{"question": "how's it going, buddy", "label": "smalltalk"}
+{"question": "which region has the worst performance metrics", "label": "top_bottom"}
+{"question": "is it time for lunch", "label": "unclear"}
+{"question": "growth trend of social media followers over the past year", "label": "trend"}
+{"question": "what are the relationships between different metrics?", "label": "correlation"}
+{"question": "hello, how are things going?", "label": "smalltalk"}
+{"question": "detecting anomalous behavior", "label": "anomaly"}
+{"question": "how does our revenue change throughout the year", "label": "trend"}
+{"question": "can you teach me a language", "label": "unclear"}
+{"question": "explain this diagram in simple terms", "label": "explain"}
+{"question": "only karnataka from now on", "label": "refinement"}
+{"question": "what caused the downturn in our sales", "label": "root_cause"}
+{"question": "i'm looking for some interesting patterns", "label": "insights"}
+{"question": "great to meet you, talk to you soon", "label": "smalltalk"}
+{"question": "show the bottom 5 countries with the lowest life expectancy", "label": "top_bottom"}
+{"question": "can you list the top 5 sales performers", "label": "top_bottom"}
+{"question": "what is the trend of orders per month", "label": "trend"}
+{"question": "how do i interpret this information", "label": "explain"}
+{"question": "what are the worst selling categories", "label": "top_bottom"}
+{"question": "list the sales team from highest to lowest paid", "label": "top_bottom"}
+{"question": "i need an answer to nothin", "label": "unclear"}
+{"question": "show the dataset in its entirety", "label": "raw_data"}
+{"question": "unusual activity in the logs", "label": "anomaly"}
+{"question": "can i get a general overview of our results", "label": "overview"}
+{"question": "identify outliers in the dataset", "label": "anomaly"}
+{"question": "give me a sample of the rows", "label": "raw_data"}
+{"question": "give me the lowdown on whats goin on", "label": "insights"}
+{"question": "show me only karnataka", "label": "refinement"}
+{"question": "can you describe a beautiful sunset", "label": "unclear"}
+{"question": "hey, whats new with you?", "label": "smalltalk"}
+{"question": "seasonal fluctuation in profits", "label": "trend"}
+{"question": "what are the key takeaways from this chart", "label": "explain"}
+{"question": "what is the main point of this visualization", "label": "explain"}
+{"question": "anything interesting to point out", "label": "insights"}
+{"question": "what are the insights i should know", "label": "insights"}
+{"question": "can you talk about the weather", "label": "unclear"}
+{"question": "detect abnormal values in the column", "label": "anomaly"}
+{"question": "whats new with you?", "label": "smalltalk"}
+{"question": "what are the biggest 3 accounts we got", "label": "top_bottom"}
+{"question": "what are the most interesting facts?", "label": "insights"}
+{"question": "what's interesting about this data", "label": "insights"}
+{"question": "what are the projected sales figures for the next quarter?", "label": "forecast"}
+{"question": "rank the top 20 items for me", "label": "top_bottom"}
+{"question": "get me the daily trend data", "label": "trend"}
+{"question": "how do sales compare to industry benchmarks and trends?", "label": "correlation"}
+{"question": "do sales correlate with trade shows and events?", "label": "correlation"}
+{"question": "show me some interesting data points", "label": "insights"}
+{"question": "can you forecast the income for the next 12 months?", "label": "forecast"}
+{"question": "what's the reason for the recent fluctuation in amount", "label": "root_cause"}
+{"question": "are there any key insights", "label": "insights"}
+{"question": "weird data points that need explaining", "label": "anomaly"}
+{"question": "give me an overview of the most notable trends", "label": "insights"}
+{"question": "show me the top sales performers in the company", "label": "top_bottom"}
+{"question": "rank companies by reveneu", "label": "top_bottom"}
+{"question": "what's behind the decrease in amount", "label": "root_cause"}
+{"question": "detect unusual activity in the logs", "label": "anomaly"}
+{"question": "what are the key perfomance indicators?", "label": "overview"}
+{"question": "give me a list of the worst products", "label": "top_bottom"}
+{"question": "i only want 2024", "label": "refinement"}
+{"question": "why did we see a decrease", "label": "root_cause"}
+{"question": "give me an example of the data", "label": "raw_data"}
+{"question": "trend analysis of monthly expenses", "label": "trend"}
+{"question": "restrict to 2024", "label": "refinement"}
+{"question": "i wanna know whats linked to user retention", "label": "correlation"}
+{"question": "what's the predicted amount for next quarter", "label": "forecast"}
+{"question": "list the worst sales performers", "label": "top_bottom"}
+{"question": "highlight any values that are out of the ordinary", "label": "anomaly"}
+{"question": "i dont get it, can someone explain this graph?", "label": "explain"}
+{"question": "revenue prediction for the next 12 months", "label": "forecast"}
+{"question": "growth rate of user base by season", "label": "trend"}
+{"question": "can you disply the first 100 rows", "label": "raw_data"}
+{"question": "sales projection for the next year please", "label": "forecast"}
+{"question": "what led to the revenue downturn", "label": "root_cause"}
+{"question": "correlation between data points", "label": "correlation"}
+{"question": "can i get a summary of our perfomance to date", "label": "overview"}
+{"question": "which products have the lowest profit margins?", "label": "top_bottom"}
+{"question": "what's the best pun you know", "label": "unclear"}
+{"question": "why did revenue decrease so much", "label": "root_cause"}
+{"question": "show me whats standin out", "label": "insights"}
+{"question": "year over year growth trend", "label": "trend"}
+{"question": "do you think bigfoot is real or not", "label": "unclear"}
+{"question": "most popular product by sales", "label": "top_bottom"}
+{"question": "historical data trend pls", "label": "trend"}
+{"question": "detect abnormal values", "label": "anomaly"}
+{"question": "boxes shipped and amount shipped, correlated?", "label": "correlation"}
+{"question": "can i get a dashboard view?", "label": "overview"}
+{"question": "whats worth lookin into further", "label": "insights"}
+{"question": "can u tell me the time pls", "label": "unclear"}
+{"question": "how do variables interact with each other?", "label": "correlation"}
+{"question": "how r we doin", "label": "overview"}
+{"question": "why did revenue fall", "label": "root_cause"}
+{"question": "correlation between boxes shipped and amount recived", "label": "correlation"}
+{"question": "what made revenue go down", "label": "root_cause"}
+{"question": "point out weird values", "label": "anomaly"}
+{"question": "what's the cause of amount's decline", "label": "root_cause"}
+{"question": "hey, how was your week?", "label": "smalltalk"}
+{"question": "what is the definition of life", "label": "unclear"}
+{"question": "projecting sales for the next fiscal year", "label": "forecast"}
+{"question": "give me a summary of everything", "label": "overview"}
+{"question": "what are the notable trends", "label": "insights"}
+{"question": "how many dimensions are there in our universe, i think", "label": "unclear"}
+{"question": "does it have seasonality?", "label": "trend"}
+{"question": "help me understand what this chart is telling me", "label": "explain"}
+{"question": "find me the abnormal points", "label": "anomaly"}
+{"question": "find the odd one out in the numbers", "label": "anomaly"}
+{"question": "can you summarize the current status", "label": "overview"}
+{"question": "how has sales changed over time", "label": "trend"}
+{"question": "projected increase in website traffic for the next quarter", "label": "forecast"}
+{"question": "reasons for the improvement", "label": "root_cause"}
+{"question": "who r our best customers", "label": "top_bottom"}
+{"question": "which 3 accounts are the largest", "label": "top_bottom"}
+{"question": "merci", "label": "smalltalk"}
+{"question": "can you uncover the relationships between supply chain metrics", "label": "correlation"}
+{"question": "why did it drop so much", "label": "root_cause"}
+{"question": "how much revenue can we expect in 2024", "label": "forecast"}
+{"question": "most successful companies by revenue", "label": "top_bottom"}
+{"question": "anything that raises an eyebrow", "label": "insights"}
+{"question": "hey whats good", "label": "smalltalk"}
+{"question": "dont use any filters", "label": "refinement"}
+{"question": "give me an executive summary", "label": "overview"}
+{"question": "show me highlights", "label": "insights"}
+{"question": "show me last quarter's", "label": "refinement"}
+{"question": "what's worth knowing about this data?", "label": "insights"}
+{"question": "what does this metric represent", "label": "explain"}
+{"question": "projected sales for the next quarter and two following", "label": "forecast"}
+{"question": "what are the main points of interest", "label": "insights"}
+{"question": "odd spikes in amount", "label": "anomaly"}
+{"question": "amount shipped and boxes: is there a connection", "label": "correlation"}
+{"question": "have a gr8 day", "label": "smalltalk"}
+{"question": "how do i make sence of this info", "label": "explain"}
+{"question": "what will amount be next month", "label": "forecast"}
+{"question": "forecast the sales figures for next quarter", "label": "forecast"}
+{"question": "predict the sales trend for the next year", "label": "forecast"}
+{"question": "history of revenue", "label": "trend"}
+{"question": "i need to know whats going on", "label": "insights"}
+{"question": "have a nice evening", "label": "smalltalk"}
+{"question": "how will our sales change in the future", "label": "forecast"}
+{"question": "can you give me an exec summary", "label": "overview"}
+{"question": "find values that dont fit", "label": "anomaly"}
+{"question": "how do these measures interact", "label": "correlation"}
+{"question": "what caused the drop in sales", "label": "root_cause"}
+{"question": "is there a link between amount and boxes shipped", "label": "correlation"}
+{"question": "this year only pls", "label": "refinement"}
+{"question": "what is the trend of our companys income over the past 5 years", "label": "trend"}
+{"question": "what's worth noting in this data?", "label": "insights"}
+{"question": "how much sales can we expect next year", "label": "forecast"}
+{"question": "what r the worst 5 states by crime rate", "label": "top_bottom"}
+{"question": "give me a list of the bottom 10 products by profit", "label": "top_bottom"}
+{"question": "help", "label": "unclear"}
+{"question": "i'm confused, can you clarify what this graph represents?", "label": "explain"}
+{"question": "growth prospects for the next 3 years", "label": "forecast"}
+{"question": "projected income for the next 5 years", "label": "forecast"}
+{"question": "trend of revenue by season", "label": "trend"}
+{"question": "can you analyze the correlation between price and quantity", "label": "correlation"}
+{"question": "give me the bottom 10% of regions by performance", "label": "top_bottom"}
+{"question": "what are the key findings", "label": "insights"}
+{"question": "i need to know whats happening", "label": "insights"}
+{"question": "what is this dashboard trying to tell me", "label": "explain"}
+{"question": "hi buddy boy", "label": "smalltalk"}
+{"question": "reason for the decline", "label": "root_cause"}
+{"question": "what is the seasonal pattern of income", "label": "trend"}
+{"question": "rank the top 3 accounts", "label": "top_bottom"}
+{"question": "can you provide some context for this dashboard", "label": "explain"}
+{"question": "seasonal fluctuations in customer engagement", "label": "trend"}
+{"question": "what's the prediction for customer engagement next quarter", "label": "forecast"}
+{"question": "i'm looking for a new phone case", "label": "unclear"}
+{"question": "can you explain the decline", "label": "root_cause"}
+{"question": "data points that are extremely high or low", "label": "anomaly"}
+{"question": "forecasting sales for the next 9 months", "label": "forecast"}
+{"question": "can you provide context for this graph", "label": "explain"}
+{"question": "can you give me a forecast of the sales amount for the next 6 months", "label": "forecast"}
+{"question": "the first 10 by amount in order", "label": "top_bottom"}
+{"question": "how's the company doing, give me a summary", "label": "overview"}
+{"question": "who played in the last super bowl", "label": "unclear"}
+{"question": "is there seasonality in website traffic", "label": "trend"}
+{"question": "can you elaborate on this chart's findings", "label": "explain"}
+{"question": "identify abnormalitys in the database", "label": "anomaly"}
+{"question": "display the top 3 items with the most sales", "label": "top_bottom"}
+{"question": "i dont understand whats bein shown", "label": "explain"}
+{"question": "can you show the raw dataset", "label": "raw_data"}
+{"question": "can you predict the sales figures for q1 next year?", "label": "forecast"}
+{"question": "show me only category a items", "label": "refinement"}
+{"question": "time series analysis of sales data", "label": "trend"}
+{"question": "how do i make sense of this data", "label": "explain"}
+{"question": "what caused the boost", "label": "root_cause"}
+{"question": "data that doesnt follow the trend", "label": "anomaly"}
+{"question": "can you provide a top level overview of our results", "label": "overview"}
+{"question": "what caused the downturn", "label": "root_cause"}
+{"question": "estimate the sales for the next quarter based on historical data", "label": "forecast"}
+{"question": "last quarter, thats all", "label": "refinement"}
+{"question": "meaning of life", "label": "unclear"}
+{"question": "do aliens exist or somethin", "label": "unclear"}
+{"question": "clear out all the filters", "label": "refinement"}
+{"question": "projection of profit for next fiscal year", "label": "forecast"}
+{"question": "you too, have a great one", "label": "smalltalk"}
+{"question": "worst sales peoples", "label": "top_bottom"}
+{"question": "can you clarify whats going on in this graph", "label": "explain"}
+{"question": "give me a sample of the raw data", "label": "raw_data"}
+{"question": "forecasting the revenue for 2027 and 2028", "label": "forecast"}
+{"question": "looking for unusual patterns", "label": "anomaly"}
+{"question": "i need to find the anomalies", "label": "anomaly"}
+{"question": "excluding japan", "label": "refinement"}
+{"question": "what are the outliers in this data", "label": "anomaly"}
+{"question": "display abnormal data points", "label": "anomaly"}
+{"question": "revenue growth over time", "label": "trend"}
+{"question": "dependency between measures", "label": "correlation"}
+{"question": "clear filter settings", "label": "refinement"}
+{"question": "time series analysis of website usage", "label": "trend"}
+{"question": "hi there", "label": "smalltalk"}
+{"question": "show without september", "label": "refinement"}
+{"question": "display the underlying dataset", "label": "raw_data"}
+{"question": "looking forward to seeing you", "label": "smalltalk"}
+{"question": "insightful observations from the research", "label": "insights"}
+{"question": "can i get a high level overview?", "label": "overview"}
+{"question": "compare sales by month for last 5 years", "label": "trend"}
+{"question": "causal factors of the rise", "label": "root_cause"}
+{"question": "can you explain this in simpler terms", "label": "explain"}
+{"question": "last quarter is what i need", "label": "refinement"}
+{"question": "growth rate year by year", "label": "trend"}
+{"question": "next years projected revenue", "label": "forecast"}
+{"question": "rank brands by sales", "label": "top_bottom"}
+{"question": "how does this dashboard work", "label": "explain"}
+{"question": "show me the correlation between different data points", "label": "correlation"}
+{"question": "what are the anomalous values", "label": "anomaly"}
+{"question": "break it down into smaller pieces", "label": "explain"}
+{"question": "rank from worst to best", "label": "top_bottom"}
+{"question": "what are the projected earnings for q2?", "label": "forecast"}
+{"question": "can you provide a brief overview of our progress?", "label": "overview"}
+{"question": "hope everythin goes well", "label": "smalltalk"}
+{"question": "can you show me whats unique", "label": "insights"}
+{"question": "show a sample of the data", "label": "raw_data"}
+{"question": "average monthly increase in subscriptions", "label": "trend"}
+{"question": "how is everything going in general", "label": "overview"}
+{"question": "what's the one thing i should know?", "label": "insights"}
+{"question": "reasons for the recent spike", "label": "root_cause"}
+{"question": "what are the key indicators i should be looking at?", "label": "overview"}
+{"question": "it was great talking to you, bye", "label": "smalltalk"}
+{"question": "show karnataka info", "label": "refinement"}
+{"question": "can you give me a simple explanation", "label": "explain"}
+{"question": "what's the sales trend like by month", "label": "trend"}
+{"question": "how come sales have been dropping lately?", "label": "root_cause"}
+{"question": "what will our order volume be in 2025", "label": "forecast"}
+{"question": "rank the products with the highest amount, give me the top 3", "label": "top_bottom"}
+{"question": "what's the trendline look like", "label": "trend"}
+{"question": "forecasting the demand for our products in 2024", "label": "forecast"}
+{"question": "describe the trends you see", "label": "explain"}
+{"question": "i need a song written", "label": "unclear"}
+{"question": "what's the relationship between these two variables?", "label": "correlation"}
+{"question": "filters should be empty", "label": "refinement"}
+{"question": "i'm really grateful", "label": "smalltalk"}
+{"question": "why has amount been fluctuating", "label": "root_cause"}
+{"question": "give me the lowdown on this", "label": "insights"}
+{"question": "can you shed some light on this", "label": "explain"}
+{"question": "which regions are at the bottom", "label": "top_bottom"}
+{"question": "summarise the data", "label": "overview"}
+{"question": "projection of the company's future performance", "label": "forecast"}
+{"question": "youre welcome, anytime", "label": "smalltalk"}
+{"question": "do you like pineapple on pizza", "label": "unclear"}
+{"question": "anything notable to know", "label": "insights"}
+{"question": "can you explain the surge", "label": "root_cause"}
+{"question": "how much do boxes shipped affect amount shipped", "label": "correlation"}
+{"question": "can you show me the connection between units and revenue", "label": "correlation"}
+{"question": "what does this report mean", "label": "explain"}
+{"question": "i need a simple explanation of what this dashboard is showing", "label": "explain"}
+{"question": "who is the president", "label": "unclear"}
+{"question": "filter returns off", "label": "refinement"}
+{"question": "what are the key drivers of correlation in this dataset?", "label": "correlation"}
+{"question": "key takeaways", "label": "insights"}
+{"question": "what are some key findings", "label": "insights"}
+{"question": "show me the raw data please", "label": "raw_data"}
+{"question": "can you diagnose the reason for the drop", "label": "root_cause"}
+{"question": "what time do clocks strike", "label": "unclear"}
+{"question": "examine reasons for revenue decrease", "label": "root_cause"}
+{"question": "what am i looking at", "label": "explain"}
+{"question": "can i see the underlying table", "label": "raw_data"}
+{"question": "find data thats off the charts", "label": "anomaly"}
+{"question": "what factors affect revenue", "label": "correlation"}
+{"question": "is it possible to communicate with animals", "label": "unclear"}
+{"question": "give me some highlights", "label": "insights"}
+{"question": "what are the key takeaways", "label": "insights"}
+{"question": "can you explain the rules of chess", "label": "unclear"}
+{"question": "unusual peaks in our dashboard", "label": "anomaly"}
+{"question": "why did we see a surge in sales", "label": "root_cause"}
+{"question": "projected revenue for the next fiscal year", "label": "forecast"}
+{"question": "i dont have a watch whats the time", "label": "unclear"}
+{"question": "rank regions by revenue from smallest to largest", "label": "top_bottom"}
+{"question": "only electronic products", "label": "refinement"}
+{"question": "i'm looking for correlated variables, can you help?", "label": "correlation"}
+{"question": "can you give me a rundown of this graph", "label": "explain"}
+{"question": "do you like reading books", "label": "unclear"}
+{"question": "identify data anomalies", "label": "anomaly"}
+{"question": "how are we doing overall", "label": "overview"}
+{"question": "take care, bye", "label": "smalltalk"}
+{"question": "show me the top performing regions", "label": "top_bottom"}
+{"question": "how come our sales are falling?", "label": "root_cause"}
+{"question": "how's the company doing at the moment", "label": "overview"}
+{"question": "how do external factors impact our sales numbers?", "label": "correlation"}
+{"question": "whats the correlation between website traffic and conversion", "label": "correlation"}
+{"question": "current year filter", "label": "refinement"}
+{"question": "i'm not sure what i'm looking at, can you clarify?", "label": "explain"}
+{"question": "show me the best and worst products by sales", "label": "top_bottom"}
+{"question": "give me a rundown of this dashboard", "label": "explain"}
+{"question": "show a few rows", "label": "raw_data"}
+{"question": "are there any values that are way off", "label": "anomaly"}
+{"question": "can you highlight something worth knowing", "label": "insights"}
+{"question": "what's the trend of cost by year", "label": "trend"}
+{"question": "who are the top 3 worst clients", "label": "top_bottom"}
+{"question": "detect spikes in the data", "label": "anomaly"}
+{"question": "nice one", "label": "smalltalk"}
+{"question": "unusual data point detection", "label": "anomaly"}
+{"question": "future sales predictions", "label": "forecast"}
+{"question": "i wish you a great day ahead", "label": "smalltalk"}
+{"question": "what's the biggest surprise", "label": "insights"}
+{"question": "what triggered the uptick", "label": "root_cause"}
+{"question": "can someone tell me whats going on", "label": "explain"}
+{"question": "data anomaly identification", "label": "anomaly"}
+{"question": "afternoon", "label": "smalltalk"}
+{"question": "i'm confused, can you clarify this graph", "label": "explain"}
+{"question": "can i c the first 100 rows", "label": "raw_data"}
+{"question": "tell me about your weekend", "label": "unclear"}
+{"question": "gr8 day isnt it", "label": "smalltalk"}
+{"question": "can you tell me y orders hav fallen", "label": "root_cause"}
+{"question": "why isnt revenue growing", "label": "root_cause"}
+{"question": "whats the time in london right now", "label": "unclear"}
+{"question": "give me the yearly trend", "label": "trend"}
+{"question": "is there anything that stands out", "label": "insights"}
+{"question": "projected sales for next year?", "label": "forecast"}
+{"question": "you're welcome, bye", "label": "smalltalk"}
+{"question": "hiya", "label": "smalltalk"}
+{"question": "show me the historical trend", "label": "trend"}
+{"question": "dump the data", "label": "raw_data"}
+{"question": "what's the current perfomance trends", "label": "overview"}
+{"question": "can you give me a quick rundown", "label": "overview"}
+{"question": "sales trend - is it going up or down", "label": "trend"}
+{"question": "can you make me smile", "label": "unclear"}
+{"question": "show just 2024", "label": "refinement"}
+{"question": "monthly flucuations in stock prices", "label": "trend"}
+{"question": "show me the bottom 10 worst products", "label": "top_bottom"}
+{"question": "what data points are considdered outliers", "label": "anomaly"}
+{"question": "who r the best sales ppl", "label": "top_bottom"}
+{"question": "what is the sales trend over time", "label": "trend"}
+{"question": "can you plot sales data by season", "label": "trend"}
+{"question": "what is the best way to make a peanut butter and jelly sandwich", "label": "unclear"}
+{"question": "key observations from the study", "label": "insights"}
+{"question": "anything intresting to note", "label": "insights"}
+{"question": "can you explain the plot of inception", "label": "unclear"}
+{"question": "anything interesting to note", "label": "insights"}
+{"question": "can you tell me whats going on in the dataset", "label": "insights"}
+{"question": "next quarter sales forecast, can you show me the numbers?", "label": "forecast"}
+{"question": "nice one, great to meet you", "label": "smalltalk"}
+{"question": "projections for the next fiscal year", "label": "forecast"}
+{"question": "got any humor to share", "label": "unclear"}
+{"question": "what's the point of this chart", "label": "explain"}
+{"question": "measure growth by season", "label": "trend"}
+{"question": "unusual patterns", "label": "anomaly"}
+{"question": "annual sales pattern", "label": "trend"}
+{"question": "provide a top level summary", "label": "overview"}
+{"question": "find the values that dont fit the trend", "label": "anomaly"}
+{"question": "whats the main thing i should take away", "label": "insights"}
+{"question": "what does the raw table look like", "label": "raw_data"}
+{"question": "browse the data", "label": "raw_data"}
+{"question": "rank our customers from best to worst", "label": "top_bottom"}
+{"question": "need a summary of all metrics", "label": "overview"}
+{"question": "give me a summary of the key findings", "label": "insights"}
+{"question": "show me only 2024 data", "label": "refinement"}
+{"question": "it was good talking to you", "label": "smalltalk"}
+{"question": "provide a company wide snapshot", "label": "overview"}
+{"question": "show me the data sample", "label": "raw_data"}
+{"question": "get rid of all the filters", "label": "refinement"}
+{"question": "anticipated orders for the next 18 months", "label": "forecast"}
+{"question": "give me insights", "label": "insights"}
+{"question": "what is the driver of the price quantity relationship", "label": "correlation"}
+{"question": "weekly sales pattern", "label": "trend"}
+{"question": "the 5 lowest ranked", "label": "top_bottom"}
+{"question": "what's the predicted value of the metric next quarter", "label": "forecast"}
+{"question": "which customers have the worst 5 sales records", "label": "top_bottom"}
+{"question": "show me how our revenue changes by month", "label": "trend"}
+{"question": "whats the predicted revenue for q2", "label": "forecast"}
+{"question": "what lead to the improvement", "label": "root_cause"}
+{"question": "i want to see the whole picture", "label": "overview"}
+{"question": "hi how are you", "label": "smalltalk"}
+{"question": "how do orders change over time", "label": "trend"}
+{"question": "notable findings", "label": "insights"}
+{"question": "what's the link between price and quantity", "label": "correlation"}
+{"question": "rank the bottom 5 by sales", "label": "top_bottom"}
+{"question": "i'm looking for a brief summary of our busness", "label": "overview"}
+{"question": "show me the major milestones", "label": "overview"}
+{"question": "can you give me some insight into this graph", "label": "explain"}
+{"question": "give an overview of our perfomance", "label": "overview"}
+{"question": "can you display all the data", "label": "raw_data"}
+{"question": "what are the top line numbers", "label": "overview"}
+{"question": "i'm not sure what to make of this", "label": "explain"}
+{"question": "do not display japan", "label": "refinement"}
+{"question": "add the electronics category", "label": "refinement"}
+{"question": "what does the overall data say", "label": "overview"}
+{"question": "how are we doing overall?", "label": "overview"}
+{"question": "prediction for the next 12 months", "label": "forecast"}
+{"question": "how's everything going?", "label": "overview"}
+{"question": "whats the current situation?", "label": "overview"}
+{"question": "rank categories by sales: bottom 10", "label": "top_bottom"}
+{"question": "what will the sales be like next year", "label": "forecast"}
+{"question": "what's the main takeaway from this report", "label": "explain"}
+{"question": "i need help understanding the trends", "label": "explain"}
+{"question": "just last year and this year", "label": "refinement"}
+{"question": "why did amount change recently", "label": "root_cause"}
+{"question": "quarterly trend", "label": "trend"}
+{"question": "explain why order volume has decreased", "label": "root_cause"}
+{"question": "time series analysis of stock prices", "label": "trend"}
+{"question": "units vs revenue: whats the correlation", "label": "correlation"}
+{"question": "how was your day so far?", "label": "smalltalk"}
+{"question": "drivers of change in the data", "label": "correlation"}
+{"question": "what am i looking at here", "label": "explain"}
+{"question": "what are the main metrics i should be looking at?", "label": "overview"}
+{"question": "what drives the correlation between these two measures?", "label": "correlation"}
+{"question": "underperforming products", "label": "top_bottom"}
+{"question": "can you filter by electronics", "label": "refinement"}
+{"question": "now only karnataka please", "label": "refinement"}
+{"question": "what is the correlation between price and quantity sold", "label": "correlation"}
+{"question": "i need help understanding this visual", "label": "explain"}
+{"question": "find the top 20 products with the highest sales figures", "label": "top_bottom"}
+{"question": "what are the key metrics i should know?", "label": "overview"}
+{"question": "nite", "label": "smalltalk"}
+{"question": "give me an overview of our current performance", "label": "overview"}
+{"question": "what stands out", "label": "insights"}
+{"question": "why did it go down", "label": "root_cause"}
+{"question": "executive summary please", "label": "overview"}
+{"question": "time series sales analysis", "label": "trend"}
+{"question": "remove japan from results", "label": "refinement"}
+{"question": "can someone explain stuff", "label": "unclear"}
+{"question": "can you break down the data for me?", "label": "explain"}
+{"question": "can i get a recipe", "label": "unclear"}
+{"question": "can you give me some interesting facts", "label": "insights"}
+{"question": "what contributted to the rise", "label": "root_cause"}
+{"question": "what color is the sky on a sunny day", "label": "unclear"}
+{"question": "can you explain this chart to me", "label": "explain"}
+{"question": "what's the trend of website traffic by month", "label": "trend"}
+{"question": "show me some interesting trends", "label": "insights"}
+{"question": "forecasting revenue for the next 3 years", "label": "forecast"}
+{"question": "amount vs boxes shipped: what's the correlation", "label": "correlation"}
+{"question": "can you show me the overall trend?", "label": "overview"}
+{"question": "what's the most notable thing here", "label": "insights"}
+{"question": "status report", "label": "overview"}
+{"question": "reset to india", "label": "refinement"}
+{"question": "what's the correlation like between these two variables?", "label": "correlation"}
+{"question": "uncover the reason for revenue drop", "label": "root_cause"}
+{"question": "flag unusual values", "label": "anomaly"}
+{"question": "what was the catalyst for the growth", "label": "root_cause"}
+{"question": "give me the high level view", "label": "overview"}
+{"question": "what's the general outlook", "label": "overview"}
+{"question": "can someone shed some light on these statistics?", "label": "explain"}
+{"question": "how do quantity and price affect each other", "label": "correlation"}
+{"question": "now show karnataka", "label": "refinement"}
+{"question": "which salesperson makes the most money", "label": "top_bottom"}
+{"question": "only india data", "label": "refinement"}
+{"question": "what stands out in the data", "label": "insights"}
+{"question": "what are the bottom 5 products by profit", "label": "top_bottom"}
+{"question": "reset all filter settings", "label": "refinement"}
+{"question": "how's the trend been so far this year", "label": "trend"}
+{"question": "who are the least successful", "label": "top_bottom"}
+{"question": "i wanna see the raw rows", "label": "raw_data"}
+{"question": "whats the deal with jokes anyway", "label": "unclear"}
+{"question": "give me a sales forecast for the next year", "label": "forecast"}
+{"question": "l8r", "label": "smalltalk"}
+{"question": "how's the company doing overall?", "label": "overview"}
+{"question": "list the best 5 cities by highest average salary", "label": "top_bottom"}
+{"question": "need an overview of our current performance", "label": "overview"}
+{"question": "what's the current state of our company?", "label": "overview"}
+{"question": "howdy", "label": "smalltalk"}
+{"question": "can you explain how to ride a bike", "label": "unclear"}
+{"question": "products ranked by sales performance", "label": "top_bottom"}
+{"question": "hey, whats going on", "label": "smalltalk"}
+{"question": "what is the expected sales growth for next year", "label": "forecast"}
+{"question": "what are the main highlights?", "label": "overview"}
+{"question": "give me the top 8 countries with the most forests", "label": "top_bottom"}
+{"question": "pattern of sales over the years", "label": "trend"}
+{"question": "what's notable in the latest reports", "label": "insights"}
+{"question": "what is driving the upward trend", "label": "root_cause"}
+{"question": "display the sample", "label": "raw_data"}
+{"question": "investigate the cause of the shift", "label": "root_cause"}
+{"question": "show me the spikes in the data", "label": "anomaly"}
+{"question": "what are the underlying dependencies between business metrics", "label": "correlation"}
+{"question": "forecasting sales for the next fiscal year", "label": "forecast"}
+{"question": "largest 3 accounts", "label": "top_bottom"}
+{"question": "should i wear shorts", "label": "unclear"}
+{"question": "find the bottom 10% of sales reps", "label": "top_bottom"}
+{"question": "what's the underlying cause of the growth", "label": "root_cause"}
+{"question": "show raw rows", "label": "raw_data"}
+{"question": "is sales increasin over time", "label": "trend"}
+{"question": "give me a rundown of what im seeing here", "label": "explain"}
+{"question": "current year", "label": "refinement"}
+{"question": "stuff thats worth knowing about the market", "label": "insights"}
+{"question": "can you give me some insight", "label": "insights"}
+{"question": "can you show the original data", "label": "raw_data"}
+{"question": "give a general outline", "label": "overview"}
+{"question": "filter by karnataka", "label": "refinement"}
+{"question": "give me the 10,000 foot view", "label": "overview"}
+{"question": "whats the point of askin questions", "label": "unclear"}
+{"question": "can u show me the top 25 products by earnings?", "label": "top_bottom"}
+{"question": "what's the current status of our operations", "label": "overview"}
+{"question": "3 largest accounts pls", "label": "top_bottom"}
+{"question": "can u forecast the revenue for next yr", "label": "forecast"}
+{"question": "find the values that stick out", "label": "anomaly"}
+{"question": "can you show me whats worth knowing?", "label": "insights"}
+{"question": "goodnight and sweet dreams", "label": "smalltalk"}
+{"question": "get me electronics stuff", "label": "refinement"}
+{"question": "how much will we make in 2029", "label": "forecast"}
+{"question": "how have you been", "label": "smalltalk"}
+{"question": "can you show the data dump", "label": "raw_data"}
+{"question": "lets talk about sports", "label": "unclear"}
+{"question": "what's the significance of this plot", "label": "explain"}
+{"question": "find unusual spikes in data", "label": "anomaly"}
+{"question": "what is the best movie ever", "label": "unclear"}
+{"question": "do u have a clock", "label": "unclear"}
+{"question": "how's it lookin outside", "label": "unclear"}
+{"question": "estimated revenue for the coming quarter", "label": "forecast"}
+{"question": "anything stand out to you", "label": "insights"}
+{"question": "show me the orginal table", "label": "raw_data"}
+{"question": "what are we looking at here", "label": "explain"}
+{"question": "unapply all filters", "label": "refinement"}
+{"question": "display yearly trend of user engagement", "label": "trend"}
+{"question": "hey, hows life treating you", "label": "smalltalk"}
+{"question": "what is behind the growth", "label": "root_cause"}
+{"question": "provide context for the figures", "label": "explain"}
+{"question": "orders are down, whats the reason", "label": "root_cause"}
+{"question": "projecting future order growth", "label": "forecast"}
+{"question": "do you like pineapple pizza", "label": "unclear"}
+{"question": "what's the best type of music", "label": "unclear"}
+{"question": "growth over the past year", "label": "trend"}
+{"question": "what time is it", "label": "unclear"}
+{"question": "noteworthy trends or observations", "label": "insights"}
+{"question": "have a good day", "label": "smalltalk"}
+{"question": "can u explain somethin to me", "label": "unclear"}
+{"question": "yearly and quarterly fluctuations", "label": "trend"}
+{"question": "show me the unprocessed data", "label": "raw_data"}
+{"question": "i dont want to see returns", "label": "refinement"}
+{"question": "how do different measures relate to each other", "label": "correlation"}
+{"question": "what drives sales", "label": "correlation"}
+{"question": "show me the executive summary", "label": "overview"}
+{"question": "identify root cause of revenue fall", "label": "root_cause"}
+{"question": "what's the story behind this plot?", "label": "explain"}
+{"question": "can you provide context for this data", "label": "explain"}
+{"question": "can you highlight something interesting", "label": "insights"}
+{"question": "i owe you one", "label": "smalltalk"}
+{"question": "can you summarize our perfomance in a nutshell", "label": "overview"}
+{"question": "only for last quarter", "label": "refinement"}
+{"question": "show me the table and all its columns", "label": "raw_data"}
+{"question": "whats the big picture here", "label": "insights"}
+{"question": "which regions are performing the worst?", "label": "top_bottom"}
+{"question": "identify abnormal patterns", "label": "anomaly"}
+{"question": "is there a link between these numbers", "label": "correlation"}
+{"question": "why did it go up so much", "label": "root_cause"}
+{"question": "show me the trend of sales over time", "label": "trend"}
+{"question": "what's the best way to learn spanish", "label": "unclear"}
+{"question": "write me a poem", "label": "unclear"}
+{"question": "yearly trend of customer purchases", "label": "trend"}
+{"question": "what is the meaning of life", "label": "unclear"}
+{"question": "what's the quarterly trend of server requests", "label": "trend"}
+{"question": "what's interesting about this information?", "label": "insights"}
+{"question": "only cat a", "label": "refinement"}
+{"question": "show me the dependencies between metrics", "label": "correlation"}
+{"question": "what was the differece last year", "label": "refinement"}
+{"question": "show the top and bottom 3 brands", "label": "top_bottom"}
+{"question": "forecast revenue for the next 6 months", "label": "forecast"}
+{"question": "what are the bottom performing regions so far", "label": "top_bottom"}
+{"question": "i want to see a high level summary of our perfomance", "label": "overview"}
+{"question": "orders trend from month to month", "label": "trend"}
+{"question": "is ther a strong correlation between sales and advertising spend?", "label": "correlation"}
+{"question": "what's the expected sales amount for next quarter?", "label": "forecast"}
+{"question": "how r things with you?", "label": "smalltalk"}
+{"question": "revenue ranking from top to bottom", "label": "top_bottom"}
+{"question": "show me the top line numbers", "label": "overview"}
+{"question": "can you forecast the next 3 quarters of revenue", "label": "forecast"}
+{"question": "list the top 3 regions with the smallest revenue", "label": "top_bottom"}
+{"question": "i dont understand anythin", "label": "unclear"}
+{"question": "compare this year's sales to last year's", "label": "trend"}
+{"question": "how do amount and boxes shipped relate to each other", "label": "correlation"}
+{"question": "go back to original data", "label": "refinement"}
+{"question": "i dont understand whats being shown here", "label": "explain"}
+{"question": "orders per month trend", "label": "trend"}
+{"question": "get me the source data", "label": "raw_data"}
+{"question": "can you translate this chart into something easier to understand?", "label": "explain"}
+{"question": "can you sumarize our perfomance", "label": "overview"}
+{"question": "what's the trend of sales by region over time", "label": "trend"}
+{"question": "what salesperson has the lowest sales", "label": "top_bottom"}
+{"question": "what's the abnormal data point", "label": "anomaly"}
+{"question": "finding glitchs in the data", "label": "anomaly"}
+{"question": "walk me thru this visualization", "label": "explain"}
+{"question": "pinpoint weird data", "label": "anomaly"}
+{"question": "why the sudden change in amount", "label": "root_cause"}
+{"question": "can you support me", "label": "unclear"}
+{"question": "whats the deal with that", "label": "unclear"}
+{"question": "key takeaways from the report", "label": "insights"}
+{"question": "the 10 best by amount", "label": "top_bottom"}
+{"question": "can you show me the dashboard?", "label": "overview"}
+{"question": "historical trend of user engagement", "label": "trend"}
+{"question": "what regions have the worst revenue", "label": "top_bottom"}
+{"question": "how's life", "label": "smalltalk"}
+{"question": "provide a brief financial summary", "label": "overview"}
+{"question": "can you give me a detailed explanation", "label": "explain"}
+{"question": "the weird stuff in the data", "label": "anomaly"}
+{"question": "can you estimate the future values", "label": "forecast"}
+{"question": "i need info on nothing", "label": "unclear"}
+{"question": "give me a brief summary", "label": "overview"}
+{"question": "what factors are highly correlated with each other?", "label": "correlation"}
+{"question": "what's the most intresting thing you've found", "label": "insights"}
+{"question": "should i carry an umbrella", "label": "unclear"}
+{"question": "include electronics", "label": "refinement"}
+{"question": "all best wishes", "label": "smalltalk"}
+{"question": "can i get a sales trend report", "label": "trend"}
+{"question": "find the odd ones out", "label": "anomaly"}
+{"question": "what's causing the spike", "label": "anomaly"}
+{"question": "i want to see the overall perfomance of the company", "label": "overview"}
+{"question": "how does quantity sold impact price", "label": "correlation"}
+{"question": "can you give me a status update?", "label": "overview"}
+{"question": "interesting facts and figures", "label": "insights"}
+{"question": "what will be the revenue in 6 months?", "label": "forecast"}
+{"question": "rank products from highest to lowest sales", "label": "top_bottom"}
+{"question": "what's the main point of the graph", "label": "explain"}
+{"question": "analyze revenue trend by season", "label": "trend"}
+{"question": "predict amount for 2026", "label": "forecast"}
+{"question": "identify the cause of the sales decline", "label": "root_cause"}
+{"question": "explain this", "label": "explain"}
+{"question": "see you later, bye", "label": "smalltalk"}
+{"question": "annual trend of employee count", "label": "trend"}
+{"question": "what's driving the growth", "label": "root_cause"}
+{"question": "which salesperson has the most sales", "label": "top_bottom"}
+{"question": "underlying causes of the downturn", "label": "root_cause"}
+{"question": "can you write a poem", "label": "unclear"}
+{"question": "what are the categories with the lowest revenue", "label": "top_bottom"}
+{"question": "write a script for a movie", "label": "unclear"}
+{"question": "how are you", "label": "smalltalk"}
+{"question": "remove all filters", "label": "refinement"}
+{"question": "categories with bad sales", "label": "top_bottom"}
+{"question": "rank products from worst to best", "label": "top_bottom"}
+{"question": "what's the general outlook for our company", "label": "overview"}
+{"question": "hi, whats up", "label": "smalltalk"}
+{"question": "hi, long time no talk", "label": "smalltalk"}
+{"question": "amount has been rising - why is that", "label": "root_cause"}
+{"question": "provide a high level overview", "label": "overview"}
+{"question": "what is the history of shoes", "label": "unclear"}
+{"question": "important things to consider", "label": "insights"}
+{"question": "can you highlight something meaningful?", "label": "insights"}
+{"question": "give me a list of the top 3 accounts", "label": "top_bottom"}
+{"question": "pattern of orders over time", "label": "trend"}
+{"question": "yearly sales fluctuations", "label": "trend"}
+{"question": "how's life treating you?", "label": "smalltalk"}
+{"question": "give me the lowdown on whats happenin", "label": "insights"}

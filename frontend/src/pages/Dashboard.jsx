@@ -173,6 +173,15 @@ export default function DashboardPage() {
         </div>
       )}
 
+      {spec.narrative && (
+        <div className="card" style={{ marginBottom: 12, borderLeft: '3px solid var(--accent-3, #ff4d97)' }}>
+          <div className="muted" style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+            Analysis
+          </div>
+          <div style={{ fontSize: 14, lineHeight: 1.7 }}>{spec.narrative}</div>
+        </div>
+      )}
+
       <QualityPanel panel={spec.quality_panel} domain={spec.domain} profile={profile} />
 
       <FilterPanel spec={spec} profile={profile} onApply={ask} activeFilters={spec.active_filters} />

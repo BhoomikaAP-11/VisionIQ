@@ -11,6 +11,10 @@ logger = logging.getLogger(__name__)
 
 FALLBACK_ORDER = os.getenv("AI_FALLBACK_ORDER", "openrouter,groq").split(",")
 
+# Process-lifetime memo of providers whose keys are exhausted, so we don't
+# waste seconds retrying every request.
+_DEAD_PROVIDERS: set[str] = set()
+
 SYSTEM_PROMPT = """You are an expert Business Intelligence analyst and SQL expert.
 When asked to generate SQL, return ONLY a valid SQL query with no explanation.
 When asked for insights or analysis, return structured JSON with keys:
@@ -84,10 +88,15 @@ PROVIDER_MAP = {
 
 
 async def query_ai(prompt: str, context: str = "") -> dict:
-    """Try each provider in fallback order. Returns {text, provider}."""
+    """Try each provider in fallback order. Returns {text, provider}.
+    Providers that return credit-exhausted / rate-limit errors are
+    remembered for the rest of the process so subsequent calls skip them.
+    """
     last_error = None
     for provider in FALLBACK_ORDER:
         provider = provider.strip()
+        if provider in _DEAD_PROVIDERS:
+            continue
         fn = PROVIDER_MAP.get(provider)
         if not fn:
             continue
@@ -96,7 +105,14 @@ async def query_ai(prompt: str, context: str = "") -> dict:
             text = await fn(prompt, context)
             return {"text": text, "provider": provider}
         except Exception as e:
-            logger.warning(f"Provider {provider} failed: {e}")
+            msg = str(e).lower()
+            logger.warning(f"Provider {provider} failed: {str(e)[:120]}")
+            # Terminal errors for this process — don't retry these providers
+            if any(t in msg for t in ("insufficient credits", "402",
+                                       "all openrouter keys",
+                                       "invalid api key", "401")):
+                _DEAD_PROVIDERS.add(provider)
+                logger.warning(f"Provider {provider} marked dead for this process.")
             last_error = e
             continue
     raise RuntimeError(f"All AI providers failed. Last error: {last_error}")

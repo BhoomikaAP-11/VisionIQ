@@ -30,9 +30,21 @@ logger = logging.getLogger("bel")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Starting BEL backend…")
+    logger.info("Starting VisionIQ backend…")
+    # Warm the query classifier at startup so the first user request
+    # doesn't pay a 3-5 second DistilBERT cold-start penalty.
+    try:
+        from .services import query_classifier
+        query_classifier._try_load_bert()
+        query_classifier._ensure_trained()  # sklearn fallback too
+        # Prime the model with a dummy query so first inference is warm
+        query_classifier.classify("warmup")
+        logger.info("Query classifier ready (bert=%s).",
+                     query_classifier._bert_status)
+    except Exception as e:
+        logger.warning("Classifier warmup failed (non-fatal): %s", e)
     yield
-    logger.info("Shutting down BEL backend.")
+    logger.info("Shutting down VisionIQ backend.")
 
 
 app = FastAPI(

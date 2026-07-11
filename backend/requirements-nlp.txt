@@ -1,0 +1,21 @@
+# =============================================================================
+# Optional NLP dependencies for training / running the DistilBERT classifier.
+# Install ONLY if you plan to fine-tune the query classifier:
+#     pip install -r backend/requirements-nlp.txt
+#
+# Base VisionIQ (backend/requirements.txt) uses a lighter scikit-learn model
+# and does NOT need any of the below.
+# =============================================================================
+
+# Deep-learning runtime — CPU-only wheel keeps the install tractable
+# (~250 MB). Swap to a CUDA build if you have a GPU: see
+# https://pytorch.org/get-started/locally/ for the exact index URL.
+torch>=2.2.0
+
+# HuggingFace transformers + accelerate for the Trainer API
+transformers>=4.44.0
+accelerate>=0.30.0
+
+# HuggingFace's own dataset helpers and evaluation metrics
+datasets>=2.20.0
+evaluate>=0.4.2

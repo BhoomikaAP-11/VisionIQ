@@ -9,10 +9,18 @@ from __future__ import annotations
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
-from ..services import ai_service, dashboard as dashboard_engine, excel_service, intent as intent_mod
+from ..services import (
+    ai_service,
+    dashboard as dashboard_engine,
+    excel_service,
+    intent as intent_mod,
+    query_classifier,
+    query_log,
+)
 from ..services.sessions import store
 
 LLM_CONFIDENCE_THRESHOLD = 0.6
+CLASSIFIER_HIGH_CONFIDENCE = 0.55  # trust classifier at or above this
 
 router = APIRouter(prefix="/api/dashboard", tags=["dashboard"])
 
@@ -56,6 +64,60 @@ async def query(session_id: str, body: QueryBody):
     sheet_profile = session.profile["sheets"][sheet_name]
 
     # ------------------------------------------------------------------
+    # Stage 0: fast heuristic FIRST — most analytical queries land here
+    # and skip DistilBERT entirely, giving sub-100ms responses.
+    # ------------------------------------------------------------------
+    quick_intent = intent_mod.parse(body.question, sheet_profile)
+    if quick_intent["confidence"] >= 0.85 and quick_intent["op"] not in {"greeting", "unknown"}:
+        # Heuristic is confident enough — skip the classifier and BERT entirely
+        classification = {
+            "label": quick_intent["op"],
+            "confidence": quick_intent["confidence"],
+            "model": "heuristic-fast-path",
+            "top3": [],
+            "is_smalltalk": False,
+            "is_analytical": True,
+        }
+    else:
+        # Only invoke the ML classifier for ambiguous queries — catches
+        # "hi", "what are you doing" etc. and routes them conversationally.
+        classification = query_classifier.classify(body.question)
+    if (
+        classification["label"] == "smalltalk"
+        and classification["confidence"] >= CLASSIFIER_HIGH_CONFIDENCE
+    ):
+        parsed = {
+            "op": "greeting",
+            "reply": query_classifier.canned_reply(body.question),
+            "confidence": classification["confidence"],
+            "source": "classifier",
+            "raw": body.question,
+        }
+        spec = dashboard_engine.build_query_dashboard(df, sheet_profile, body.question, intent=parsed)
+        query_log.log(body.question, classification, parsed)
+        return spec
+    if (
+        classification["label"] == "unclear"
+        and classification["confidence"] >= CLASSIFIER_HIGH_CONFIDENCE
+    ):
+        parsed = {
+            "op": "unknown",
+            "reply": (
+                "That doesn't look like a data question. Try one of these:\n"
+                "  • Top 10 <dimension> by <measure>\n"
+                "  • Show <measure> trend by month\n"
+                "  • Forecast <measure> for the next 6 months\n"
+                "  • Find anomalies in <measure>"
+            ),
+            "confidence": classification["confidence"],
+            "source": "classifier",
+            "raw": body.question,
+        }
+        spec = dashboard_engine.build_query_dashboard(df, sheet_profile, body.question, intent=parsed)
+        query_log.log(body.question, classification, parsed)
+        return spec
+
+    # ------------------------------------------------------------------
     # Detect follow-up commands
     # ------------------------------------------------------------------
     is_refinement = intent_mod.is_refinement(body.question)
@@ -79,6 +141,34 @@ async def query(session_id: str, body: QueryBody):
         parsed = {**session.last_intent, **{k: v for k, v in parsed.items() if v not in (None, "summary", "unknown")}}
         parsed["confidence"] = max(parsed.get("confidence", 0.5), 0.7)
         parsed["source"] = "follow-up"
+
+    # ------------------------------------------------------------------
+    # BERT rescue: if heuristic couldn't figure out an op but the classifier
+    # is confident it's a specific analytical intent, promote the BERT label.
+    # Catches typos ('forcaste 8 months') the regex missed.
+    # ------------------------------------------------------------------
+    _BERT_TO_OP = {
+        "top_bottom": "top",
+        "trend": "trend",
+        "forecast": "forecast",
+        "anomaly": "anomaly",
+        "correlation": "correlation",
+        "root_cause": "root_cause",
+        "overview": "overview",
+        "insights": "insights",
+        "explain": "explain",
+        "raw_data": "summary",
+    }
+    if (
+        parsed["op"] in {"summary", "unknown"}
+        and classification.get("model") in {"distilbert", "sklearn"}
+        and classification.get("confidence", 0) >= 0.7
+    ):
+        rescued = _BERT_TO_OP.get(classification["label"])
+        if rescued:
+            parsed["op"] = rescued
+            parsed["confidence"] = max(parsed["confidence"], 0.8)
+            parsed["source"] = "classifier-rescue"
 
     # ------------------------------------------------------------------
     # LLM fallback for low confidence
@@ -118,6 +208,7 @@ async def query(session_id: str, body: QueryBody):
         "intent": parsed,
         "filters": list(session.active_filters),
     })
+    query_log.log(body.question, classification, parsed)
     return spec
 
 

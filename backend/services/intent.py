@@ -270,7 +270,28 @@ def _tokens(s: str) -> list[str]:
 
 
 def _phrase_hit(q: str, vocab: set[str]) -> bool:
+    """Exact substring match — used for multi-word phrases."""
     return any(v in q for v in vocab)
+
+
+def _fuzzy_phrase_hit(q: str, vocab: set[str], threshold: float = 0.82) -> bool:
+    """
+    Typo-tolerant match. Checks each token of `q` against each vocab keyword
+    using SequenceMatcher. Catches misspellings like 'forcaste' -> 'forecast'
+    or 'trned' -> 'trend' without any training.
+    """
+    if _phrase_hit(q, vocab):
+        return True
+    tokens = q.split()
+    for tok in tokens:
+        if len(tok) < 4:  # skip short tokens, too many false positives
+            continue
+        for v in vocab:
+            if " " in v:
+                continue  # multi-word phrases handled by _phrase_hit above
+            if SequenceMatcher(None, tok, v).ratio() >= threshold:
+                return True
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -381,29 +402,37 @@ def _extract_nth(q: str) -> Optional[int]:
 
 
 def _extract_forecast_periods(q: str) -> Optional[int]:
-    """Pull horizon from phrases like 'next 6 months', 'next 2 years', 'forecast 12 weeks'."""
-    m = re.search(r"(?:next|forecast|predict|for)\s+(\d+)\s+(month|months|year|years|quarter|quarters|week|weeks|day|days)", q)
+    """
+    Pull horizon from phrases like 'next 6 months', 'next 2 years',
+    'forecast 12 weeks', 'for 8 months'. Also handles misspelled anchors
+    ('forcaste 8 months', 'predikt 6 months') because the anchor word is
+    optional in the second-pass fallback.
+    """
+    # 1. Anchor-word + number + unit (strictest, most reliable)
+    m = re.search(
+        r"(?:next|forecast|forcast|forcaste|forecaste|predict|predikt|projection|"
+        r"estimate|for)\s+(\d+)\s+(month|year|quarter|week|day)s?",
+        q,
+    )
+    if not m:
+        # 2. Just number + unit anywhere — catches 'forcaste amount 8 months'
+        m = re.search(r"(\d+)\s+(month|year|quarter|week|day)s?", q)
     if m:
         n = int(m.group(1))
         unit = m.group(2)
-        if unit.startswith("year"):
-            return n * 12
-        if unit.startswith("quarter"):
-            return n * 3
-        if unit.startswith("week"):
-            return max(1, n // 4)
-        if unit.startswith("day"):
-            return max(1, n // 30)
+        if unit.startswith("year"): return n * 12
+        if unit.startswith("quarter"): return n * 3
+        if unit.startswith("week"): return max(1, n // 4)
+        if unit.startswith("day"): return max(1, n // 30)
         return n
-    # word numbers
-    m = re.search(r"(?:next|forecast|predict|for)\s+([a-z]+)\s+(month|months|year|years|quarter|quarters)", q)
+
+    # 3. Word numbers ('six months', 'next twelve months')
+    m = re.search(r"([a-z]+)\s+(month|year|quarter|week)s?", q)
     if m and m.group(1) in _WORD_NUM:
         n = _WORD_NUM[m.group(1)]
         unit = m.group(2)
-        if unit.startswith("year"):
-            return n * 12
-        if unit.startswith("quarter"):
-            return n * 3
+        if unit.startswith("year"): return n * 12
+        if unit.startswith("quarter"): return n * 3
         return n
     return None
 
@@ -484,27 +513,27 @@ def parse(question: str, profile: dict) -> dict:
         out["op"] = "top"
         out["ascending"] = True
         op_confidence = 0.9
-    elif _phrase_hit(q, _FORECAST):
+    elif _fuzzy_phrase_hit(q, _FORECAST):
         out["op"] = "forecast"
         op_confidence = 0.85
-    elif _phrase_hit(q, _ANOMALY):
+    elif _fuzzy_phrase_hit(q, _ANOMALY):
         out["op"] = "anomaly"
         op_confidence = 0.85
-    elif _phrase_hit(q, _CORRELATION):
+    elif _fuzzy_phrase_hit(q, _CORRELATION):
         out["op"] = "correlation"
         op_confidence = 0.85
-    elif _phrase_hit(q, _BOTTOM):
+    elif _fuzzy_phrase_hit(q, _BOTTOM):
         out["op"] = "top"          # same op, ascending=True
         out["ascending"] = True
         op_confidence = 0.85
-    elif _phrase_hit(q, _TOP):
+    elif _fuzzy_phrase_hit(q, _TOP):
         out["op"] = "top"
         out["ascending"] = False
         op_confidence = 0.85
-    elif _phrase_hit(q, _TREND):
+    elif _fuzzy_phrase_hit(q, _TREND):
         out["op"] = "trend"
         op_confidence = 0.85
-    elif _extract_nth(q) is not None and not _phrase_hit(q, _TOP | _BOTTOM):
+    elif _extract_nth(q) is not None and not _fuzzy_phrase_hit(q, _TOP | _BOTTOM):
         out["op"] = "nth"
         out["nth_index"] = _extract_nth(q)
         op_confidence = 0.8

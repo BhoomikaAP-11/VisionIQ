@@ -56,6 +56,14 @@ uploads/
 exports/
 reports/
 
+# --- Trained NLP models (built by train_nlp_model.py) -----------------------
+# Model weights are hundreds of MB — regenerate locally, don't commit.
+backend/models/
+!backend/models/.gitkeep
+
+# Query log used to grow the training set
+backend/uploads/query_log.jsonl
+
 # --- Python -----------------------------------------------------------------
 __pycache__/
 *.py[cod]
