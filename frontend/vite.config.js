@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       // Forward /api to the FastAPI backend so the browser doesn't hit CORS in dev.
-      '/api': 'http://localhost:8000',
+      '/api': 'http://127.0.0.1:8000',
     },
   },
 })

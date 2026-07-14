@@ -376,6 +376,15 @@ def profile_dataframe(df: pd.DataFrame, name: str = "Sheet1") -> tuple[dict, pd.
     df.columns = [str(c).strip() for c in df.columns]
     df = df.dropna(how="all").reset_index(drop=True)
 
+    # Convert unhashable elements (dicts/lists, common in MongoDB) to strings
+    # so that pandas `.nunique()` and `.duplicated()` do not crash.
+    for col in df.columns:
+        if df[col].dtype == "object":
+            try:
+                df[col].nunique()
+            except TypeError:
+                df[col] = df[col].apply(lambda x: str(x) if isinstance(x, (dict, list, set)) else x)
+
     # Try parsing string columns that look like dates
     for col in list(df.columns):
         if df[col].dtype == "object":
