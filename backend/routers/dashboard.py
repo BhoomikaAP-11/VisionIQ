@@ -68,7 +68,19 @@ async def query(session_id: str, body: QueryBody):
     # and skip DistilBERT entirely, giving sub-100ms responses.
     # ------------------------------------------------------------------
     quick_intent = intent_mod.parse(body.question, sheet_profile)
-    if quick_intent["confidence"] >= 0.85 and quick_intent["op"] not in {"greeting", "unknown"}:
+    # If the question starts with a diagnostic word, ALWAYS run BERT so
+    # root-cause questions never get misclassified as trend/top.
+    _q_lower = body.question.strip().lower()
+    _diagnostic_start = any(
+        _q_lower.startswith(w) for w in ("why", "which", "who ", "what caused",
+                                           "what drove", "what changed", "explain the",
+                                           "reason", "root cause", "responsible")
+    )
+    if (
+        quick_intent["confidence"] >= 0.85
+        and quick_intent["op"] not in {"greeting", "unknown"}
+        and not _diagnostic_start
+    ):
         # Heuristic is confident enough — skip the classifier and BERT entirely
         classification = {
             "label": quick_intent["op"],
@@ -79,8 +91,7 @@ async def query(session_id: str, body: QueryBody):
             "is_analytical": True,
         }
     else:
-        # Only invoke the ML classifier for ambiguous queries — catches
-        # "hi", "what are you doing" etc. and routes them conversationally.
+        # Ambiguous, or diagnostic phrasing — invoke the ML classifier.
         classification = query_classifier.classify(body.question)
     if (
         classification["label"] == "smalltalk"
@@ -169,6 +180,19 @@ async def query(session_id: str, body: QueryBody):
             parsed["op"] = rescued
             parsed["confidence"] = max(parsed["confidence"], 0.8)
             parsed["source"] = "classifier-rescue"
+
+    # Stronger BERT rescue: if the classifier is highly confident it's
+    # root_cause but the heuristic picked something else (trend/top), trust
+    # BERT. Fixes "which sales person drove the change" style queries.
+    if (
+        classification.get("model") == "distilbert"
+        and classification.get("label") == "root_cause"
+        and classification.get("confidence", 0) >= 0.75
+        and parsed["op"] not in {"root_cause", "greeting", "overview", "insights"}
+    ):
+        parsed["op"] = "root_cause"
+        parsed["confidence"] = max(parsed["confidence"], 0.85)
+        parsed["source"] = "classifier-rescue-strong"
 
     # ------------------------------------------------------------------
     # LLM fallback for low confidence

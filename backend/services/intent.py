@@ -76,15 +76,23 @@ _EXPLAIN_PATTERNS = [
     r"what(?:'?s| is)? going on",
 ]
 
-# "Why did X change" — root-cause questions
+# Root-cause questions — "why did X change", "which Y caused the change",
+# "who drove the growth", "what's responsible for the drop".
 _ROOT_CAUSE_PATTERNS = [
     r"^why\b",
-    r"what (?:caused|drove|led to|is behind)",
-    r"reason(?:s)? (?:for|behind)",
-    r"root cause",
-    r"drivers? of",
-    r"contribut(?:or|ors|ed) to",
-    r"explain (?:the )?(?:drop|decline|rise|jump|increase|decrease|change)",
+    r"\bwhat (?:caused|drove|led to|is behind|is responsible)",
+    r"\bwhat drove the",
+    r"\bwhich [a-z\s]+? (?:drove|caused|led to|hurt|helped|is behind|is responsible|contributed|impacted|affected|"
+        r"influenced|pushed|pulled)",
+    r"\bwho (?:drove|caused|led to|is responsible|is behind)",
+    r"\breason(?:s)? (?:for|behind)",
+    r"\broot cause",
+    r"\bdrivers? of",
+    r"\bcontribut(?:or|ors|ed) to",
+    r"\bexplain (?:the )?(?:drop|decline|rise|jump|increase|decrease|change|movement|shift)",
+    r"\bresponsible for the (?:drop|decline|rise|jump|change|growth|fall)",
+    r"\bwhat (?:changed|shifted|moved)",
+    r"\bwhere is the (?:growth|decline|drop|drag)",
 ]
 
 _BEST_PATTERNS = [
