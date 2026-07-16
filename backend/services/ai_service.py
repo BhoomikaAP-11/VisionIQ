@@ -137,34 +137,69 @@ async def parse_intent_with_llm(question: str, schema_context: str) -> dict:
     """
     Use the LLM to convert a natural-language question into the structured intent
     dict the dashboard engine consumes. Falls back to a safe default on parse error.
-    """
-    prompt = f"""You parse business-intelligence questions into a strict JSON intent.
 
-Schema:
+    The schema_context should include sample values per column so the LLM can
+    match user vocabulary ("engineering headcount" → EmployeeCount where
+    Department='Engineering') even when column names don't literally contain
+    the user's words.
+    """
+    prompt = f"""You convert business-intelligence questions into a strict JSON intent.
+Think about the user's meaning, not literal word matching. Map their vocabulary
+to the actual column that holds that concept — even if the column name is
+technical or abbreviated. Use sample values in the schema to reason about it.
+
+SCHEMA (with sample values so you can tell what each column contains):
 {schema_context}
 
-User question: {question}
+USER QUESTION:
+{question}
+
+REASONING STEPS (do these silently, then output only the JSON):
+1. What is the user asking about? (a metric to sum? a ranking? a trend? a why?)
+2. Which numeric column(s) hold the METRIC they care about? (map synonyms:
+   revenue/sales/turnover/income/gmv → any numeric currency column;
+   headcount/staff/people → any employee-count column;
+   tickets/cases/issues → any count column;
+   utilisation/rate/percentage → any pct column;
+   tenure/duration/years/months → any time-length column)
+   If the dataset has NO numeric column that matches, leave measure=null.
+   The system will fall back to counting records — that is correct for
+   HR/survey/catalog data.
+3. Which categorical column holds the DIMENSION they want to slice by?
+   (region/area/zone/location → any geography column;
+   team/department/unit/function → any org column;
+   product/item/sku → any catalog column;
+   position/role/title/grade → any job-level column;
+   reason/cause/why → any free-text reason column;
+   gender/sex → gender column)
+4. Is there a date column that matches "when" in the question?
+5. Choose the op: trend (over time), forecast (future), top/bottom
+   (ranking), nth (exact position), anomaly (outliers), correlation
+   (relationship), root_cause (why did X change), summary (open-ended),
+   greeting (hi/hello/thanks), unknown (nonsense/off-topic).
 
 Return ONLY valid JSON with this exact shape (no markdown, no commentary):
 {{
-  "op": "trend|forecast|top|bottom|nth|anomaly|correlation|summary|greeting|unknown",
-  "measure": "<column name or null>",
-  "dimension": "<column name or null>",
-  "date_col": "<column name or null>",
+  "op": "trend|forecast|top|bottom|nth|count|anomaly|correlation|root_cause|summary|greeting|unknown",
+  "measure": "<exact column name from schema, or null>",
+  "dimension": "<exact column name from schema, or null>",
+  "date_col": "<exact column name from schema, or null>",
   "n": <integer or null>,
   "periods": <forecast horizon in months or null>,
   "nth_index": <integer or null>,
   "ascending": <true if bottom/worst/lowest else false>,
-  "reply": "<short conversational reply if op is greeting/unknown, else null>"
+  "reply": "<short conversational reply if op is greeting/unknown, else null>",
+  "reasoning": "<one-sentence explanation of WHY you picked these columns>"
 }}
 
 Rules:
-- Column names MUST match the schema exactly (case-sensitive).
-- If the question is a greeting (hi/hello/thanks), set op=greeting and write a 1-line reply.
-- If the question is unclear or unrelated to the data, set op=unknown and give guidance in reply.
-- "bottom N" / "worst N" → op=top with ascending=true.
+- Column names MUST match the schema EXACTLY (case-sensitive, spaces preserved).
+- If you can't find a plausible column, return op=unknown with a helpful reply.
+- "bottom N" / "worst N" / "lowest" → op=top with ascending=true.
 - "forecast for N months" → op=forecast, periods=N.
-- "5th row" → op=nth, nth_index=5."""
+- "5th X by Y" → op=nth, nth_index=5.
+- "why did X change / drop / rise" → op=root_cause.
+- "which Y drove/caused the change in X" → op=root_cause with dimension=Y."""
 
     try:
         result = await query_ai(prompt)
@@ -172,16 +207,19 @@ Rules:
         import json, re
         match = re.search(r"\{.*\}", text, re.DOTALL)
         if not match:
-            return {"op": "unknown", "reply": "Couldn't parse the question."}
+            return {"op": "unknown", "reply": "Couldn't parse the question.",
+                    "provider": result.get("provider")}
         intent = json.loads(match.group())
         intent.setdefault("ascending", False)
         intent.setdefault("reply", None)
         intent["confidence"] = 0.9
         intent["source"] = "llm"
+        intent["provider"] = result.get("provider")
         return intent
     except Exception as e:
         logger.warning(f"LLM intent parse failed: {e}")
-        return {"op": "unknown", "reply": "Couldn't parse the question.", "confidence": 0.0}
+        return {"op": "unknown", "reply": "Couldn't parse the question.",
+                "confidence": 0.0, "provider": None}
 
 
 async def generate_insights(data_summary: str, question: str = "") -> dict:

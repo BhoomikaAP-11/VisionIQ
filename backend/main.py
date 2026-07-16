@@ -31,6 +31,10 @@ logger = logging.getLogger("bel")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("Starting VisionIQ backend…")
+    _force = os.getenv("FORCE_LLM_ALWAYS", "").lower() in ("1", "true", "yes")
+    logger.info("FORCE_LLM_ALWAYS = %s  (env raw value: %r)",
+                 "ENABLED" if _force else "disabled",
+                 os.getenv("FORCE_LLM_ALWAYS"))
     # Warm the query classifier at startup so the first user request
     # doesn't pay a 3-5 second DistilBERT cold-start penalty.
     try:

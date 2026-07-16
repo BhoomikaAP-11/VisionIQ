@@ -149,6 +149,37 @@ export default function DashboardPage() {
         </div>
       )}
 
+      {spec.parse_hint && (
+        <div className="card no-print" style={{ marginBottom: 12, borderLeft: '3px solid var(--warning)', background: 'rgba(255,200,87,0.06)' }}>
+          <div style={{ fontSize: 12, marginBottom: 8, color: 'var(--warning)' }}>
+            ⚠ {spec.parse_hint.reason}
+          </div>
+          <div className="muted" style={{ fontSize: 11, marginBottom: 6 }}>What the parser picked:</div>
+          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 10, fontSize: 12 }}>
+            <span className="tag">measure: {spec.parse_hint.picked_measure || '—'}</span>
+            <span className="tag">dimension: {spec.parse_hint.picked_dimension || '—'}</span>
+            <span className="tag">date: {spec.parse_hint.picked_date || '—'}</span>
+          </div>
+          <div className="muted" style={{ fontSize: 11, marginBottom: 6 }}>
+            Available columns — click one to force it into the query:
+          </div>
+          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+            {(spec.parse_hint.available_measures || []).map((m) => (
+              <button key={'m'+m} className="secondary" style={{ fontSize: 11, padding: '3px 9px', boxShadow: 'none' }}
+                onClick={() => ask(`show ${m} by ${spec.parse_hint.picked_dimension || spec.parse_hint.available_dimensions?.[0] || 'category'}`)}>
+                📊 {m}
+              </button>
+            ))}
+            {(spec.parse_hint.available_dimensions || []).map((d) => (
+              <button key={'d'+d} className="secondary" style={{ fontSize: 11, padding: '3px 9px', boxShadow: 'none' }}
+                onClick={() => ask(`top 10 ${d} by ${spec.parse_hint.picked_measure || spec.parse_hint.available_measures?.[0] || 'amount'}`)}>
+                🏷 {d}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {profile.sheet_count > 1 && (
         <div style={{ marginBottom: 12 }} className="no-print">
           {Object.keys(profile.sheets).map((name) => (
@@ -222,10 +253,52 @@ export default function DashboardPage() {
       <InsightsPanel insights={spec.insights} recommendations={spec.recommendations} />
 
       {spec.intent && (
-        <div className="card no-print" style={{ marginTop: 16, fontSize: 12 }}>
-          <span className="muted">Detected intent ({Math.round((spec.intent.confidence ?? 0) * 100)}% confidence): </span>
-          <code style={{ wordBreak: 'break-all' }}>{JSON.stringify(spec.intent)}</code>
-        </div>
+        <>
+          <div className="no-print" style={{ marginTop: 12, marginBottom: 12, display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+            <span className="muted" style={{ fontSize: 11 }}>Parser:</span>
+            <span className="tag" style={{
+              background: 'rgba(124,92,255,0.15)',
+              borderColor: 'var(--accent)',
+              color: 'var(--text)',
+            }}>
+              {spec.intent.source || 'heuristic'} · {Math.round((spec.intent.confidence ?? 0) * 100)}% conf
+            </span>
+            {spec.intent.llm_called ? (
+              <span
+                className="tag success"
+                title={spec.intent.escalation_reason || 'LLM was called'}
+                style={{ background: 'rgba(30,224,122,0.15)', borderColor: '#1ee07a', color: '#4be79b' }}
+              >
+                ✓ LLM called{spec.intent.llm_provider ? ` (${spec.intent.llm_provider})` : ''}
+              </span>
+            ) : (
+              <span
+                className="tag"
+                title="Handled locally by the heuristic parser or fine-tuned DistilBERT — no API quota used"
+                style={{ background: 'rgba(107,110,156,0.15)', color: 'var(--text-dim)' }}
+              >
+                ⚡ Handled locally · LLM skipped
+              </span>
+            )}
+            {spec.intent.escalation_reason && (
+              <span
+                className="tag"
+                style={{ background: 'rgba(255,181,71,0.12)', borderColor: '#ffb547', color: '#ffcc7a', fontSize: 11 }}
+              >
+                Reason: {spec.intent.escalation_reason}
+              </span>
+            )}
+            {spec.intent.llm_error && (
+              <span className="tag" style={{ background: 'rgba(255,84,112,0.15)', borderColor: 'var(--danger)', color: '#ff7d94' }}>
+                LLM error: {spec.intent.llm_error.slice(0, 60)}…
+              </span>
+            )}
+          </div>
+          <div className="card no-print" style={{ marginTop: 8, fontSize: 12 }}>
+            <span className="muted">Detected intent JSON: </span>
+            <code style={{ wordBreak: 'break-all' }}>{JSON.stringify(spec.intent)}</code>
+          </div>
+        </>
       )}
     </div>
   )

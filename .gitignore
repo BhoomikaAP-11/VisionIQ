@@ -48,6 +48,11 @@ uploads/
 # ...but keep any tracked sample fixtures the smoke test needs
 !backend/tests/**/*.csv
 !backend/tests/**/*.xlsx
+# ...and the committed training / sample datasets
+!backend/data/**/*.csv
+!backend/data/**/*.json
+!backend/data/**/*.jsonl
+!backend/data/**/*.sql
 
 # --- Generated dashboard exports & reports ----------------------------------
 *_dashboard.json

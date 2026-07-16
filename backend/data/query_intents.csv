@@ -1,0 +1,2396 @@
+question,label
+year over year comparison,refinement
+reasons for the slump,root_cause
+show the source data,raw_data
+compare to previous year,refinement
+explain the reason for the sales decrease,root_cause
+suspicious values,anomaly
+do price and quantity move together,correlation
+how's everything going,smalltalk
+karnataka please,refinement
+electronics filter on,refinement
+what is 2 plus 2,unclear
+what r the correlations between these fields?,correlation
+exclusively india,refinement
+what's the most notable aspect of this,insights
+nice chatting with you,smalltalk
+show me sales by month,trend
+analyse the relationship between these metrics,correlation
+predict the outcome for 2028 sales,forecast
+"hey, whats up",smalltalk
+show me sales over time,trend
+which products ar underperforming the most,top_bottom
+exclude returns,refinement
+"hello, great to meet you",smalltalk
+price vs quantity: what's the relationship,correlation
+display the data set,raw_data
+forecasting revenue growth over the next 5 years,forecast
+whats the time in new york,unclear
+visualize amount over years,trend
+show me the regions with the poorest performance,top_bottom
+interesting trends to explore,insights
+line graph of website traffic by month,trend
+nice to see you,smalltalk
+factors contributing to the decline,root_cause
+just india,refinement
+find the odd one out,anomaly
+forecast the amount of profit in 2029,forecast
+what does this dashboard data mean exactly?,explain
+how do i interpret these results,explain
+do changes in price affect quantity,correlation
+categories with lowest sales figures,top_bottom
+rank all products by performance from lowest to highest,top_bottom
+i need help understanding this visualization,explain
+see you around,smalltalk
+how r u,smalltalk
+can you show me the regions with the lowest earning,top_bottom
+what are the poorest performing regions in terms of revenue,top_bottom
+i need to know whats gonna happen with revenue next quarter,forecast
+time series analysis of website traffic,trend
+can you give me a summary of the interesting bits,insights
+category a and nothing else,refinement
+can someone tell me whats goin on here,explain
+filter out japan,refinement
+what are the most interesting statistics,insights
+show the entire raw dataset,raw_data
+can you point out something notable,insights
+what do you think about music,unclear
+just show electronics,refinement
+add category electronics,refinement
+can someone tell me whats the current time,unclear
+display raw data,raw_data
+i wanna see our progress ovir time,trend
+predictive analysis for 2026 revenue,forecast
+what's the meaning of life,unclear
+whats the reason for the decrease,root_cause
+what caused the surge,root_cause
+what drives the relationship between price and quantity,correlation
+sales fluctuation over time,trend
+can someone write me a poem,unclear
+provide a brief summary of our activites,overview
+it was nice talkin to u,smalltalk
+current stock price of tesla,unclear
+give me the big picture,overview
+what does this show,explain
+show electronics,refinement
+can you estimate future demand,forecast
+how about a random fact,unclear
+can i get a birds eye view?,overview
+have a fantastic day,smalltalk
+what can you tell me that's noteworthy,insights
+why have orders decreased,root_cause
+i need to see all the entries,raw_data
+thankyou,smalltalk
+reset filter to india,refinement
+do u no the time,unclear
+revenue by region: what are the smallest ones,top_bottom
+can you write a play,unclear
+can you identify the top drivers of sales revenue?,correlation
+monthly sales trend for orders,trend
+can you give me a top level view,overview
+i need to no whats the time now,unclear
+trend analysis by quarter,trend
+thank you,smalltalk
+thaks,smalltalk
+what day is today,unclear
+yearly trend of market share,trend
+electronic products only,refinement
+predicting revenue streams for the next decade,forecast
+how are you doing,smalltalk
+refine to 2024,refinement
+can you show me the correlation between marketing spend and sales?,correlation
+hi,smalltalk
+can i see the raw info,raw_data
+last qtr only,refinement
+estimate the sales for the next 12 month period,forecast
+whats the monthly trend of new signups,trend
+leading brands,top_bottom
+can you show me the relationships between different kpis,correlation
+can you identfy the key driver,root_cause
+can you provide me with a summary of our key perfomance indicators?,overview
+predict revenue growth over the next 2 years,forecast
+highlight unusual activity,anomaly
+can you walk me through this data,explain
+monthly sales trend analysis,trend
+i need assistance,unclear
+anything intresting going on,insights
+show the raw data table,raw_data
+news today,unclear
+identify data points that are outside the norm,anomaly
+only show non returns,refinement
+odd trends in the numbers,anomaly
+identify the trend of customer complaints over time,trend
+"hello, how are you doing",smalltalk
+filter to 2024,refinement
+how's our company doing as a whole,overview
+what are the abnormal values,anomaly
+amount changed - what's the reason for that,root_cause
+filter to just category a,refinement
+what's the bigger picture here,explain
+locate the outlier in the dataset,anomaly
+can you determine the factors that contribute to sales fluctuations?,correlation
+filter by electronics,refinement
+what is the relationship between the amount of units sold and revenue generated,correlation
+how does it change over the years,trend
+what's the meaning of this dashboard,explain
+what r the top 10 amounts?,top_bottom
+what are some interesting observations,insights
+what's the overall performance look like,overview
+identify unusual patterns in the data,anomaly
+whats the meaning of life,unclear
+"i need to see the big picture, whats going on?",overview
+revenue pattern over months,trend
+provide a brief overview of our key metrics,overview
+may the rest of your day be awesome,smalltalk
+list the best 3 products by amount sold,top_bottom
+need help understanding this visualisation,explain
+later dude,smalltalk
+give me a brief on our current performance,overview
+i need help understanding this business intelligence chart,explain
+"hey, hows it going?",smalltalk
+what r the top brandz,top_bottom
+what is the predicted revenue for the upcoming quarter?,forecast
+can you show me the main dashboard,overview
+what do these numbers mean,explain
+display entire dataset,refinement
+can you give me a insight view of this data?,insights
+can u show me sum sample rows?,raw_data
+what's the main thing i should take away,insights
+i need a brief overview of our current status,overview
+what is this chart supposed to show,explain
+what does this chart mean,explain
+what happened to sales recently,root_cause
+why did amount go up,root_cause
+what are some suprising insights,insights
+can you list the regions with the worst outcomes,top_bottom
+explain this graph to me like i'm 5,explain
+what are the projected revenues for the upcoming quarter?,forecast
+can you analyze the dependence between sales and pricing strategy?,correlation
+"i dont get it, can you explain?",explain
+can u help me with the time,unclear
+summary of key findings,insights
+clear filters completely,refinement
+what are the top countries by amount?,top_bottom
+how do these variables relate to each other?,correlation
+attribute the drop in revenue,root_cause
+whats the main takeaway from this visualisation?,explain
+how has profit changed yearly,trend
+top 10 sales performers,top_bottom
+"rank products by amount, show me the top 3",top_bottom
+"hey, nice to meet ya",smalltalk
+main points of intrest,insights
+can you explain the concept of time,unclear
+provide a summary overview,overview
+what's the projeciton for the companys revenue next year,forecast
+what's goin on with the weather,unclear
+i need a summary of our key stats,overview
+i need a dashboard of key perfomance indicators,overview
+thnx,smalltalk
+give me a general idea of how we're doing,overview
+correlation between amount and boxes shipped,correlation
+can you give me a snapshot of our progress,overview
+whats worth looking at in this analysis,insights
+what's the yearly trend in sales performance,trend
+how has revenue grown over the yrs,trend
+what is our current overall perfomance,overview
+what insights can we gain from this dashboard?,explain
+revenue prognosis for the next 2 quarters,forecast
+do these figures correlate,correlation
+can u pls tell me the time,unclear
+"hello there, how are you doing today?",smalltalk
+causes of revenue slump,root_cause
+list the 10 highest amounts,top_bottom
+why did the numbers go up so significently,root_cause
+find the abnormal ones,anomaly
+flag abnormal orders,anomaly
+can you determine the correlation betwen amount and boxes shipped,correlation
+what does this graph represent?,explain
+show me a list of correlated variables in my data,correlation
+give me the database rows,raw_data
+give me a general overview of our busniess perfomance,overview
+monthly pattern of orders,trend
+can u show me the data rows,raw_data
+what is the secret to making the perfect grilled cheese,unclear
+revenue rankings: what are the lowest regions,top_bottom
+find data that dont fit the norm,anomaly
+is there a yearly trend?,trend
+what's behind the significent rise in numbers,root_cause
+products with the highest and lowest sales,top_bottom
+what's the main reason for the sales downturn,root_cause
+"give me the sales projection for next quarter, pls",forecast
+show amount by year,trend
+i need to see the key performance indicators,overview
+what's the predicted profit for the next 2 years?,forecast
+product with the most sales,top_bottom
+forecast the next quarter,forecast
+show data points that are way off,anomaly
+do you have a favorite food,unclear
+"hey, take care",smalltalk
+"last quarter, dont show other quarters",refinement
+whats driving our expenses,correlation
+what are the worst perfoming regions this quarter,top_bottom
+uncovering hidden anomalies in the system,anomaly
+i need a summary of our companys performance,overview
+data points that are off the charts,anomaly
+for 2024 only,refinement
+"hello, whats up?",smalltalk
+filter by this year,refinement
+reason for the fluctuation,root_cause
+is it hot or cold outside,unclear
+amount's increase - what's the root cause,root_cause
+what are the worst selling items,top_bottom
+take care now,smalltalk
+how do you make a paper plane,unclear
+abnormal usage patterns in our app,anomaly
+summarize our progress so far,overview
+projected revenue for the upcoming fiscal year,forecast
+how do sales change by year,trend
+what's the correllation between these,correlation
+scope to category a,refinement
+which countries have the most?,top_bottom
+next year sales prediction,forecast
+what's new with u?,smalltalk
+predict sales for the upcoming year,forecast
+what's the bottom line?,insights
+predict the revenue for the next 5 quarters,forecast
+explain the meaning of this chart please,explain
+what are the overall numbers looking like,overview
+can you give me a quick overview of our company's perfomance?,overview
+"i dont get it, can you explain",explain
+give me an overview of whats goin on,insights
+how do product features impact sales?,correlation
+what's the pattern of usage over time,trend
+"predicting sales for the next quarter, what's the outlook?",forecast
+electronic products only please,refinement
+what's the general outlook for our business,overview
+provide a brief update,overview
+what is this plot trying to show,explain
+what role does seasonality play in sales trends?,correlation
+hey there,smalltalk
+hey long time no talk,smalltalk
+give me the amount trend,trend
+show me electronics as well,refinement
+what's the root cause of the improvment,root_cause
+india alone,refinement
+hey long time no see,smalltalk
+find data points that are way off,anomaly
+"hey, what's new",smalltalk
+show me the raw dataset,raw_data
+can you break down this graph for me,explain
+hmm,unclear
+can you provide an executive dashboard,overview
+what stands out in these numbers,insights
+pinpoint anomalies in the dataset,anomaly
+how much revenue can we expect in the next 3 months?,forecast
+"rank items by profitability, show me the worst",top_bottom
+identify the factors that effect stock price,correlation
+raw dataset please,raw_data
+display income trend from 2010 onwards,trend
+recent amount change - what's the cause,root_cause
+what caused the decline in revenue,root_cause
+what are the underlying factors,root_cause
+can you make me laugh,unclear
+show all data points,refinement
+what are the key insights here,insights
+exclude any returns,refinement
+you're the best,smalltalk
+what is the relationship like between units and revenue,correlation
+how does it change by month?,trend
+can you tell me if it's cloudy,unclear
+tell me somthing thats worth knowing,insights
+how do i bake a cake,unclear
+does temperature affect sales,correlation
+is there a statistical correlation between units and revenue,correlation
+what's gonna be the revenue forecast for the next 12 months,forecast
+how's your week been,smalltalk
+give me a bird's eye view,overview
+what is the predicted revenue for the upcoming fiscal year,forecast
+sales figures over the years,trend
+reset to category a,refinement
+is there a pattern in our yearly losses,trend
+leave out japan,refinement
+forecasting the next 2 years,forecast
+what's new with you,smalltalk
+point out somethin unusual,insights
+good evening,smalltalk
+bye bye,smalltalk
+overall performance,overview
+what are some key takeaways,insights
+what are the key factors that influence revenue?,correlation
+it was nice chatting,smalltalk
+show me the data,raw_data
+filter results by electronics,refinement
+find me the variables that are closely related,correlation
+display the original table,raw_data
+whats the most insightful thing you can tell me,insights
+"rank products by sales, top to bottom",top_bottom
+can you provide some interesting statistics,insights
+only show category a,refinement
+show electronic items only,refinement
+show me the anomalies in the results,anomaly
+what about last quarter?,refinement
+do you have any pet videos,unclear
+i need the unfiltered records,raw_data
+anything interesting,insights
+give me a rundown of the dashboard,explain
+trend of revenue by year,trend
+"what does it all mean, can you give me a summary",explain
+provide a high level overview of our current performance,overview
+can you describe a sunset,unclear
+can you decipher this data for me,explain
+what's causing our sales to go down?,root_cause
+whats the connection between employee engagement and customer satisfaction,correlation
+estimate the income for the coming year,forecast
+what,unclear
+i need the complete picture,refinement
+forecast next year,forecast
+stats that are just plain weird,anomaly
+dont inclue japan,refinement
+what is the dependance of revenue on units sold,correlation
+which are the best 15 products by revenue?,top_bottom
+quantity and price: how do they relate,correlation
+find outliers in the data,anomaly
+i want to learn how to cook,unclear
+"good afternoon, how are you?",smalltalk
+what's the overall outlook like?,overview
+how are we perfoming as a whole,overview
+i'd like to know whats worth notising,insights
+provide a high level overview of the business,overview
+forecasting next years sales,forecast
+show me the products with the lowest profit,top_bottom
+show me the data points that are off the charts,anomaly
+see you later,smalltalk
+what's the monthly trend of amount,trend
+what story is this data trying to tell,explain
+i need a quick snapshot,overview
+i appreciate that,smalltalk
+give me a prediction of sales for the next 3 months,forecast
+take care and bye,smalltalk
+stuff that's out of whack,anomaly
+can you break down what this chart is telling us?,explain
+break down the data for me,explain
+what's the temperature like today,unclear
+rank all items by profit and show me the bottom 5,top_bottom
+tell me about the forecast,unclear
+can you provide a high-level dashboard view,overview
+time series of sales,trend
+i'm looking for some valuable insights,insights
+show me the unusual trends,anomaly
+"which products have the least amount, show me the bottom 3",top_bottom
+only category a,refinement
+filter by last 2 years,refinement
+can you show me something interesting,insights
+show the database contents,raw_data
+who invented the chair,unclear
+determine why revenue isnt rising,root_cause
+can you predict the future trends for us,forecast
+anything i should be aware of,insights
+what's the root cause of our sales problem,root_cause
+"i'm confuseed by this plot, can you explain",explain
+which 3 products made the most amount?,top_bottom
+can i get a high level summary?,overview
+future outlook for order intake,forecast
+filter to include only 2024,refinement
+year on year revenue comparision,trend
+filter to just last quarter,refinement
+show performance summary,overview
+identify correlations with customer engagement,correlation
+display the first hundred rows,raw_data
+i forgot my phone at home whats the time,unclear
+why did we see a spike,root_cause
+what's the sales forecast look like for next quarter?,forecast
+what's the weather like in london,unclear
+just show karnataka state,refinement
+can you rank our customers by spend,top_bottom
+can i get a glimpse of the db table,raw_data
+are there any interesting trends,insights
+examine the relationship between units and revenue,correlation
+you too,smalltalk
+give me a high level overview of performance,overview
+exceptions to the norm,anomaly
+raw data pleez,raw_data
+rank the worst 5 customers by sales,top_bottom
+say something funny,unclear
+can you identify any data points that are not normal,anomaly
+get me unfiltered results,refinement
+show me the main perfomance metrics,overview
+can you share some insights with me,insights
+the reason behing the declin,root_cause
+display our top and bottom 5 customers,top_bottom
+show karnataka now,refinement
+its great to talk to you,smalltalk
+what dont i know that i should,insights
+why are orders falling,root_cause
+the raw info please,raw_data
+apply electronics filter,refinement
+what are the main points to take away,insights
+why is it growing so fast,root_cause
+take care and talk to you soon,smalltalk
+forecast sales for the next year using machine learning,forecast
+does our revenue have a seasonal trend?,trend
+hey long time,smalltalk
+"orders have decreased, what's the root cause",root_cause
+take out japan,refinement
+can you highlight something suprising,insights
+just the current year,refinement
+plot the seasonal trend,trend
+what's the trend in profits over the years,trend
+nice talking to you,smalltalk
+how much will we have in 6 months time,forecast
+just show india,refinement
+list the least 12 popular ones,top_bottom
+give me the 3 products with the highest amount,top_bottom
+projekt the amount of money we will make in 2027,forecast
+future revenue forecast,forecast
+can you give me a brief update,overview
+how do i plan a vacation,unclear
+highest earning salesperson,top_bottom
+what will be the revenue next quarter,forecast
+can you give me a brief overview,overview
+reset to 2024,refinement
+i'm having trouble understanding the insights,explain
+can you decode this chart for me,explain
+list the products with the lowest revenue,top_bottom
+show outlier transactions,anomaly
+show outliers,anomaly
+forecasting sales growth over the next 3 years,forecast
+can i get a dashboard,overview
+growth pattern of profitability by year,trend
+what are the actual rows?,raw_data
+show me the key indicators,overview
+find the top 5 most unusual data points,anomaly
+give me 2024,refinement
+find anomalies in the dataset,anomaly
+what should i be aware of?,insights
+quarterly sales trend analisis,trend
+display the raw data,raw_data
+can you summarize our key metrics,overview
+explane whats goin on in this chart,explain
+"i need an executive summary, asap",overview
+forecast the value of stock in 2028,forecast
+categories that dont sell well,top_bottom
+thanks,smalltalk
+show me this years,refinement
+what am i suppost to be seeing in this chart,explain
+nice to catch up with you,smalltalk
+can i get electronics too,refinement
+how strong is the correlation between units and revenue,correlation
+walk me through the numbers,explain
+what is the expected growth rate for the next 2 years,forecast
+identify the root cause of the change,root_cause
+for the last quarter alone,refinement
+can you estimate the total for 2026,forecast
+add electronics to results,refinement
+is it sunny or rainy,unclear
+give me a sample of 100 records,raw_data
+what does the underlying data look like,raw_data
+tell me a joke,unclear
+analyse the drop in revenue,root_cause
+thanks so much,smalltalk
+can you determine the correlation between these metrics?,correlation
+can you show me whats intresting,insights
+predicting the stock price in the upcoming quarter,forecast
+the 5 regions with the smallest revenue r,top_bottom
+what's somthing that jumps out at you,insights
+forecasting sales for the next quarter,forecast
+show me the key metrics,overview
+trend of product demand by quarter,trend
+give me a list of our best and worst customers,top_bottom
+can i see the first 100 entries,raw_data
+can you plot the trend by week,trend
+what are the most important things to know,insights
+anything that jumps out at you,insights
+how do i grow a garden,unclear
+show me the difference from 2023,refinement
+returns should not be included,refinement
+"hi, hows it going",smalltalk
+how are things going,smalltalk
+show me all data without filters,refinement
+investigate reasons for revenue decline,root_cause
+what are the outliers in our data,anomaly
+show me how its changed since last year,refinement
+show the top and bottom 5 items by sales,top_bottom
+reset filters,refinement
+add electronics category,refinement
+give me the raw table,raw_data
+only catagory a from now on,refinement
+country amount - biggest to smallest,top_bottom
+largest amount by country,top_bottom
+"i dont understand this visualization, can you explain",explain
+orders by month trend,trend
+can you show me the original data,raw_data
+what are the key drivers of growth,correlation
+can you offer some analysis of the results,explain
+take it easy,smalltalk
+who's doing the worst,top_bottom
+good to see u,smalltalk
+show me what moves with revenue,correlation
+estimate revenue for the upcoming year,forecast
+what's our overall status?,overview
+analyze trend by quarter,trend
+can you give me a rundown of this chart,explain
+bye for now,smalltalk
+expected roi for the upcoming investment,forecast
+what's the significance of this dashboard,explain
+does sales increse during holidays,trend
+exclude all but category a,refinement
+"hi, how was your day?",smalltalk
+what are the outlier values in this dataset,anomaly
+why is amount increasing so rapidly,root_cause
+can you show me whats notable,insights
+i dont get what this chart is saying,explain
+what's the big picture,overview
+revenue and units sold: correlated or not,correlation
+can you diagnoze the reason for the increase,root_cause
+give me an overview of our sales and revenue,overview
+i need to know which fields are dependent on each other,correlation
+what's the forecasted revenue for 2028,forecast
+what's behing the upward trend,root_cause
+can you highlight some key points,insights
+can you summarize the main points,insights
+spotting anomalies in the figures,anomaly
+how does price relate to quantity,correlation
+what's the historic trend of amount,trend
+show me amount over time,trend
+underlying cause of the drop,root_cause
+what are the main contributors to productivity,correlation
+predict the trend for the next 3 quarters,forecast
+what's the best pizza topping,unclear
+limit to category a,refinement
+whats goin on today,unclear
+quarterly projection of customer acquisition costs,forecast
+can u show me the data,raw_data
+which metrics have a strong correlation?,correlation
+future predictions for our industry,forecast
+what are the 5 worst products by profit?,top_bottom
+give me a quick rundown,overview
+give me the key statistics,overview
+"rank the products by revenue, show me the bottom 8",top_bottom
+how does weather affect sales patterns?,correlation
+explane the significent increase,root_cause
+thanks a ton,smalltalk
+what are the top brands,top_bottom
+show unusual trends,anomaly
+its great to finally meet you,smalltalk
+what's going on in this graph,explain
+"it's great to see you, how are you?",smalltalk
+what are the topline numbers?,overview
+can you provide context for this chart,explain
+irregularities in the figures,anomaly
+what's notable about this situation?,insights
+what are the charts trying to say,explain
+sales peack in wich month,trend
+future outlook for our company's profits,forecast
+predicting future revenue based on historical data,forecast
+what is the weather today,unclear
+can you give me a peek at the raw data,raw_data
+top countrys by amount,top_bottom
+hey friend,smalltalk
+amount's been changing alot lately - why,root_cause
+find data that dont fit the pattern,anomaly
+i need to see the overall perfomance,overview
+who r the top 5 worst customers,top_bottom
+bottom 5 categories by sales,top_bottom
+what's causing the rise,root_cause
+"you too, bye",smalltalk
+what pushed revenue up,root_cause
+how do different variables affect sales performance?,correlation
+diagnose the reason for falling orders,root_cause
+what are the top 3 customers this quarter,top_bottom
+what does the data in this chart suggest?,explain
+i need to know if i should bring an umbrella,unclear
+who is responsible for the decline,root_cause
+clear all the filter options,refinement
+first 20 records,raw_data
+i dont get whats going on in this chart,explain
+"i'm having trouble grasping this information, can you clarify",explain
+what is the main reason for the increse in,root_cause
+show me the underlying records,raw_data
+can u tell me the current time,unclear
+current year data,refinement
+thanks alot,smalltalk
+identify the abnormal behavior,anomaly
+"most amounts by country, ranked",top_bottom
+can you walk me through what this report is showing?,explain
+can you display the table,raw_data
+give me a data table,raw_data
+can you break down the findings,explain
+compare 2023 and 2024,refinement
+correlation and drivers of the data,correlation
+its been real,smalltalk
+data from this year,refinement
+can you write a poem about trees,unclear
+can you give me the overall status?,overview
+show me everything,refinement
+display the complete recordset,raw_data
+i want a summary of everythin,overview
+how do i cook ramen noodles,unclear
+i need a distraction,unclear
+i need a high level dashboard,overview
+what's the predicted revenue in 2027,forecast
+dependencies and correlations,correlation
+show me all the raw data,raw_data
+can you walk me through this,explain
+give me a sample of the data,raw_data
+can someone elaborate on this graphic?,explain
+i dont care about data,unclear
+trend for orders each month,trend
+what are the predicted values for the upcoming year,forecast
+why is there a decline in orders,root_cause
+how's everything,smalltalk
+compare with last year,refinement
+"country with the most, ranked list",top_bottom
+give me a birds eye view,overview
+what's the monthly trend in sales,trend
+what are the key insights,insights
+exclude the outlier month,refinement
+without japan data,refinement
+monthly revenue trend,trend
+tell a story thats not related to work,unclear
+what's the time series pattern of amount,trend
+need to see the raw data rows,raw_data
+can you describe a rainbow,unclear
+what are the underlying reasons for the increas,root_cause
+estimated orders for the next 3 years,forecast
+can you diagnose the reason for the change,root_cause
+"last quarter, nothing else",refinement
+what are the top level insights here?,insights
+what caused the orders to drop,root_cause
+give me the short version,overview
+rank the top 5 nations by highest gdp per capita,top_bottom
+highlight data thats off the charts,anomaly
+"how's amount doing, is it going up or down",trend
+time series analysis of profit,trend
+explain this to me like i'm 5,explain
+can you show me the bottom 10 customers,top_bottom
+yearly sales trend,trend
+find unusual activity,anomaly
+i want to watch a movie recomendation,unclear
+give me a sample of the table,raw_data
+what are the best 3 products by amount?,top_bottom
+are there any unusual patterns,anomaly
+what's the story behind this data,explain
+identify data spikes,anomaly
+estimated market value in 5 years,forecast
+what is the dependence of amount on boxes shipped,correlation
+all the best,smalltalk
+"sales perfomance over time, plz",trend
+diagnose revenue decline,root_cause
+find me some weird numbers,anomaly
+detect anomolies in the system,anomaly
+what's the worst region in terms of perfomance?,top_bottom
+can you display the raw data for me,raw_data
+"good morning, how's everything?",smalltalk
+what's the most suprising thing,insights
+identify spikes in the dataset,anomaly
+long term trend of net profits,trend
+what's your favorite color,unclear
+what's the situation at a glance,overview
+display the worst 10 customers in our system,top_bottom
+"i'm confused, can you clarify",explain
+do i need a coat,unclear
+what is important here,insights
+unusual trends in sales figures,anomaly
+insights view,insights
+what should i be paying attention to,insights
+locate outliers in the stats,anomaly
+anything that stands out to you,insights
+give a rundown of the key findings,explain
+what's up?,smalltalk
+hey whats up,smalltalk
+i need to see the trend of website traffic,trend
+bottom 5 countries by amount,top_bottom
+show me the complete dataset,refinement
+correlation analysis between variables,correlation
+is there a seasonal trend in orders,trend
+how do i cook an egg,unclear
+why is amount lower this month,root_cause
+forecasting the future of our company's revenue,forecast
+can u help me with somethin,unclear
+what affects our bottom line,correlation
+predict the outcome of our next quarterly earnings,forecast
+whats the time on the east coast,unclear
+what's the pattern of sales over months,trend
+how come the numbers increaed,root_cause
+what is the purpose of this dashboard?,explain
+can you display the data records,raw_data
+revenue fell - whats the reason,root_cause
+what are the best and worst brand performers this year,top_bottom
+can you show me the pattern of expenditure over time,trend
+show every single row,refinement
+"hi, how are things?",smalltalk
+can you provide a dashboard of key metrics?,overview
+what's the sales pattern like by quarter,trend
+do you have any travelling tips,unclear
+"can you give me the 10,000 ft view?",overview
+whats the main reason for the growth,root_cause
+can i see the base data?,raw_data
+what is the correlation between sales and revenue,correlation
+what are the unusual values in this chart,anomaly
+walk me through this dashboard,explain
+is there a relationship between price and quantity purchased,correlation
+display the sample data,raw_data
+i need a coffe break,unclear
+display every single record,raw_data
+can you include electronics,refinement
+cause of the reduction,root_cause
+show the original data,raw_data
+sales trend for the last 5 years,trend
+ignore japan,refinement
+what's the connection between sales and online reviews?,correlation
+whats goin on with the weather outside,unclear
+whats new with you,smalltalk
+can you determine the cause of the spike,root_cause
+lowest selling categories,top_bottom
+can you decipher this for me,explain
+give me the lowdown on whats going on,insights
+"whats the meaning of life, lol",unclear
+is there a link between units sold and total revenue,correlation
+what are the insights i should have,insights
+what is the secret to happiness,unclear
+i want to view the records,raw_data
+orders trend per month,trend
+okay,unclear
+only show data from this year and last,refinement
+give me a interesting perspective,insights
+analyse the time series data of customer complaints,trend
+whats goin on in the world,unclear
+identify patterns in daily website visits,trend
+what's the relationship between sales and economic indicators?,correlation
+what's the expected revenue for q1 2024,forecast
+boxes shipped vs amount: correlation analysis,correlation
+what insights can we gain from this data visualization?,explain
+identify transactions that dont add up,anomaly
+plot the time series of website traffic,trend
+can you plot our daily revenue,trend
+what's driving the decline in orders,root_cause
+give me some key findings,insights
+what's behind the shift,root_cause
+good luck,smalltalk
+"hello, how are you doing today?",smalltalk
+pattern of sales by quarter,trend
+why did numbers go up,root_cause
+can you highlight something important,insights
+show me the metrics over time,trend
+whats the expected amount for 2026,forecast
+explain the decline in orders,root_cause
+can you show me the sales curve,trend
+what are the top 3 accounts by size,top_bottom
+revenue stream over time,trend
+give me the entire dataset,refinement
+bottom performers,top_bottom
+can you give me the cliffs notes version?,overview
+"hi, how are you?",smalltalk
+restrict to category a only,refinement
+predicting demand for our products in 2024,forecast
+whats the big picture take away,insights
+show me all the raw records,raw_data
+"nice to meet you, hows it going",smalltalk
+projected earnings for next fiscal year,forecast
+time series of price by quarter,trend
+i want to see whats intresting about this,insights
+what's the trend in customer complaints over time,trend
+i forgot my password,unclear
+explain to me like im 5 what this chart is saying,explain
+can you decrypt this graph for me?,explain
+how many rainbows can fit inside a unicorn,unclear
+talk to you when you get back,smalltalk
+only 2024 pls,refinement
+what's the general outlook?,overview
+display the underlying table,raw_data
+amount and boxes shipped: what's the relationship like,correlation
+can someone walk me through this dashboard,explain
+what's the connection between metrics,correlation
+spikes in the data,anomaly
+analyze seasonality of demand,trend
+notable trends,insights
+can you break down the data for me,explain
+whatss the point of this,unclear
+time series analysis of customer acquisition,trend
+detect spikes in user engagement,anomaly
+what's the pattern of amount by month,trend
+show me the table with all the rows,raw_data
+morning,smalltalk
+what's the key takeaway from this dashboard,explain
+what led to the fall,root_cause
+can you tell me something,unclear
+what are the projected earnings for 2024,forecast
+what is the correlation coeficient between amount and boxes,correlation
+hey hows it going,smalltalk
+hello how r u,smalltalk
+do you no any good jokes,unclear
+take off all filters,refinement
+ditch all the filters,refinement
+show quantity by month and year,trend
+list the top 15 best selling products by revenue,top_bottom
+"i wanna know the sales forecast for next quarter, thx",forecast
+"next 3 quarters forecast, can you show me",forecast
+what is the airspeed velocity of an unladen swallow,unclear
+what's the sales trend lookin like,trend
+what's the current situation?,overview
+i need to talk about my cat,unclear
+i want to know what's significant,insights
+give me a bird's eye view of the data,overview
+what are the underlying rows,raw_data
+can you project sales figures for the upcoming month?,forecast
+walk me through this data,explain
+spot unusual changes in web traffic,anomaly
+show me the predicted trend for the next 12 months,forecast
+which brand is number one,top_bottom
+identify the correlations between different data elements,correlation
+can you show me the outliers,anomaly
+many thanks,smalltalk
+whats the key thing to understand,insights
+what's the forcast look like,unclear
+projected earnings for the next fiscal year,forecast
+what will our future profits look like,forecast
+projection for the future,forecast
+thanks for everything,smalltalk
+predict future orders,forecast
+"whats the product with the lowest sales, and the highest",top_bottom
+revenue growth by quarter,trend
+show me the sample data,raw_data
+show some sample data,raw_data
+what are the projections for the upcoming quarter,forecast
+"amount, whats the pattern like",trend
+how do i get rid of a headache,unclear
+identify the root of the problem,root_cause
+"i'm confused, can you clarify whats going on",explain
+find unusual data points,anomaly
+i'm having trouble grasping this chart's meaning,explain
+give me the weather,unclear
+can you recommend a good book,unclear
+narrow down to category a,refinement
+what's causing the drop in sales,root_cause
+investigate if there is a correlation between units and revenue,correlation
+can someone tell me whats happening here,explain
+"can you estimate the forecast for q1, q2 and q3",forecast
+show me the best 10 with the highest amounts,top_bottom
+what's the weird stuff in our metrics,anomaly
+show raw data please,raw_data
+rank our customers from top to bottom by revenue,top_bottom
+what are some interesting trends,insights
+what's the top 10 by amount?,top_bottom
+what are the top level metrics i should be aware of?,overview
+this year's data only,refinement
+can i get a quick rundown,overview
+how does profit change by season,trend
+what's behind the decline in sales figures?,root_cause
+how's everything going in general?,overview
+display the 7 products with the lowest revenue,top_bottom
+can u show me the worst customers,top_bottom
+consider only india,refinement
+which region is struggling the most,top_bottom
+monthly fluctuations in product demand,trend
+i have a meeting whats the time,unclear
+is there a yearly trend in revenue,trend
+is there seasonality in our data,trend
+can you explain the reason for the increse,root_cause
+can you show me the main highlights,overview
+is ther anything notable,insights
+can you tell me why sales have dropped,root_cause
+do units sold impact total revenue,correlation
+what are the main predictors of sales growth?,correlation
+i need a quick rundown of our perfomance,overview
+i need help understanding this report,explain
+overall perfomance please,overview
+monthly fluctuation in turnover,trend
+show me the categories with the lowest sales volume,top_bottom
+model future demand,forecast
+why did amount jump up,root_cause
+do you like pizza,unclear
+can you describe a cat,unclear
+display the bottom 5 customer list,top_bottom
+show me all of it,refinement
+excluding only japan,refinement
+hope you're doing well,smalltalk
+show me a sample of the data,raw_data
+can you summarize the key findings?,overview
+year over year growth,trend
+what's the most noticable thing,insights
+what will be the predicted value in 2027,forecast
+long time no see,smalltalk
+can you recommend a good restaurant,unclear
+i dont wanna talk about data,unclear
+no filters should be applied,refinement
+give a brief summary of perfomance,overview
+what insights can we gain from this,explain
+whats the story behind this plot,explain
+its been a pleasue talking to you,smalltalk
+also show me electronics,refinement
+you're welcome,smalltalk
+hope you had a great weekend,smalltalk
+what led to the decrease in sales revenue,root_cause
+find the irregularities in the figures,anomaly
+what's the dependence of quantity on price,correlation
+monthly and yearly pattern,trend
+can you break it down for me,explain
+i'll catch you on the flip side,smalltalk
+what's your favorite book,unclear
+what contributed to the jump,root_cause
+show the entire dataset,raw_data
+can you estimate the future demand for our product,forecast
+filter reset please,refinement
+reasons why its not working,root_cause
+"you too, thanks",smalltalk
+seasonal variation in product demand,trend
+what drives the relationship between these metrics,correlation
+how do product sales affect revenue,correlation
+predict sales for next quarter,forecast
+sales worst perfoming categories,top_bottom
+refine by electronics,refinement
+display full results,refinement
+analyze the correlation between product sales and revenue,correlation
+list countries from largest to smallest,top_bottom
+can you create a short story,unclear
+the least successful ones,top_bottom
+what's the overall situation?,overview
+what are the best and worst regions,top_bottom
+walk me through the results,explain
+can you give me some notable trends?,insights
+seasonal fluctuations in revenue,trend
+how do i get started with nothing,unclear
+can you write a script for a movie,unclear
+what is the underlying cause of the growth spurt,root_cause
+why has revenue been falling,root_cause
+hi hows it going,smalltalk
+can you put the results into perspective,explain
+erase all filter criteria,refinement
+"hello, nice to meet u too",smalltalk
+show me the top findings,insights
+how do different factors impact sales performance,correlation
+why did we see an increase in,root_cause
+high level overview of whats important,insights
+what made it go down,root_cause
+filter by 2024,refinement
+exclude all return entries,refinement
+prediction of employee turnover rate for the next 6 months,forecast
+what's the big picture?,overview
+what are the bottom 5 sales performers,top_bottom
+refine to karnataka,refinement
+what's the main thing that stands out?,insights
+projecting the future sales,forecast
+explain this chart to me,explain
+display records,raw_data
+show only 2024,refinement
+pattern of user retention over time,trend
+amount's down - what's the reason,root_cause
+next year's predicted expenses,forecast
+estimating future expenses,forecast
+estimate the numbers for 2024,forecast
+what's the weather suppost to be,unclear
+relationship between measures,correlation
+surprise me,insights
+year over year growth rate,trend
+what does the chart indicate,explain
+how are the metrics connected,correlation
+"hi, how was your week?",smalltalk
+what does this data represent,explain
+high level overview of whats interesting,insights
+show me revenue over time,trend
+i'm confused about everything,unclear
+why did our sales numbers go down?,root_cause
+how are you doing today,smalltalk
+show me the projected numbers for the next 3 quarters,forecast
+whats the worst product we have,top_bottom
+describe what i'm looking at,explain
+i need help with my homework,unclear
+what drove the increase,root_cause
+i want to know whats intresting,insights
+show me the raw data,raw_data
+can you analize the corelation between amount and boxes shipped,correlation
+what are the 10 worst cities by traffic congestion,top_bottom
+list the bottom 5 items by sales,top_bottom
+what's the story behind the stats,explain
+show me the raw data set,raw_data
+how do i find out the time,unclear
+"what's the predicted outlook for q1, q2, and q3",forecast
+i need a summary of the important stuff,overview
+what does the fox say,unclear
+month by month revenue pattern,trend
+how much will the kpi be in a year,forecast
+interpret this dashboard,explain
+can you draw a picture,unclear
+what's the top level view?,overview
+list all records,raw_data
+what are all the records,raw_data
+forecasting order intake for the upcoming quarter,forecast
+"nice to meet you, thanks for chatting",smalltalk
+explane the visualizations,explain
+how's life treating you,smalltalk
+whats worth knowing about this,insights
+what's catchin my attention,insights
+predict future trends,forecast
+can you tell me a joke about chickens,unclear
+"hi, how are you doing today",smalltalk
+japan shouldnt be in the results,refinement
+remove all returns from view,refinement
+display a sample of the orginal data,raw_data
+elaborate on the key takeways,explain
+what are some interesting facts here,insights
+can you shed some light on these numbers,explain
+"hello, how r u?",smalltalk
+give me india data,refinement
+whats the projected forecast for the next 3 quarters,forecast
+give me an update on our progress,overview
+i want to see the top level metrics,overview
+monthly breakdown of orders,trend
+can you provide a high-level overview,overview
+give me a projection of our expenses for next year,forecast
+give me the table,raw_data
+what will be the sales like in the comming year,forecast
+identify the root cause of the decline,root_cause
+highlight spikes in the data,anomaly
+what's worth noting in the data,insights
+can you highlite some key observations?,insights
+display the data sample,raw_data
+measures that affect each other,correlation
+can you highlight whats important,insights
+whats the main story here?,overview
+is price dependent on quantity,correlation
+can someone walk me thru this chart,explain
+gracias,smalltalk
+"hi, nice to finally meet you in person",smalltalk
+what's the relationship between customer satisfaction and sales?,correlation
+i'm looking for a new hairstyle,unclear
+i'm looking for a joke,unclear
+what are the main points i should know,overview
+what is the currnt situaton?,overview
+can you predict the next quarter and two after that,forecast
+list the 10 bottom performing customers,top_bottom
+thanks again,smalltalk
+trend of orders over time,trend
+how can we make sense of these figures on the screen?,explain
+anomalous behaviour in customer purchases,anomaly
+can you shed some light on this dashboard's data,explain
+can you point out somethin interesting?,insights
+"country amount rankings, top and bottom",top_bottom
+identify freak data points,anomaly
+whats the most interesting thing,insights
+i need help with somethin else,unclear
+thansk alot,smalltalk
+analyze the reason for the decline in order numbers,root_cause
+how will the numbers look like next year,forecast
+what are the predicted values for the next 3 quarters,forecast
+what are the key metrics looking like,overview
+what's the difference between a cat and dog,unclear
+forecasting model for future customer behavior,forecast
+the reason behing the decrease,root_cause
+what insights can be gained from the visualization,explain
+what are the outliers in this set,anomaly
+how do i make sense of this,explain
+reset to electronics section,refinement
+factors that led to the growth,root_cause
+great to meet you in person,smalltalk
+units sold and revenue: is there a connection,correlation
+i want to see the unfiltered data,raw_data
+"i'm not sure what i'm lookin at, can you help",explain
+"good morning, nice to meet you",smalltalk
+thanks a lot,smalltalk
+provide a general overview of the business,overview
+can you provide a summary report,overview
+only last year and this year please,refinement
+unusual patterns in the data,anomaly
+smallest revenue by region,top_bottom
+"good morning, hope you're doing well",smalltalk
+root cause of the change,root_cause
+what's the significance of this data point,explain
+how was your week,smalltalk
+list the 5 worst selling items,top_bottom
+which variables have a significant correlation?,correlation
+display the base records,raw_data
+what does this dashboard mean,explain
+forecast the next 3 quarters,forecast
+display the raw database table,raw_data
+what's the meaning of this graph,explain
+what to expect in the upcoming year,forecast
+show me the main dashboard please,overview
+2024 data only,refinement
+i need to know about any abnormal data,anomaly
+remove all applied filters,refinement
+which product sells the most units,top_bottom
+trends in customer purchases by season,trend
+what are the predicted sales for next year,forecast
+can u show me the 3 largest accounts,top_bottom
+identify data that stands out,anomaly
+"how's everything going, in general?",overview
+"nice to meet you, have a great day",smalltalk
+what's the relationship like between quantity and price,correlation
+uncover abnormal patterns,anomaly
+make a prediction about the next 3 quarters of data,forecast
+exceptions to the usual trend,anomaly
+what color is the sky,unclear
+what's worth noting in this context,insights
+can you summarize our current position,overview
+give me a sample data set,raw_data
+what's the pattern of revenue by month,trend
+how has the population grown over decades,trend
+what's the story behind this chart,explain
+what drives the relationship between units and revenue,correlation
+how's everything doing overall?,overview
+any suprizes in the numbers,insights
+what's the current status,overview
+i dont no whats goin on,unclear
+which variables are correlated,correlation
+correlation between amount shipped and number of boxes,correlation
+how's your day going so far?,smalltalk
+i want to see the bigger picture,overview
+whats the story behind this dashboard,explain
+what are you doing,smalltalk
+karnataka only from now,refinement
+can you translate this data into something understandable?,explain
+"hey, long time no see",smalltalk
+"good to meet you, thanks",smalltalk
+show the first 100 rows,raw_data
+i'd like to see some key takeaways,insights
+filter to show only electronic items,refinement
+amount has decreased - what's causing it,root_cause
+help me understand the dashboard,explain
+can you show me whats worth noting?,insights
+summary of the most important findings,insights
+how does our stock price change over the years,trend
+good bye for now,smalltalk
+hello,smalltalk
+what happened to cause the fall,root_cause
+"best countries by amount, top 10",top_bottom
+whats up,smalltalk
+what is this dashboard showing us?,explain
+filter to show only karnataka,refinement
+i need help interpreting this data,explain
+what are the main points of this graph?,explain
+what's the big picture here?,insights
+need to view the raw table,raw_data
+the worst products we have to offer,top_bottom
+what's the weather like,unclear
+why are the numbers lowering,root_cause
+explain the results,explain
+give me a prediction of the amount for next month,forecast
+i need a joke,unclear
+who are the best performers in terms of revenue,top_bottom
+can you provide some context,explain
+japan should be excluded,refinement
+start with no filters,refinement
+values that dont seem rite,anomaly
+how are we performing as a whole?,overview
+how has customer count changed by month,trend
+projected market trends for the upcoming year,forecast
+can you show me the correlation between price and quantity,correlation
+"hi, doing alright?",smalltalk
+excluding japan completely,refinement
+how does quantity impact price,correlation
+whats worthy of my attention,insights
+the best revenue performers,top_bottom
+what's the best part,insights
+give me a rundown of our perfomance,overview
+monthly revenue pattern,trend
+what's the most important thing to know?,insights
+can you describe the plot of my favorite movie,unclear
+whats good,smalltalk
+anticipated future business performance,forecast
+show me the dashboard,overview
+give me the headline figures,overview
+understanding the correlations between data points,correlation
+i need last quarter,refinement
+detecting freak occurrences in the data,anomaly
+what are the most interesting points?,insights
+"i want to see the big picture, whats going on?",overview
+can you list the top brands in the industry,top_bottom
+what do the numbers mean,explain
+can you put this info into plain english,explain
+can you decipher what this table is telling us?,explain
+hello there,smalltalk
+how do i interperet this data,explain
+can you identify the root cause of decreasing sales,root_cause
+forecasting future demand,forecast
+give me the lowdown on this data,explain
+can you show me the master dashboard?,overview
+list the best customers by region,top_bottom
+get rid of existing filters,refinement
+i need a brief rundown,overview
+give me the bottom 5 products with the lowest sales,top_bottom
+"hello, how are you",smalltalk
+find spikes in the graph,anomaly
+what's worth mentioning,insights
+what led to the rise in,root_cause
+can you analyze the correlation between social media presence and brand awareness,correlation
+"hey, hows life",smalltalk
+amount trend by season,trend
+i want to see all the rows,raw_data
+how do i interpret this chart,explain
+give me a rundown of whats happening here,explain
+can we discus the weather,unclear
+compare with prev year,refinement
+what can we expect in terms of roi next year,forecast
+what's the secret to happiness,unclear
+give me an overview of the data,explain
+display all records please,raw_data
+data that's off the charts,anomaly
+what's behind the sales slump?,root_cause
+provide an overall performance report,overview
+show the top 10 by amount please,top_bottom
+i want to see the main highlights,overview
+thanks for everythin,smalltalk
+how do metrics relate to each other,correlation
+what's the trend in electricity consumption,trend
+give me a snapshot of our current situation,overview
+the best 20 items in desc order,top_bottom
+find me the abnormal values,anomaly
+i need help understanding this data,explain
+can i get a forecast of the next quarter and the two after,forecast
+show me the core data,raw_data
+can you write a song about heartbreak,unclear
+orders forecast for the next 5 years,forecast
+forecasted earnings for the next 12 months,forecast
+show me the big picture view,overview
+elaborate on the insights from this graphic,explain
+how do you interpret this visualisation?,explain
+can you write a short story about a talking eggplant,unclear
+how do you interprete the chart,explain
+"hi, hows it going?",smalltalk
+categories that have the lowest sales numbers,top_bottom
+detecting abnormal behaviour,anomaly
+why did sales fall off a cliff?,root_cause
+yearly trend of customer retention,trend
+what's driving the growth in amount,root_cause
+weather forecast please,unclear
+just this year,refinement
+"is the earth round or flat, idk",unclear
+what's the story behind this plot,explain
+what are the sales figures by month,trend
+measures that influence one another,correlation
+show electronics products,refinement
+"i'm confused, can you explain this in simpler terms",explain
+show me data thats out of the ordinary,anomaly
+how has customer count changed yearly,trend
+do i need to wear a jacket,unclear
+what's the top level view,overview
+i want to learn how to dance,unclear
+only 2024 data,refinement
+which factors influence profit,correlation
+revenue has dropped - why,root_cause
+can u explain the concept of time travel,unclear
+can u tell me whats the deal with cats,unclear
+any hidden gems in the data,insights
+can you show me sales by season,trend
+"i dont get it, can you break it down",explain
+explanations for the drop,root_cause
+does amount shipped depend on boxes shipped,correlation
+wipe out all filters,refinement
+can you summarize our current position in the market?,overview
+sales figures over the last 5 years,trend
+what's the forecast look like for q2,forecast
+what's the headline news,overview
+can you walk me thru the key findings,explain
+i need a general idea of how we're doing,overview
+predictive analytics for future orders,forecast
+which products are the top and bottom sellers,top_bottom
+can you identify correlated variables in my dataset?,correlation
+what are the worst selling products,top_bottom
+worst perfoming units,top_bottom
+what r the least profitable stuff,top_bottom
+can you give me some notable trends,insights
+show me amount trend from 2010 to 2020,trend
+what's interesting to know,insights
+estimated sales for the upcoming year,forecast
+give me a bird's eye view of our perfomance,overview
+show me raw sample data,raw_data
+can you explain the decrease in order volume,root_cause
+i need to see the raw records,raw_data
+show me only electronics,refinement
+can you spot any unusual activity,anomaly
+i need to know the worst region,top_bottom
+monthly trend of orders placed,trend
+detect unusual patterns,anomaly
+monthly pattern of user engagement,trend
+can i get a glimpse of the data,raw_data
+provide a brief summary of our status,overview
+can you share some interesting observations,insights
+can you forecast our orders for the next 2 years,forecast
+predicting the future of our business's financials,forecast
+whats up with that thing,unclear
+what factors contributed to the sales drop,root_cause
+can you explain the sudden increase,root_cause
+list the bottom 10%,top_bottom
+what are some intriguing trends,insights
+what does the data look like,overview
+trend of sales by month,trend
+remove every filter,refinement
+need to know info,insights
+can we determine if units and revenue are related,correlation
+show me only non return data,refinement
+why have sales been falling off?,root_cause
+how does our revenue change over time,trend
+can u forecast the sales 4 next quarter?,forecast
+can someone interprete this for me,explain
+"is amount seasonal, show me the pattern",trend
+i need a general overview of perfomance,overview
+find data that seems fishy,anomaly
+i need to see the worst performing regions,top_bottom
+show the worst 3 products by amount,top_bottom
+why did the numbers go up,root_cause
+i need help with my english essay,unclear
+sales trend over the past year,trend
+bottom 5 products with poorest performance,top_bottom
+how do i become a millionaire,unclear
+how does this chart relate to our business,explain
+how strong is the correlation between price and quantity,correlation
+export as table,raw_data
+display the data table,raw_data
+what's the statistical relationship between price and quantity,correlation
+laters,smalltalk
+how many planets are in our galaxie,unclear
+locate data points that are off the charts,anomaly
+unusual data points,anomaly
+what's the monthly order trend,trend
+no filters at all,refinement
+what are the key takeaways from this graph,explain
+i need a dashboard view of our performance,overview
+can i get a high level summary,overview
+how does this graph relate to our goals,explain
+what's the story behind these numbers,explain
+what's causing the blip in our stats,anomaly
+"i'm confused, can you explain",explain
+outlier detection in financial reports,anomaly
+see you tomorrow,smalltalk
+spot anomalies in the numbers,anomaly
+predicted order volume for q1,forecast
+why the sudden jump,root_cause
+visualize customer growth by year,trend
+give me a fast overview of the key points,overview
+can you show me the correlation between amount and boxes,correlation
+what does the raw data look like,raw_data
+dependencies between metrics,correlation
+what's the pattern of revenue by quarter,trend
+is there a link between price and volume,correlation
+give me a quick rundown of our situation,overview
+determine if units and revenue are correlated or independent,correlation
+reset and compare with previous year,refinement
+can you give me some notable insights,insights
+nice to see you again,smalltalk
+i could use a break from all this data,unclear
+why did revenue take a hit,root_cause
+i want to know whats going on,insights
+can you tell me a story,unclear
+is there a link between social media engagement and sales?,correlation
+what are some surprising facts,insights
+expected growth rate of our user base,forecast
+whats the corelation between sales and customer demographics?,correlation
+list the top 8 products with the highest revenue,top_bottom
+i hope you have a great week,smalltalk
+predicting future sales performance,forecast
+appreciate it,smalltalk
+rank customers by profitability,top_bottom
+how does monthly revenue change,trend
+test,unclear
+plot the historic data of stock prices,trend
+anything worth noting in the numbers,insights
+category a exclusively,refinement
+any unusual data points,anomaly
+which country has the largest amount?,top_bottom
+what's the current state of affairs?,overview
+i like pizza,unclear
+can you highlight whats notable,insights
+revert to no filters,refinement
+prediction of future growth,forecast
+can you break down this data for me,explain
+give me a top level view of our perfomance,overview
+what's the point of this,unclear
+its lovely to meet you,smalltalk
+how are we doing comparied to last year,overview
+give me the most important info,insights
+reset filters to this year,refinement
+what drives customer purchasing behavior?,correlation
+reason for amount's recent drop,root_cause
+disply the orginal rows,raw_data
+i need a summary,overview
+what are the main factors behind the growth,root_cause
+i want to see whats poppin,insights
+do you think artificial intelligence will surpass human intelligence,unclear
+dont filter anything,refinement
+long term forecast for stock prices,forecast
+un.expected values in the db,anomaly
+can you point out any surprises,insights
+what's the unusual values,anomaly
+see you when i see you,smalltalk
+data points that dont fit,anomaly
+diagnose the reason for the slump in sales,root_cause
+anything notable in the statistics,insights
+show me the most interesting stuff,insights
+"hey, hows everything going",smalltalk
+whats the most important thing to know,insights
+"rank everything by profit, whats at the bottom",top_bottom
+predicted income for the next 18 months,forecast
+find anomalies in amount,anomaly
+unexplained changes in the data,anomaly
+i want to see it all,refinement
+"its been a while, how are things",smalltalk
+i want to see the big picture,overview
+"bye for now, take care",smalltalk
+sales over time,trend
+what are the key performance indicators,overview
+see the orginal dataset,raw_data
+can you give me a brief rundown,overview
+how's everything going on?,smalltalk
+whats the expected amount of revenue for next quater,forecast
+is it morning yet,unclear
+what's worth knowing about this data,insights
+how much revenue can we expect in the next quarter?,forecast
+key observations,insights
+how's everything going so far,overview
+need to predict the next 3 quarters of sales,forecast
+"nice to meet u, tc",smalltalk
+projection of future market conditions,forecast
+has amount increased or decreased over time,trend
+how does it look vs last year,refinement
+which are the top 10 with the highest amount?,top_bottom
+estimate future revenue,forecast
+can you tell me whats going on with this graph,explain
+what happend to cause the change,root_cause
+the least sucessful sales peoples,top_bottom
+can you explain why amount dropped,root_cause
+"amount, how has it changed over the years",trend
+tell me whats goin on,insights
+what are the projected earnings for the next 3 months?,forecast
+can you tell me why amount's changing,root_cause
+limit to 2024,refinement
+give me a list of the top 12 products by revenue,top_bottom
+monthly sales fluctuations,trend
+can you give me a perfomance update?,overview
+compared to the year before,refinement
+"hi, hows everything",smalltalk
+filter by year 2024,refinement
+visualize quarterly earnings trend,trend
+give me a snapshot,overview
+overall perfomance stats,overview
+evening,smalltalk
+track down weird discrepensies in the numbers,anomaly
+why the numbers are down,root_cause
+what is the pattern of sales over time,trend
+thank you very much,smalltalk
+seasonality of sales,trend
+which customer is the most valuable,top_bottom
+nice,smalltalk
+provide a summary of our key metrics and perfomance,overview
+show me the regions thats performing the worst,top_bottom
+what are the main insights,insights
+who are you,smalltalk
+need a quick update on everythin,overview
+are units and revenue related,correlation
+can you recommand a movie,unclear
+"i need help with my math homework, but not really",unclear
+list the 10 customers with the lowest sales figures,top_bottom
+what are the key takeaways from this?,insights
+how do sales fluctuate seasonally,trend
+what drives the amount shipped in relation to boxes,correlation
+give me the main points,overview
+whats the weird data point,anomaly
+what are the predicted sales for next quarter,forecast
+amount's rising fast - what's behind it,root_cause
+what are the outliers,anomaly
+what can we learn from this data,insights
+price and quantity: are they connected,correlation
+until next time,smalltalk
+nice to talk to you,smalltalk
+tell me something i dont know,insights
+show me the main dashboard,overview
+show me the underlying rows,raw_data
+detect unusual activity,anomaly
+"hey, whats going on?",smalltalk
+give me the lowdown on the current metrics,explain
+filter to current year,refinement
+what story is this data trying to tell us?,explain
+what are the main insights i should know,insights
+refine to category a,refinement
+i need to know everythin,unclear
+i need to see the underlying records,raw_data
+what's the most importent thing to know,insights
+tell me about cats,unclear
+is there a seasonal pattern in customer purchases,trend
+estimated future profits,forecast
+why the sudden drop in revenue,root_cause
+can you write a poem about summer,unclear
+the top ten with the most amount,top_bottom
+tell me what's interesting here,insights
+2024 only please,refinement
+do you like music,unclear
+values that are way off,anomaly
+sales growth over the last year,trend
+can you give me a quick rundown?,overview
+show me the raw info,raw_data
+can you summarize the key points?,overview
+flagging suspicious account activty,anomaly
+show me india,refinement
+show the dataset,raw_data
+summarize the highlights for me,insights
+what are the reasons behind the drop in sales,root_cause
+what's the overall insight from this data?,insights
+i need the best 8 items,top_bottom
+discover abnormal trends,anomaly
+why did orders go down,root_cause
+show the base data,raw_data
+trend of sales over the last decade,trend
+i want to see the outliers in this data,anomaly
+brands that are doing the best,top_bottom
+"i dont get it, can you elaborate",explain
+why is sales revenue decreasing?,root_cause
+what are the raw rows,raw_data
+relationship betweeen datas,correlation
+how does amount correlate with boxes shipped,correlation
+show revenue trend by month,trend
+dont show returns,refinement
+help me understand this,explain
+tell me somethin interesting,insights
+find the unusual values in the table,anomaly
+diagnose the reason for the change,root_cause
+what are some intersting trends in this data?,insights
+can you explain this graph to me,explain
+see you soon,smalltalk
+good day,smalltalk
+show me the worst and best selling products,top_bottom
+analyze the trend of user retention rate,trend
+find the weird data points for me,anomaly
+projected earnings for next quarter,forecast
+which are the 15 lowest ranked universities by student satisfaction,top_bottom
+can you determine the relationship between marketing spend and revenue,correlation
+what's the most notable aspect,insights
+i want the sample data,raw_data
+year over year comparision of revenue,trend
+display sample records,raw_data
+the worst brands to invest in,top_bottom
+show unfiltered results,refinement
+can you provide some actionable insights?,insights
+long time no talk,smalltalk
+"how's everything going, give me a quick rundown",overview
+show revenue by quarter,trend
+thx for everythin,smalltalk
+provide me with general info,unclear
+anything worth knowing in this report,insights
+last quarter data please,refinement
+projection of income for the upcoming year,forecast
+stuff thats actually worth looking at,insights
+whats goin on with these numbers on the screen?,explain
+what are the most interesting aspects,insights
+i need help understanding the data,explain
+any interesting trends or patterns,insights
+find the salesperson with the lowest earnings,top_bottom
+why did the metric rise so sharply,root_cause
+begin with a clean slate,refinement
+i have no idea whats happening,unclear
+"hey, hows everything",smalltalk
+i need help with my math homework,unclear
+is revenue dependent on the number of units sold,correlation
+projected revenue for the upcoming year,forecast
+what are the projected sales figures for next quarter,forecast
+show me the table,raw_data
+why is revenue down,root_cause
+what are the exceptional values,anomaly
+reasons for revenue drop,root_cause
+display the 8 worst performing stocks by value,top_bottom
+japan exclusion,refinement
+what's the deal with turtles,unclear
+i want to see whats surprising,insights
+how do these stats relate to each other,explain
+are there any surprises in the data,insights
+how much money will we make in the next 3 years,forecast
+finding data that is out of place,anomaly
+what is your favret food,unclear
+do amount and boxes shipped have a strong correlation,correlation
+give me a list of regions from top to bottom,top_bottom
+can u find me some correlated fields?,correlation
+what's the reason for the increase,root_cause
+predicting future order trends,forecast
+something that dont add up,insights
+could you estimate the figures for the next half year,forecast
+can you show me the raw records?,raw_data
+detect anomalies in this data set,anomaly
+determine the root cause of the trend,root_cause
+show the data without any aggregation,raw_data
+i want to know how we're doing overall,overview
+2024 only thanks,refinement
+the bottom of the barrel: worst selling categories,top_bottom
+"forecast for next 3 quaters, whats it look like",forecast
+can you give me a rundown of the key findings?,explain
+what are the top 15 products with the most sales,top_bottom
+give me an overview,overview
+can you explane a meme to me,unclear
+start fresh with no filters,refinement
+"hello, hope you're doing great",smalltalk
+what is the meaning of this data visualization,explain
+can you forecast the growth of our market share,forecast
+show me sales trend,trend
+wishing you a wonderful day,smalltalk
+what's the main point of this visualization,explain
+how many orders can we expect in the next 12 months,forecast
+what's the factor behind the growth,root_cause
+sales by month - is there a pattern?,trend
+what does this chart indicate about our perfomance,explain
+"it's been a while, how have you been doing",smalltalk
+only show 2024,refinement
+how does revenue change by month,trend
+where do we stand right now,overview
+estimated revenue for the next fiscal year,forecast
+find the black swans in the data,anomaly
+can you describe what i'm looking at here,explain
+what is the relationship between amount shipped and boxes,correlation
+dont apply any filters,refinement
+i want to examine the sample data,raw_data
+what's the story behind the numbers,insights
+show sample rows,raw_data
+identify abnormal values,anomaly
+why the growth stopped,root_cause
+cheers mate,smalltalk
+give me the lowdown on whats happening,insights
+can you help me identify some weird data,anomaly
+can you list the products with the highest and lowest sales,top_bottom
+what does this visualization mean,explain
+can you add electronics to the list,refinement
+can you describe the atmospheric conditions,unclear
+can you provide some context for this chart,explain
+i really appreciate that,smalltalk
+what's the best movie ever,unclear
+filterless search,refinement
+how do i interpret this data visualization,explain
+show the first 100 records,raw_data
+explain the cause of the decine,root_cause
+factor analysis,correlation
+why has there been a drop off in orders,root_cause
+how do i set my watch,unclear
+estimating the forecast for the next 3 quarters,forecast
+forecast revenue for next year,forecast
+can you provide a short summary of our acheivements,overview
+can you provide context for this visualization?,explain
+identify the correlations between data,correlation
+what are the key insights from this data,insights
+values that are way out of range,anomaly
+restrict to india,refinement
+any interesting patterns emerge,insights
+investigate the cause of the orders decline,root_cause
+can you show the raw table,raw_data
+show data for karnataka,refinement
+no filters please,refinement
+give me a summary of our performance,overview
+what jumps out,insights
+what's the reason for the orders downturn,root_cause
+give me an estimate of the next 3 quarter's performance,forecast
+have a fantastic day ahead,smalltalk
+clear all of them,refinement
+identify the root cause of declining orders,root_cause
+hey whats new,smalltalk
+what values are far away from the mean,anomaly
+"hey, how's it going",smalltalk
+projecting earnings per share for the next year,forecast
+i need the original records,raw_data
+"thanks, catch you later",smalltalk
+future outlook for the company's profits,forecast
+what stands out in the analysis,insights
+only 2025,refinement
+good day to you,smalltalk
+what's the pattern of sales by month,trend
+highlight any strange occurrences,anomaly
+without japan,refinement
+narrow down to electronics,refinement
+"goodbye, see you later",smalltalk
+what's the most interesting aspect of this,insights
+which regions are at the bottom in terms of performance,top_bottom
+identify data points that are way off,anomaly
+can you give me some key insights?,insights
+why did it go up,root_cause
+what variables impact customer satisfaction,correlation
+can you give me a rundown of this report,explain
+can you recomend a book,unclear
+what region is doing the worst,top_bottom
+can you give me a summary of whats intresting,insights
+"i dont understand the trend on this graph, can you explain?",explain
+whats the weather like,unclear
+key things to take away,insights
+apply filter for this year,refinement
+give me some direction please,unclear
+who are the least valuable customers,top_bottom
+give me a snapshot of our perfomance,overview
+play music,unclear
+give me an estimate of future growth,forecast
+i wanna see the whole table,raw_data
+what's behind the downturn in orders,root_cause
+estimated earnings per share for q2,forecast
+show me the trend in revenue,trend
+next years sales forecast,forecast
+brands with the highest revenue,top_bottom
+hello again,smalltalk
+i want to discuss the weather,unclear
+what will our revenue be in 2025,forecast
+can i see the overall perfomance indicators,overview
+categories with the poorest sales performance,top_bottom
+how are we doing,overview
+what values are outside the norm,anomaly
+revenue leaders,top_bottom
+?,unclear
+predictive analysis for the next 6 months,forecast
+predict revenue for next 3 quarters please,forecast
+can you put into plain words what this data means?,explain
+break this down for me,explain
+you're a lifesaver,smalltalk
+need to see the top 25 and worst 10,top_bottom
+rank the top 3 products by amount made,top_bottom
+highlight the most significent findings,insights
+can you recommend a restaurant,unclear
+how do sales change over the years,trend
+can you share some insightful information,insights
+anticipated customer acquisition costs,forecast
+restrict to karnataka,refinement
+trend analysis of revenue by quarter,trend
+irregular transactions,anomaly
+unusual fluctuations in the data,anomaly
+show the base data now,raw_data
+how does the world work,unclear
+what led to the decrease in orders,root_cause
+what does this chart represent,explain
+show me the anomalies,anomaly
+can you put this data into perspective,explain
+clarify this chart,explain
+"how's it going, buddy",smalltalk
+which region has the worst performance metrics,top_bottom
+is it time for lunch,unclear
+growth trend of social media followers over the past year,trend
+what are the relationships between different metrics?,correlation
+"hello, how are things going?",smalltalk
+detecting anomalous behavior,anomaly
+how does our revenue change throughout the year,trend
+can you teach me a language,unclear
+explain this diagram in simple terms,explain
+only karnataka from now on,refinement
+what caused the downturn in our sales,root_cause
+i'm looking for some interesting patterns,insights
+"great to meet you, talk to you soon",smalltalk
+show the bottom 5 countries with the lowest life expectancy,top_bottom
+can you list the top 5 sales performers,top_bottom
+what is the trend of orders per month,trend
+how do i interpret this information,explain
+what are the worst selling categories,top_bottom
+list the sales team from highest to lowest paid,top_bottom
+i need an answer to nothin,unclear
+show the dataset in its entirety,raw_data
+unusual activity in the logs,anomaly
+can i get a general overview of our results,overview
+identify outliers in the dataset,anomaly
+give me a sample of the rows,raw_data
+give me the lowdown on whats goin on,insights
+show me only karnataka,refinement
+can you describe a beautiful sunset,unclear
+"hey, whats new with you?",smalltalk
+seasonal fluctuation in profits,trend
+what are the key takeaways from this chart,explain
+what is the main point of this visualization,explain
+anything interesting to point out,insights
+what are the insights i should know,insights
+can you talk about the weather,unclear
+detect abnormal values in the column,anomaly
+whats new with you?,smalltalk
+what are the biggest 3 accounts we got,top_bottom
+what are the most interesting facts?,insights
+what's interesting about this data,insights
+what are the projected sales figures for the next quarter?,forecast
+rank the top 20 items for me,top_bottom
+get me the daily trend data,trend
+how do sales compare to industry benchmarks and trends?,correlation
+do sales correlate with trade shows and events?,correlation
+show me some interesting data points,insights
+can you forecast the income for the next 12 months?,forecast
+what's the reason for the recent fluctuation in amount,root_cause
+are there any key insights,insights
+weird data points that need explaining,anomaly
+give me an overview of the most notable trends,insights
+show me the top sales performers in the company,top_bottom
+rank companies by reveneu,top_bottom
+what's behind the decrease in amount,root_cause
+detect unusual activity in the logs,anomaly
+what are the key perfomance indicators?,overview
+give me a list of the worst products,top_bottom
+i only want 2024,refinement
+why did we see a decrease,root_cause
+give me an example of the data,raw_data
+trend analysis of monthly expenses,trend
+restrict to 2024,refinement
+i wanna know whats linked to user retention,correlation
+what's the predicted amount for next quarter,forecast
+list the worst sales performers,top_bottom
+highlight any values that are out of the ordinary,anomaly
+"i dont get it, can someone explain this graph?",explain
+revenue prediction for the next 12 months,forecast
+growth rate of user base by season,trend
+can you disply the first 100 rows,raw_data
+sales projection for the next year please,forecast
+what led to the revenue downturn,root_cause
+correlation between data points,correlation
+can i get a summary of our perfomance to date,overview
+which products have the lowest profit margins?,top_bottom
+what's the best pun you know,unclear
+why did revenue decrease so much,root_cause
+show me whats standin out,insights
+year over year growth trend,trend
+do you think bigfoot is real or not,unclear
+most popular product by sales,top_bottom
+historical data trend pls,trend
+detect abnormal values,anomaly
+"boxes shipped and amount shipped, correlated?",correlation
+can i get a dashboard view?,overview
+whats worth lookin into further,insights
+can u tell me the time pls,unclear
+how do variables interact with each other?,correlation
+how r we doin,overview
+why did revenue fall,root_cause
+correlation between boxes shipped and amount recived,correlation
+what made revenue go down,root_cause
+point out weird values,anomaly
+what's the cause of amount's decline,root_cause
+"hey, how was your week?",smalltalk
+what is the definition of life,unclear
+projecting sales for the next fiscal year,forecast
+give me a summary of everything,overview
+what are the notable trends,insights
+"how many dimensions are there in our universe, i think",unclear
+does it have seasonality?,trend
+help me understand what this chart is telling me,explain
+find me the abnormal points,anomaly
+find the odd one out in the numbers,anomaly
+can you summarize the current status,overview
+how has sales changed over time,trend
+projected increase in website traffic for the next quarter,forecast
+reasons for the improvement,root_cause
+who r our best customers,top_bottom
+which 3 accounts are the largest,top_bottom
+merci,smalltalk
+can you uncover the relationships between supply chain metrics,correlation
+why did it drop so much,root_cause
+how much revenue can we expect in 2024,forecast
+most successful companies by revenue,top_bottom
+anything that raises an eyebrow,insights
+hey whats good,smalltalk
+dont use any filters,refinement
+give me an executive summary,overview
+show me highlights,insights
+show me last quarter's,refinement
+what's worth knowing about this data?,insights
+what does this metric represent,explain
+projected sales for the next quarter and two following,forecast
+what are the main points of interest,insights
+odd spikes in amount,anomaly
+amount shipped and boxes: is there a connection,correlation
+have a gr8 day,smalltalk
+how do i make sence of this info,explain
+what will amount be next month,forecast
+forecast the sales figures for next quarter,forecast
+predict the sales trend for the next year,forecast
+history of revenue,trend
+i need to know whats going on,insights
+have a nice evening,smalltalk
+how will our sales change in the future,forecast
+can you give me an exec summary,overview
+find values that dont fit,anomaly
+how do these measures interact,correlation
+what caused the drop in sales,root_cause
+is there a link between amount and boxes shipped,correlation
+this year only pls,refinement
+what is the trend of our companys income over the past 5 years,trend
+what's worth noting in this data?,insights
+how much sales can we expect next year,forecast
+what r the worst 5 states by crime rate,top_bottom
+give me a list of the bottom 10 products by profit,top_bottom
+help,unclear
+"i'm confused, can you clarify what this graph represents?",explain
+growth prospects for the next 3 years,forecast
+projected income for the next 5 years,forecast
+trend of revenue by season,trend
+can you analyze the correlation between price and quantity,correlation
+give me the bottom 10% of regions by performance,top_bottom
+what are the key findings,insights
+i need to know whats happening,insights
+what is this dashboard trying to tell me,explain
+hi buddy boy,smalltalk
+reason for the decline,root_cause
+what is the seasonal pattern of income,trend
+rank the top 3 accounts,top_bottom
+can you provide some context for this dashboard,explain
+seasonal fluctuations in customer engagement,trend
+what's the prediction for customer engagement next quarter,forecast
+i'm looking for a new phone case,unclear
+can you explain the decline,root_cause
+data points that are extremely high or low,anomaly
+forecasting sales for the next 9 months,forecast
+can you provide context for this graph,explain
+can you give me a forecast of the sales amount for the next 6 months,forecast
+the first 10 by amount in order,top_bottom
+"how's the company doing, give me a summary",overview
+who played in the last super bowl,unclear
+is there seasonality in website traffic,trend
+can you elaborate on this chart's findings,explain
+identify abnormalitys in the database,anomaly
+display the top 3 items with the most sales,top_bottom
+i dont understand whats bein shown,explain
+can you show the raw dataset,raw_data
+can you predict the sales figures for q1 next year?,forecast
+show me only category a items,refinement
+time series analysis of sales data,trend
+how do i make sense of this data,explain
+what caused the boost,root_cause
+data that doesnt follow the trend,anomaly
+can you provide a top level overview of our results,overview
+what caused the downturn,root_cause
+estimate the sales for the next quarter based on historical data,forecast
+"last quarter, thats all",refinement
+meaning of life,unclear
+do aliens exist or somethin,unclear
+clear out all the filters,refinement
+projection of profit for next fiscal year,forecast
+"you too, have a great one",smalltalk
+worst sales peoples,top_bottom
+can you clarify whats going on in this graph,explain
+give me a sample of the raw data,raw_data
+forecasting the revenue for 2027 and 2028,forecast
+looking for unusual patterns,anomaly
+i need to find the anomalies,anomaly
+excluding japan,refinement
+what are the outliers in this data,anomaly
+display abnormal data points,anomaly
+revenue growth over time,trend
+dependency between measures,correlation
+clear filter settings,refinement
+time series analysis of website usage,trend
+hi there,smalltalk
+show without september,refinement
+display the underlying dataset,raw_data
+looking forward to seeing you,smalltalk
+insightful observations from the research,insights
+can i get a high level overview?,overview
+compare sales by month for last 5 years,trend
+causal factors of the rise,root_cause
+can you explain this in simpler terms,explain
+last quarter is what i need,refinement
+growth rate year by year,trend
+next years projected revenue,forecast
+rank brands by sales,top_bottom
+how does this dashboard work,explain
+show me the correlation between different data points,correlation
+what are the anomalous values,anomaly
+break it down into smaller pieces,explain
+rank from worst to best,top_bottom
+what are the projected earnings for q2?,forecast
+can you provide a brief overview of our progress?,overview
+hope everythin goes well,smalltalk
+can you show me whats unique,insights
+show a sample of the data,raw_data
+average monthly increase in subscriptions,trend
+how is everything going in general,overview
+what's the one thing i should know?,insights
+reasons for the recent spike,root_cause
+what are the key indicators i should be looking at?,overview
+"it was great talking to you, bye",smalltalk
+show karnataka info,refinement
+can you give me a simple explanation,explain
+what's the sales trend like by month,trend
+how come sales have been dropping lately?,root_cause
+what will our order volume be in 2025,forecast
+"rank the products with the highest amount, give me the top 3",top_bottom
+what's the trendline look like,trend
+forecasting the demand for our products in 2024,forecast
+describe the trends you see,explain
+i need a song written,unclear
+what's the relationship between these two variables?,correlation
+filters should be empty,refinement
+i'm really grateful,smalltalk
+why has amount been fluctuating,root_cause
+give me the lowdown on this,insights
+can you shed some light on this,explain
+which regions are at the bottom,top_bottom
+summarise the data,overview
+projection of the company's future performance,forecast
+"youre welcome, anytime",smalltalk
+do you like pineapple on pizza,unclear
+anything notable to know,insights
+can you explain the surge,root_cause
+how much do boxes shipped affect amount shipped,correlation
+can you show me the connection between units and revenue,correlation
+what does this report mean,explain
+i need a simple explanation of what this dashboard is showing,explain
+who is the president,unclear
+filter returns off,refinement
+what are the key drivers of correlation in this dataset?,correlation
+key takeaways,insights
+what are some key findings,insights
+show me the raw data please,raw_data
+can you diagnose the reason for the drop,root_cause
+what time do clocks strike,unclear
+examine reasons for revenue decrease,root_cause
+what am i looking at,explain
+can i see the underlying table,raw_data
+find data thats off the charts,anomaly
+what factors affect revenue,correlation
+is it possible to communicate with animals,unclear
+give me some highlights,insights
+what are the key takeaways,insights
+can you explain the rules of chess,unclear
+unusual peaks in our dashboard,anomaly
+why did we see a surge in sales,root_cause
+projected revenue for the next fiscal year,forecast
+i dont have a watch whats the time,unclear
+rank regions by revenue from smallest to largest,top_bottom
+only electronic products,refinement
+"i'm looking for correlated variables, can you help?",correlation
+can you give me a rundown of this graph,explain
+do you like reading books,unclear
+identify data anomalies,anomaly
+how are we doing overall,overview
+"take care, bye",smalltalk
+show me the top performing regions,top_bottom
+how come our sales are falling?,root_cause
+how's the company doing at the moment,overview
+how do external factors impact our sales numbers?,correlation
+whats the correlation between website traffic and conversion,correlation
+current year filter,refinement
+"i'm not sure what i'm looking at, can you clarify?",explain
+show me the best and worst products by sales,top_bottom
+give me a rundown of this dashboard,explain
+show a few rows,raw_data
+are there any values that are way off,anomaly
+can you highlight something worth knowing,insights
+what's the trend of cost by year,trend
+who are the top 3 worst clients,top_bottom
+detect spikes in the data,anomaly
+nice one,smalltalk
+unusual data point detection,anomaly
+future sales predictions,forecast
+i wish you a great day ahead,smalltalk
+what's the biggest surprise,insights
+what triggered the uptick,root_cause
+can someone tell me whats going on,explain
+data anomaly identification,anomaly
+afternoon,smalltalk
+"i'm confused, can you clarify this graph",explain
+can i c the first 100 rows,raw_data
+tell me about your weekend,unclear
+gr8 day isnt it,smalltalk
+can you tell me y orders hav fallen,root_cause
+why isnt revenue growing,root_cause
+whats the time in london right now,unclear
+give me the yearly trend,trend
+is there anything that stands out,insights
+projected sales for next year?,forecast
+"you're welcome, bye",smalltalk
+hiya,smalltalk
+show me the historical trend,trend
+dump the data,raw_data
+what's the current perfomance trends,overview
+can you give me a quick rundown,overview
+sales trend - is it going up or down,trend
+can you make me smile,unclear
+show just 2024,refinement
+monthly flucuations in stock prices,trend
+show me the bottom 10 worst products,top_bottom
+what data points are considdered outliers,anomaly
+who r the best sales ppl,top_bottom
+what is the sales trend over time,trend
+can you plot sales data by season,trend
+what is the best way to make a peanut butter and jelly sandwich,unclear
+key observations from the study,insights
+anything intresting to note,insights
+can you explain the plot of inception,unclear
+anything interesting to note,insights
+can you tell me whats going on in the dataset,insights
+"next quarter sales forecast, can you show me the numbers?",forecast
+"nice one, great to meet you",smalltalk
+projections for the next fiscal year,forecast
+got any humor to share,unclear
+what's the point of this chart,explain
+measure growth by season,trend
+unusual patterns,anomaly
+annual sales pattern,trend
+provide a top level summary,overview
+find the values that dont fit the trend,anomaly
+whats the main thing i should take away,insights
+what does the raw table look like,raw_data
+browse the data,raw_data
+rank our customers from best to worst,top_bottom
+need a summary of all metrics,overview
+give me a summary of the key findings,insights
+show me only 2024 data,refinement
+it was good talking to you,smalltalk
+provide a company wide snapshot,overview
+show me the data sample,raw_data
+get rid of all the filters,refinement
+anticipated orders for the next 18 months,forecast
+give me insights,insights
+what is the driver of the price quantity relationship,correlation
+weekly sales pattern,trend
+the 5 lowest ranked,top_bottom
+what's the predicted value of the metric next quarter,forecast
+which customers have the worst 5 sales records,top_bottom
+show me how our revenue changes by month,trend
+whats the predicted revenue for q2,forecast
+what lead to the improvement,root_cause
+i want to see the whole picture,overview
+hi how are you,smalltalk
+how do orders change over time,trend
+notable findings,insights
+what's the link between price and quantity,correlation
+rank the bottom 5 by sales,top_bottom
+i'm looking for a brief summary of our busness,overview
+show me the major milestones,overview
+can you give me some insight into this graph,explain
+give an overview of our perfomance,overview
+can you display all the data,raw_data
+what are the top line numbers,overview
+i'm not sure what to make of this,explain
+do not display japan,refinement
+add the electronics category,refinement
+what does the overall data say,overview
+how are we doing overall?,overview
+prediction for the next 12 months,forecast
+how's everything going?,overview
+whats the current situation?,overview
+rank categories by sales: bottom 10,top_bottom
+what will the sales be like next year,forecast
+what's the main takeaway from this report,explain
+i need help understanding the trends,explain
+just last year and this year,refinement
+why did amount change recently,root_cause
+quarterly trend,trend
+explain why order volume has decreased,root_cause
+time series analysis of stock prices,trend
+units vs revenue: whats the correlation,correlation
+how was your day so far?,smalltalk
+drivers of change in the data,correlation
+what am i looking at here,explain
+what are the main metrics i should be looking at?,overview
+what drives the correlation between these two measures?,correlation
+underperforming products,top_bottom
+can you filter by electronics,refinement
+now only karnataka please,refinement
+what is the correlation between price and quantity sold,correlation
+i need help understanding this visual,explain
+find the top 20 products with the highest sales figures,top_bottom
+what are the key metrics i should know?,overview
+nite,smalltalk
+give me an overview of our current performance,overview
+what stands out,insights
+why did it go down,root_cause
+executive summary please,overview
+time series sales analysis,trend
+remove japan from results,refinement
+can someone explain stuff,unclear
+can you break down the data for me?,explain
+can i get a recipe,unclear
+can you give me some interesting facts,insights
+what contributted to the rise,root_cause
+what color is the sky on a sunny day,unclear
+can you explain this chart to me,explain
+what's the trend of website traffic by month,trend
+show me some interesting trends,insights
+forecasting revenue for the next 3 years,forecast
+amount vs boxes shipped: what's the correlation,correlation
+can you show me the overall trend?,overview
+what's the most notable thing here,insights
+status report,overview
+reset to india,refinement
+what's the correlation like between these two variables?,correlation
+uncover the reason for revenue drop,root_cause
+flag unusual values,anomaly
+what was the catalyst for the growth,root_cause
+give me the high level view,overview
+what's the general outlook,overview
+can someone shed some light on these statistics?,explain
+how do quantity and price affect each other,correlation
+now show karnataka,refinement
+which salesperson makes the most money,top_bottom
+only india data,refinement
+what stands out in the data,insights
+what are the bottom 5 products by profit,top_bottom
+reset all filter settings,refinement
+how's the trend been so far this year,trend
+who are the least successful,top_bottom
+i wanna see the raw rows,raw_data
+whats the deal with jokes anyway,unclear
+give me a sales forecast for the next year,forecast
+l8r,smalltalk
+how's the company doing overall?,overview
+list the best 5 cities by highest average salary,top_bottom
+need an overview of our current performance,overview
+what's the current state of our company?,overview
+howdy,smalltalk
+can you explain how to ride a bike,unclear
+products ranked by sales performance,top_bottom
+"hey, whats going on",smalltalk
+what is the expected sales growth for next year,forecast
+what are the main highlights?,overview
+give me the top 8 countries with the most forests,top_bottom
+pattern of sales over the years,trend
+what's notable in the latest reports,insights
+what is driving the upward trend,root_cause
+display the sample,raw_data
+investigate the cause of the shift,root_cause
+show me the spikes in the data,anomaly
+what are the underlying dependencies between business metrics,correlation
+forecasting sales for the next fiscal year,forecast
+largest 3 accounts,top_bottom
+should i wear shorts,unclear
+find the bottom 10% of sales reps,top_bottom
+what's the underlying cause of the growth,root_cause
+show raw rows,raw_data
+is sales increasin over time,trend
+give me a rundown of what im seeing here,explain
+current year,refinement
+stuff thats worth knowing about the market,insights
+can you give me some insight,insights
+can you show the original data,raw_data
+give a general outline,overview
+filter by karnataka,refinement
+"give me the 10,000 foot view",overview
+whats the point of askin questions,unclear
+can u show me the top 25 products by earnings?,top_bottom
+what's the current status of our operations,overview
+3 largest accounts pls,top_bottom
+can u forecast the revenue for next yr,forecast
+find the values that stick out,anomaly
+can you show me whats worth knowing?,insights
+goodnight and sweet dreams,smalltalk
+get me electronics stuff,refinement
+how much will we make in 2029,forecast
+how have you been,smalltalk
+can you show the data dump,raw_data
+lets talk about sports,unclear
+what's the significance of this plot,explain
+find unusual spikes in data,anomaly
+what is the best movie ever,unclear
+do u have a clock,unclear
+how's it lookin outside,unclear
+estimated revenue for the coming quarter,forecast
+anything stand out to you,insights
+show me the orginal table,raw_data
+what are we looking at here,explain
+unapply all filters,refinement
+display yearly trend of user engagement,trend
+"hey, hows life treating you",smalltalk
+what is behind the growth,root_cause
+provide context for the figures,explain
+"orders are down, whats the reason",root_cause
+projecting future order growth,forecast
+do you like pineapple pizza,unclear
+what's the best type of music,unclear
+growth over the past year,trend
+what time is it,unclear
+noteworthy trends or observations,insights
+have a good day,smalltalk
+can u explain somethin to me,unclear
+yearly and quarterly fluctuations,trend
+show me the unprocessed data,raw_data
+i dont want to see returns,refinement
+how do different measures relate to each other,correlation
+what drives sales,correlation
+show me the executive summary,overview
+identify root cause of revenue fall,root_cause
+what's the story behind this plot?,explain
+can you provide context for this data,explain
+can you highlight something interesting,insights
+i owe you one,smalltalk
+can you summarize our perfomance in a nutshell,overview
+only for last quarter,refinement
+show me the table and all its columns,raw_data
+whats the big picture here,insights
+which regions are performing the worst?,top_bottom
+identify abnormal patterns,anomaly
+is there a link between these numbers,correlation
+why did it go up so much,root_cause
+show me the trend of sales over time,trend
+what's the best way to learn spanish,unclear
+write me a poem,unclear
+yearly trend of customer purchases,trend
+what is the meaning of life,unclear
+what's the quarterly trend of server requests,trend
+what's interesting about this information?,insights
+only cat a,refinement
+show me the dependencies between metrics,correlation
+what was the differece last year,refinement
+show the top and bottom 3 brands,top_bottom
+forecast revenue for the next 6 months,forecast
+what are the bottom performing regions so far,top_bottom
+i want to see a high level summary of our perfomance,overview
+orders trend from month to month,trend
+is ther a strong correlation between sales and advertising spend?,correlation
+what's the expected sales amount for next quarter?,forecast
+how r things with you?,smalltalk
+revenue ranking from top to bottom,top_bottom
+show me the top line numbers,overview
+can you forecast the next 3 quarters of revenue,forecast
+list the top 3 regions with the smallest revenue,top_bottom
+i dont understand anythin,unclear
+compare this year's sales to last year's,trend
+how do amount and boxes shipped relate to each other,correlation
+go back to original data,refinement
+i dont understand whats being shown here,explain
+orders per month trend,trend
+get me the source data,raw_data
+can you translate this chart into something easier to understand?,explain
+can you sumarize our perfomance,overview
+what's the trend of sales by region over time,trend
+what salesperson has the lowest sales,top_bottom
+what's the abnormal data point,anomaly
+finding glitchs in the data,anomaly
+walk me thru this visualization,explain
+pinpoint weird data,anomaly
+why the sudden change in amount,root_cause
+can you support me,unclear
+whats the deal with that,unclear
+key takeaways from the report,insights
+the 10 best by amount,top_bottom
+can you show me the dashboard?,overview
+historical trend of user engagement,trend
+what regions have the worst revenue,top_bottom
+how's life,smalltalk
+provide a brief financial summary,overview
+can you give me a detailed explanation,explain
+the weird stuff in the data,anomaly
+can you estimate the future values,forecast
+i need info on nothing,unclear
+give me a brief summary,overview
+what factors are highly correlated with each other?,correlation
+what's the most intresting thing you've found,insights
+should i carry an umbrella,unclear
+include electronics,refinement
+all best wishes,smalltalk
+can i get a sales trend report,trend
+find the odd ones out,anomaly
+what's causing the spike,anomaly
+i want to see the overall perfomance of the company,overview
+how does quantity sold impact price,correlation
+can you give me a status update?,overview
+interesting facts and figures,insights
+what will be the revenue in 6 months?,forecast
+rank products from highest to lowest sales,top_bottom
+what's the main point of the graph,explain
+analyze revenue trend by season,trend
+predict amount for 2026,forecast
+identify the cause of the sales decline,root_cause
+explain this,explain
+"see you later, bye",smalltalk
+annual trend of employee count,trend
+what's driving the growth,root_cause
+which salesperson has the most sales,top_bottom
+underlying causes of the downturn,root_cause
+can you write a poem,unclear
+what are the categories with the lowest revenue,top_bottom
+write a script for a movie,unclear
+how are you,smalltalk
+remove all filters,refinement
+categories with bad sales,top_bottom
+rank products from worst to best,top_bottom
+what's the general outlook for our company,overview
+"hi, whats up",smalltalk
+"hi, long time no talk",smalltalk
+amount has been rising - why is that,root_cause
+provide a high level overview,overview
+what is the history of shoes,unclear
+important things to consider,insights
+can you highlight something meaningful?,insights
+give me a list of the top 3 accounts,top_bottom
+pattern of orders over time,trend
+yearly sales fluctuations,trend
+how's life treating you?,smalltalk
+give me the lowdown on whats happenin,insights

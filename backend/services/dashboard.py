@@ -62,15 +62,24 @@ def _pick_primary_dimension(profile: dict, exclude: Optional[list[str]] = None) 
 # Chart-builder helpers
 # ---------------------------------------------------------------------------
 def _kpi_card(kpi: dict) -> dict:
+    """Wrap a KPI dict into a chart spec. Tolerates missing optional fields
+    (count-based KPIs from HR/survey data don't have sparklines or trends)."""
     return {
         "id": _id(),
         "type": "kpi_card",
-        "title": kpi["name"],
-        "value": kpi["value"],
-        "trend": kpi["trend"],
-        "change_pct": kpi["change_pct"],
-        "sparkline": kpi["sparkline"],
-        "why": f"{kpi['name']} is a primary measure; trend computed from recent periods.",
+        "title": kpi.get("name", "KPI"),
+        "value": kpi.get("value"),
+        "trend": kpi.get("trend", "stable"),
+        "change_pct": kpi.get("change_pct"),
+        "change_abs": kpi.get("change_abs"),
+        "current_value": kpi.get("current_value", kpi.get("value")),
+        "previous_value": kpi.get("previous_value"),
+        "compare_period_label": kpi.get("compare_period_label"),
+        "compare_current_period": kpi.get("compare_current_period"),
+        "compare_previous_period": kpi.get("compare_previous_period"),
+        "note": kpi.get("note"),
+        "sparkline": kpi.get("sparkline", []),
+        "why": f"{kpi.get('name', 'KPI')}",
     }
 
 
@@ -540,7 +549,45 @@ def build_executive_overview(df: pd.DataFrame, profile: dict) -> dict:
     computed: dict = {}
     computed["kpis"] = analytics.kpi_summary(df, measures, date_col=date_col)
 
+    # If the dataset has no numeric measures (HR / survey / catalog data),
+    # emit count-based KPI cards so the overview isn't empty.
+    if not computed["kpis"]:
+        total_rows = int(len(df))
+        computed["kpis"].append({
+            "name": "Total records", "value": total_rows,
+            "current_value": total_rows, "trend": "stable",
+            "change_pct": None,
+        })
+        for dim in classified["dimensions"][:3]:
+            uniques = int(df[dim].nunique(dropna=True))
+            computed["kpis"].append({
+                "name": f"Unique {dim}", "value": uniques,
+                "current_value": uniques, "trend": "stable",
+                "change_pct": None,
+            })
+
     charts: list[dict] = [_kpi_card(k) for k in computed["kpis"]]
+
+    # For each of the top 3 dimensions, add a count-by-value bar chart.
+    # This is what makes overview useful for HR / survey data.
+    if not measures:
+        for dim in classified["dimensions"][:4]:
+            ct = analytics.count_by(df, dim, n=10)
+            if ct.get("items"):
+                charts.append({
+                    "id": _id(),
+                    "type": "bar",
+                    "title": f"Records by {dim}",
+                    "x": dim,
+                    "y": "count",
+                    "data": ct["items"],
+                    "why": f"{ct['unique_values']} distinct {dim} values. Bar shows record count per value.",
+                    "summary": (
+                        f"Top: {ct['items'][0].get(dim)} "
+                        f"({ct['items'][0].get('count')} records, "
+                        f"{ct['items'][0].get('percentage')}%)."
+                    ),
+                })
 
     if primary_measure and date_col:
         t = analytics.trend(df, date_col, primary_measure)
@@ -725,6 +772,32 @@ def build_query_dashboard(
         })
         query_result_rows = f.get("forecast", [])
 
+    elif op == "top" and dimension and not measure:
+        # No numeric measure available (e.g. HR/exit-interview data) —
+        # fall back to counting records per dimension value.
+        n = int(intent.get("n") or 10)
+        ct = analytics.count_by(df, dimension, n=n, ascending=ascending)
+        if ct.get("items"):
+            direction = "Bottom" if ascending else "Top"
+            charts.append({
+                "id": _id(),
+                "type": "bar",
+                "title": f"{direction} {n} {dimension} by record count",
+                "x": dimension,
+                "y": "count",
+                "data": ct["items"],
+                "why": (
+                    f"Ranked {dimension} by number of records. "
+                    f"No numeric measure was found in the dataset, so counts are used."
+                ),
+                "summary": (
+                    f"Top: {ct['items'][0].get(dimension)} "
+                    f"({ct['items'][0].get('count')}, {ct['items'][0].get('percentage')}%)."
+                ),
+            })
+            query_result_rows = ct["items"]
+            computed["count_result"] = ct
+
     elif op == "top" and measure and dimension:
         n = int(intent.get("n") or 10)
         rows = analytics.top_n(df, dimension, measure, n=n, ascending=ascending)
@@ -779,6 +852,45 @@ def build_query_dashboard(
                        f"{a.get('count', 0)} flagged.",
             })
             query_result_rows = a.get("anomalies", [])
+        else:
+            charts.append(_no_measure_card())
+
+    elif op == "count":
+        target_dim = dimension or _pick_primary_dimension(profile)
+        if target_dim:
+            n = int(intent.get("n") or 20)
+            ct = analytics.count_by(df, target_dim, n=n, ascending=ascending)
+            if ct.get("items"):
+                charts.append({
+                    "id": _id(),
+                    "type": "bar",
+                    "title": f"Count by {target_dim}",
+                    "x": target_dim,
+                    "y": "count",
+                    "data": ct["items"],
+                    "why": (
+                        f"{ct['total']:,} records across {ct['unique_values']} "
+                        f"distinct {target_dim} values. Bar shows count per value."
+                    ),
+                    "summary": (
+                        f"Top: {ct['items'][0].get(target_dim)} "
+                        f"({ct['items'][0].get('count')}, {ct['items'][0].get('percentage')}%)."
+                    ),
+                })
+                query_result_rows = ct["items"]
+                computed["count_result"] = ct
+                # KPI card for the total
+                total_kpi = {
+                    "name": "Total records",
+                    "value": ct["total"],
+                    "current_value": ct["total"],
+                    "trend": "stable",
+                    "change_pct": None,
+                }
+                computed["kpis"] = [total_kpi]
+                charts.insert(0, _kpi_card(total_kpi))
+            else:
+                charts.append(_no_measure_card())
         else:
             charts.append(_no_measure_card())
 
@@ -873,12 +985,30 @@ def build_query_dashboard(
     insights = _query_specific_insights(intent, query_result_rows, computed, df, profile)
     recommendations = _query_specific_recs(intent, query_result_rows, profile)
 
+    # When parse confidence is low, expose the columns the parser considered
+    # so the frontend can offer a manual override picker.
+    _all_measures = profile["classification"].get("measures", [])
+    _all_dims = profile["classification"].get("dimensions", [])
+    _all_dates = profile["classification"].get("date_columns", [])
+    parse_hint = None
+    if intent.get("confidence", 0) < 0.7 or intent.get("op") in ("summary", "unknown"):
+        parse_hint = {
+            "reason": "Low parser confidence — pick columns manually if this dashboard isn't what you meant.",
+            "picked_measure": intent.get("measure"),
+            "picked_dimension": intent.get("dimension"),
+            "picked_date": intent.get("date_col"),
+            "available_measures": _all_measures,
+            "available_dimensions": _all_dims[:20],  # cap for UI
+            "available_dates": _all_dates,
+        }
+
     spec = {
         "id": _id(),
         "title": question.strip().rstrip("?") or "Query Result",
         "business_goal": f"Answer: {question}",
         "question": question,
         "intent": intent,
+        "parse_hint": parse_hint,
         "generated_at": _now_iso(),
         "kpis": computed.get("kpis", []),
         "charts": charts,

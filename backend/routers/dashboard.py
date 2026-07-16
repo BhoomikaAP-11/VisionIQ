@@ -22,6 +22,21 @@ from ..services.sessions import store
 LLM_CONFIDENCE_THRESHOLD = 0.6
 CLASSIFIER_HIGH_CONFIDENCE = 0.55  # trust classifier at or above this
 
+# For testing: set FORCE_LLM_ALWAYS=true in .env to hit the LLM on every
+# analytical query. Confirms the LLM path is wired end-to-end.
+import os as _os
+FORCE_LLM_ALWAYS = _os.getenv("FORCE_LLM_ALWAYS", "").lower() in ("1", "true", "yes")
+
+# LLM is EXPENSIVE — only escalate when the local stack really can't cope.
+# Rule: if the heuristic OR BERT is at least this confident, DO NOT call LLM.
+# 0.55 = "the model is reasonably sure"; below that we escalate.
+LLM_AMBIGUITY_THRESHOLD = 0.55
+
+# Ops that always resolve locally (no LLM needed — they don't parse a query)
+_LOCAL_ONLY_OPS = {"greeting", "overview", "insights", "explain"}
+# Ops that mean "we didn't understand" — always escalate
+_ESCALATE_OPS = {"summary", "unknown"}
+
 router = APIRouter(prefix="/api/dashboard", tags=["dashboard"])
 
 
@@ -159,7 +174,7 @@ async def query(session_id: str, body: QueryBody):
     # Catches typos ('forcaste 8 months') the regex missed.
     # ------------------------------------------------------------------
     _BERT_TO_OP = {
-        "top_bottom": "top",
+        "top_bottom": "top",  # will auto-fallback to count when no measure
         "trend": "trend",
         "forecast": "forecast",
         "anomaly": "anomaly",
@@ -195,12 +210,54 @@ async def query(session_id: str, body: QueryBody):
         parsed["source"] = "classifier-rescue-strong"
 
     # ------------------------------------------------------------------
-    # LLM fallback for low confidence
+    # LLM fallback / verification
+    # Fires when EITHER of:
+    #   (a) FORCE_LLM_ALWAYS env flag is set (testing mode)
+    #   (b) heuristic + classifier are both below the ambiguity threshold
+    #   (c) heuristic op is "summary" or "unknown" (nothing else understood it)
     # ------------------------------------------------------------------
-    if parsed["confidence"] < LLM_CONFIDENCE_THRESHOLD and parsed["op"] not in {"greeting", "overview", "insights", "explain"}:
+    parsed["llm_called"] = False
+    parsed["llm_provider"] = None
+    parsed["llm_error"] = None
+    parsed["escalation_reason"] = None
+
+    # Decide whether to escalate to the LLM.
+    _op = parsed["op"]
+    _conf = parsed.get("confidence", 0)
+    escalation_reason = None
+    if _op in _LOCAL_ONLY_OPS:
+        escalation_reason = None                       # never escalate these
+    elif FORCE_LLM_ALWAYS:
+        escalation_reason = "FORCE_LLM_ALWAYS flag is set (demo mode)"
+    elif _op in _ESCALATE_OPS:
+        escalation_reason = f"local stack returned op='{_op}' (didn't understand)"
+    elif _conf < LLM_AMBIGUITY_THRESHOLD:
+        escalation_reason = (
+            f"low confidence ({_conf:.2f} < {LLM_AMBIGUITY_THRESHOLD}) — "
+            f"escalating to LLM for a second opinion"
+        )
+    # else: local stack is confident enough → skip LLM, save quota
+
+    should_call_llm = escalation_reason is not None
+    parsed["escalation_reason"] = escalation_reason
+
+    if should_call_llm:
+        import logging as _logging
+        _log = _logging.getLogger("bel.llm")
+        _log.info("🤖 LLM ESCALATION → query=%r  reason=%s  (local op=%s, conf=%.2f)",
+                   body.question, escalation_reason, _op, _conf)
+    else:
+        import logging as _logging
+        _log = _logging.getLogger("bel.llm")
+        _log.info("✓ Local stack handled query — LLM skipped. op=%s conf=%.2f  query=%r",
+                   _op, _conf, body.question)
+
+    if should_call_llm:
         try:
             schema_context = excel_service.build_schema_context({"profile": session.profile})
             llm_intent = await ai_service.parse_intent_with_llm(body.question, schema_context)
+            parsed["llm_called"] = True
+            parsed["llm_provider"] = llm_intent.get("provider") or llm_intent.get("source") or "unknown"
             if llm_intent.get("op") and llm_intent["op"] not in {"unknown"}:
                 for key in ("op", "measure", "dimension", "date_col", "n",
                             "periods", "nth_index", "ascending", "reply"):
@@ -208,8 +265,12 @@ async def query(session_id: str, body: QueryBody):
                         parsed[key] = llm_intent[key]
                 parsed["confidence"] = max(parsed["confidence"], llm_intent.get("confidence", 0.85))
                 parsed["source"] = "llm"
-        except Exception:
-            pass
+            _log.info("← LLM parsed: op=%s measure=%s dimension=%s (provider=%s)",
+                       parsed.get("op"), parsed.get("measure"),
+                       parsed.get("dimension"), parsed["llm_provider"])
+        except Exception as e:
+            parsed["llm_error"] = str(e)[:200]
+            _log.warning("✗ LLM call failed: %s", str(e)[:200])
 
     # ------------------------------------------------------------------
     # Apply accumulated filters to the dataframe

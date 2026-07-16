@@ -1,0 +1,251 @@
+EmployeeID,Gender,AgeGroup,Department,Position,Location,JoinDate,ExitDate,TenureMonths,ManagerRating,SatisfactionScore,ReasonForLeaving,WouldRecommend,HasCounteroffer
+E02131,Male,40-49,Engineering,Director,Pune,2020-05-21,2025-05-19,60,4,8,Better Opportunity,Yes,No
+E02075,Female,30-39,HR,Senior Manager,Pune,2017-08-21,2023-10-18,74,4,7,Manager Issues,Yes,No
+E02164,Male,20-29,Marketing,Analyst,Pune,2019-03-14,2024-02-09,59,5,10,Compensation,No,No
+E02054,Male,50+,Engineering,Manager,Bengaluru,2021-09-26,2023-09-25,24,3,5,Compensation,No,Yes
+E02003,Male,20-29,Engineering,Individual Contributor,Delhi,2020-04-27,2025-02-23,58,4,8,Manager Issues,No,Yes
+E02046,Female,20-29,Operations,Individual Contributor,Delhi,2019-05-14,2024-07-10,62,3,6,Compensation,Yes,No
+E02064,Male,30-39,Marketing,Analyst,Remote,2022-12-07,2023-09-06,9,4,6,Health,No,No
+E02165,Male,30-39,Sales,Senior Analyst,Bengaluru,2023-05-29,2024-08-27,15,4,7,Better Opportunity,Yes,No
+E02090,Male,20-29,Engineering,Senior Analyst,Delhi,2020-11-19,2023-08-19,33,4,7,Work-Life Balance,Maybe,No
+E02179,Female,20-29,Operations,Analyst,Remote,2023-12-08,2025-05-07,17,4,9,Work-Life Balance,Yes,No
+E02225,Male,30-39,Engineering,Director,Bengaluru,2023-02-21,2025-06-21,28,4,8,Better Opportunity,No,Yes
+E02121,Prefer not to say,20-29,Engineering,Analyst,Mumbai,2021-12-21,2024-04-20,28,4,9,Career Growth,Yes,No
+E02188,Male,30-39,Operations,Analyst,Chennai,2021-01-22,2023-09-21,32,4,9,Manager Issues,Yes,No
+E02049,Male,20-29,Product,Analyst,Bengaluru,2021-10-13,2023-07-13,21,5,9,Manager Issues,Yes,No
+E02097,Female,20-29,Product,Analyst,Bengaluru,2019-04-20,2024-04-17,60,3,5,Health,Yes,No
+E02070,Female,20-29,Sales,Individual Contributor,Pune,2023-10-04,2024-11-02,13,2,2,Relocation,No,Yes
+E02024,Male,30-39,Product,Individual Contributor,Bengaluru,2022-06-25,2024-04-23,22,4,8,Relocation,Yes,No
+E02177,Male,20-29,Engineering,Individual Contributor,Hyderabad,2022-07-01,2023-07-31,13,5,9,Better Opportunity,No,No
+E02062,Female,20-29,Engineering,Analyst,Bengaluru,2021-08-28,2023-08-27,24,4,7,Manager Issues,Yes,No
+E02239,Male,20-29,Engineering,Analyst,Delhi,2022-06-12,2023-10-11,16,4,9,Compensation,No,Yes
+E02148,Male,30-39,Engineering,Individual Contributor,Hyderabad,2016-09-01,2024-02-28,90,3,4,Career Growth,No,No
+E02041,Female,30-39,Engineering,Individual Contributor,Mumbai,2021-05-11,2024-03-09,34,5,8,Work-Life Balance,Yes,Yes
+E02184,Male,20-29,Engineering,Analyst,Bengaluru,2020-11-18,2024-10-16,47,5,9,Career Growth,Yes,No
+E02019,Female,30-39,Operations,Analyst,Delhi,2022-07-05,2025-05-03,34,4,8,Better Opportunity,Yes,No
+E02173,Male,30-39,Engineering,Individual Contributor,Hyderabad,2023-05-26,2025-06-24,25,3,6,Health,Yes,No
+E02217,Female,20-29,Marketing,Individual Contributor,Bengaluru,2024-01-24,2025-01-22,12,3,6,Career Growth,No,Yes
+E02190,Female,40-49,Engineering,Manager,Pune,2021-09-10,2023-09-09,24,3,5,Compensation,No,Yes
+E02022,Male,20-29,Engineering,Senior Analyst,Hyderabad,2023-05-10,2024-04-08,11,4,6,Relocation,No,Yes
+E02171,Female,20-29,Operations,Senior Analyst,Delhi,2022-07-07,2024-07-05,24,5,10,Better Opportunity,Yes,Yes
+E02204,Female,40-49,Engineering,Senior Analyst,Mumbai,2023-04-25,2025-02-21,22,3,5,Compensation,Yes,No
+E02086,Female,30-39,Engineering,Individual Contributor,Hyderabad,2019-11-29,2024-08-26,57,1,3,Compensation,No,No
+E02248,Male,30-39,Engineering,Analyst,Mumbai,2023-11-27,2024-06-26,7,4,8,Better Opportunity,No,No
+E02030,Female,50+,Engineering,Senior Manager,Mumbai,2023-05-06,2025-03-04,22,3,7,Manager Issues,Yes,No
+E02076,Female,30-39,Customer Support,Analyst,Bengaluru,2022-04-07,2024-04-05,24,5,10,Better Opportunity,Yes,Yes
+E02199,Non-binary,30-39,Engineering,Senior Analyst,Delhi,2022-08-02,2024-05-01,21,3,4,Work-Life Balance,No,No
+E02181,Male,30-39,Engineering,Analyst,Bengaluru,2021-02-20,2023-09-20,31,4,9,Career Growth,Yes,No
+E02168,Non-binary,50+,Engineering,Manager,Mumbai,2023-05-22,2024-05-20,12,4,7,Career Growth,No,No
+E02020,Female,20-29,Engineering,Individual Contributor,Bengaluru,2022-01-27,2023-08-27,19,3,5,Better Opportunity,Maybe,No
+E02017,Male,40-49,Marketing,Manager,Remote,2018-10-15,2025-01-11,75,3,7,Manager Issues,Maybe,Yes
+E02056,Female,20-29,Finance,Analyst,Pune,2023-12-23,2025-01-21,13,4,10,Better Opportunity,Yes,No
+E02092,Female,50+,Operations,Senior Manager,Delhi,2019-01-04,2025-06-01,77,4,10,Compensation,Yes,No
+E02202,Male,40-49,Sales,Senior Analyst,Chennai,2019-09-05,2023-07-04,46,3,5,Compensation,No,Yes
+E02130,Non-binary,20-29,Finance,Analyst,Bengaluru,2023-01-23,2024-09-22,20,4,9,Compensation,Yes,No
+E02212,Female,20-29,Marketing,Individual Contributor,Bengaluru,2023-02-27,2025-01-26,23,5,9,Career Growth,Yes,No
+E02110,Male,40-49,Sales,Senior Analyst,Mumbai,2017-04-20,2024-09-15,89,4,6,Health,Yes,No
+E02081,Male,20-29,Finance,Individual Contributor,Delhi,2019-07-02,2023-08-30,50,5,10,Better Opportunity,Yes,Yes
+E02001,Female,20-29,Engineering,Analyst,Pune,2021-06-06,2023-11-04,29,3,6,Work-Life Balance,Yes,No
+E02094,Female,30-39,Marketing,Analyst,Bengaluru,2023-01-09,2025-04-08,27,4,10,Compensation,Yes,No
+E02002,Male,20-29,Customer Support,Analyst,Bengaluru,2023-01-20,2025-01-18,24,4,7,Better Opportunity,Yes,Yes
+E02206,Female,40-49,Sales,Senior Manager,Delhi,2021-10-19,2024-03-18,29,3,4,Relocation,No,Yes
+E02027,Male,40-49,Product,Senior Analyst,Chennai,2022-08-26,2024-07-25,23,4,6,Relocation,No,No
+E02137,Female,30-39,Operations,Senior Analyst,Mumbai,2023-01-09,2024-09-08,20,5,10,Better Opportunity,No,No
+E02105,Female,20-29,Sales,Analyst,Mumbai,2021-10-25,2024-07-24,33,5,10,Career Growth,Maybe,No
+E02141,Female,20-29,Sales,Senior Analyst,Chennai,2022-12-10,2025-05-09,29,3,6,Manager Issues,No,No
+E02044,Male,40-49,Marketing,Manager,Mumbai,2016-02-17,2023-07-15,89,4,9,Compensation,No,Yes
+E02140,Male,40-49,Marketing,Director,Bengaluru,2022-12-11,2025-03-10,27,5,10,Manager Issues,No,No
+E02042,Female,30-39,Engineering,Senior Analyst,Chennai,2023-06-29,2024-11-26,17,3,6,Compensation,Maybe,No
+E02015,Female,30-39,Operations,Manager,Bengaluru,2022-10-07,2024-05-06,19,2,4,Compensation,No,No
+E02079,Male,30-39,Customer Support,Individual Contributor,Chennai,2022-12-05,2024-03-05,15,5,10,Health,No,Yes
+E02014,Male,20-29,Marketing,Analyst,Hyderabad,2023-06-20,2024-09-18,15,4,7,Relocation,Yes,Yes
+E02113,Male,40-49,Operations,Director,Chennai,2021-12-19,2023-07-19,19,5,8,Compensation,Yes,No
+E02172,Male,30-39,Engineering,Analyst,Chennai,2022-05-06,2024-05-04,24,4,10,Health,Yes,No
+E02209,Female,20-29,Product,Individual Contributor,Bengaluru,2021-11-06,2023-09-05,22,4,9,Career Growth,Yes,No
+E02166,Male,20-29,Marketing,Analyst,Bengaluru,2022-11-17,2024-06-16,19,5,10,Career Growth,Yes,No
+E02093,Male,40-49,Marketing,Senior Manager,Bengaluru,2022-02-04,2024-01-04,23,4,10,Better Opportunity,Yes,No
+E02208,Female,20-29,Marketing,Individual Contributor,Bengaluru,2023-12-01,2025-06-30,19,5,10,Health,Maybe,Yes
+E02213,Female,20-29,Engineering,Individual Contributor,Mumbai,2021-06-23,2024-09-20,39,3,5,Career Growth,No,No
+E02152,Male,20-29,Engineering,Individual Contributor,Bengaluru,2022-10-20,2024-04-19,18,3,6,Better Opportunity,No,No
+E02012,Male,20-29,Operations,Individual Contributor,Bengaluru,2022-11-08,2024-01-07,14,5,9,Better Opportunity,Yes,No
+E02034,Female,20-29,Engineering,Analyst,Delhi,2020-05-14,2023-08-12,39,3,9,Career Growth,Yes,No
+E02111,Male,30-39,Product,Analyst,Mumbai,2017-05-29,2025-02-23,93,4,10,Career Growth,Yes,Yes
+E02124,Male,30-39,Engineering,Analyst,Mumbai,2024-05-05,2025-06-04,13,3,4,Career Growth,No,No
+E02155,Male,20-29,Engineering,Individual Contributor,Delhi,2022-03-30,2023-12-28,21,4,5,Career Growth,No,No
+E02154,Male,20-29,Sales,Analyst,Delhi,2019-12-26,2023-07-25,43,5,10,Relocation,Yes,No
+E02241,Male,20-29,Engineering,Senior Analyst,Chennai,2022-08-07,2023-07-07,11,5,10,Personal,Maybe,Yes
+E02197,Female,40-49,Marketing,Director,Bengaluru,2022-02-20,2023-07-21,17,4,9,Compensation,No,No
+E02058,Male,30-39,Customer Support,Senior Manager,Chennai,2022-07-01,2023-10-30,16,4,6,Compensation,Yes,No
+E02220,Female,30-39,Engineering,Manager,Bengaluru,2018-09-29,2023-09-27,60,4,9,Compensation,Yes,No
+E02120,Female,30-39,Product,Senior Analyst,Remote,2021-02-16,2024-01-16,35,4,9,Better Opportunity,Yes,No
+E02088,Male,50+,Marketing,VP,Delhi,2019-12-26,2024-11-22,59,2,5,Compensation,Yes,Yes
+E02214,Male,40-49,Engineering,Senior Analyst,Hyderabad,2023-05-27,2024-05-25,12,3,6,Compensation,Maybe,Yes
+E02101,Female,30-39,Marketing,Senior Manager,Delhi,2022-02-23,2023-09-23,19,4,9,Compensation,Yes,No
+E02242,Male,30-39,Engineering,Senior Analyst,Pune,2019-05-29,2024-05-26,60,4,6,Compensation,No,No
+E02195,Male,30-39,Engineering,Analyst,Bengaluru,2020-03-20,2025-03-18,60,4,6,Work-Life Balance,Yes,No
+E02051,Male,30-39,Sales,VP,Delhi,2023-07-18,2024-10-16,15,4,10,Career Growth,Yes,No
+E02234,Male,30-39,Marketing,Individual Contributor,Mumbai,2024-01-18,2024-09-17,8,3,7,Relocation,No,Yes
+E02060,Female,30-39,Engineering,Manager,Chennai,2021-04-07,2024-03-06,35,3,6,Better Opportunity,Yes,Yes
+E02116,Male,30-39,Marketing,Senior Analyst,Remote,2019-04-14,2023-12-11,56,5,10,Better Opportunity,Yes,No
+E02036,Female,40-49,Operations,Manager,Chennai,2022-11-19,2024-10-18,23,4,8,Work-Life Balance,Yes,No
+E02119,Non-binary,30-39,HR,Individual Contributor,Bengaluru,2023-12-14,2025-05-13,17,4,7,Work-Life Balance,Yes,No
+E02178,Female,20-29,Finance,Analyst,Pune,2023-12-29,2024-08-28,8,4,9,Work-Life Balance,No,No
+E02047,Male,30-39,Sales,Senior Analyst,Mumbai,2023-06-12,2024-04-11,10,4,10,Relocation,No,No
+E02007,Female,20-29,Product,Analyst,Bengaluru,2022-09-11,2023-11-10,14,3,7,Career Growth,Yes,Yes
+E02135,Female,20-29,Sales,Analyst,Bengaluru,2022-05-11,2024-03-09,22,3,6,Manager Issues,Yes,Yes
+E02005,Male,20-29,Customer Support,Individual Contributor,Pune,2022-11-24,2024-10-23,23,4,9,Compensation,Maybe,No
+E02032,Female,30-39,Customer Support,Senior Analyst,Pune,2022-08-09,2024-06-07,22,3,3,Better Opportunity,No,No
+E02132,Female,30-39,Operations,Senior Analyst,Delhi,2022-06-13,2023-09-12,15,5,10,Better Opportunity,No,No
+E02136,Male,50+,Engineering,VP,Bengaluru,2020-03-15,2024-09-11,54,2,3,Better Opportunity,No,No
+E02127,Female,30-39,Sales,Analyst,Bengaluru,2022-05-28,2024-06-26,25,3,6,Compensation,No,No
+E02128,Female,20-29,Sales,Senior Analyst,Pune,2020-04-18,2025-04-16,60,4,9,Better Opportunity,Yes,No
+E02224,Male,30-39,Sales,Senior Analyst,Chennai,2022-06-05,2023-11-03,17,5,9,Work-Life Balance,No,No
+E02073,Male,30-39,Product,Senior Analyst,Bengaluru,2022-06-09,2023-11-07,17,3,10,Better Opportunity,No,No
+E02162,Female,20-29,Engineering,Analyst,Mumbai,2022-02-16,2025-05-16,39,3,7,Work-Life Balance,Yes,Yes
+E02191,Male,20-29,Engineering,Analyst,Delhi,2022-10-13,2024-06-12,20,2,6,Better Opportunity,No,No
+E02193,Male,30-39,Customer Support,Senior Analyst,Bengaluru,2022-04-08,2023-09-06,17,5,10,Manager Issues,Maybe,No
+E02200,Female,30-39,Engineering,Analyst,Bengaluru,2019-02-11,2024-02-09,60,3,6,Career Growth,Yes,No
+E02065,Male,40-49,HR,Manager,Delhi,2017-06-17,2025-02-11,92,4,7,Career Growth,No,No
+E02091,Male,20-29,Engineering,Analyst,Bengaluru,2020-02-10,2023-12-09,46,2,6,Better Opportunity,No,Yes
+E02040,Male,40-49,Marketing,Senior Manager,Hyderabad,2021-06-29,2024-04-27,34,2,3,Career Growth,No,Yes
+E02223,Male,20-29,Sales,Senior Analyst,Bengaluru,2018-03-25,2025-04-21,85,5,8,Manager Issues,No,No
+E02203,Female,40-49,Marketing,Senior Manager,Delhi,2018-03-12,2024-09-07,78,2,2,Compensation,No,No
+E02149,Male,20-29,Operations,Individual Contributor,Bengaluru,2022-11-04,2025-01-02,26,2,5,Work-Life Balance,Maybe,No
+E02066,Non-binary,30-39,Operations,Senior Analyst,Bengaluru,2017-07-04,2025-01-29,91,3,7,Better Opportunity,Yes,No
+E02008,Male,30-39,Operations,Senior Manager,Bengaluru,2022-02-01,2024-06-01,28,2,7,Compensation,Yes,Yes
+E02123,Male,40-49,Customer Support,Senior Manager,Bengaluru,2023-01-04,2024-06-03,17,4,8,Compensation,Yes,No
+E02048,Female,30-39,Sales,Manager,Delhi,2023-08-20,2024-09-18,13,4,7,Career Growth,Yes,No
+E02201,Female,20-29,Operations,Analyst,Pune,2018-03-04,2023-08-31,66,4,7,Better Opportunity,Maybe,No
+E02196,Male,30-39,Sales,Director,Bengaluru,2023-10-10,2024-07-09,9,3,7,Career Growth,Yes,No
+E02098,Male,20-29,Operations,Individual Contributor,Chennai,2023-09-25,2024-10-24,13,3,7,Health,Yes,Yes
+E02063,Female,30-39,Sales,Analyst,Bengaluru,2022-03-23,2024-02-20,23,5,10,Compensation,No,No
+E02095,Male,30-39,Engineering,Senior Analyst,Bengaluru,2022-05-22,2024-08-19,27,4,8,Work-Life Balance,No,No
+E02053,Female,20-29,Engineering,Analyst,Bengaluru,2021-08-16,2024-02-14,30,4,8,Health,Yes,No
+E02163,Male,30-39,Engineering,Manager,Pune,2022-05-09,2024-08-06,27,4,10,Career Growth,Maybe,No
+E02117,Male,30-39,Sales,Analyst,Bengaluru,2022-10-26,2024-07-25,21,4,9,Work-Life Balance,Yes,No
+E02169,Male,20-29,Engineering,Analyst,Mumbai,2017-02-09,2024-08-07,90,4,7,Compensation,Yes,No
+E02057,Female,30-39,Engineering,Senior Analyst,Bengaluru,2023-07-05,2024-10-03,15,4,6,Relocation,No,Yes
+E02025,Prefer not to say,20-29,Sales,Individual Contributor,Delhi,2018-03-24,2023-12-20,69,4,8,Compensation,No,No
+E02192,Male,20-29,Engineering,Analyst,Remote,2018-10-12,2024-07-09,69,3,8,Compensation,Yes,No
+E02235,Male,50+,Marketing,Director,Mumbai,2021-07-23,2024-02-20,31,3,8,Work-Life Balance,Yes,No
+E02144,Male,20-29,Operations,Individual Contributor,Delhi,2023-10-23,2024-10-21,12,4,9,Work-Life Balance,Maybe,Yes
+E02083,Female,30-39,Customer Support,Individual Contributor,Delhi,2021-11-25,2025-02-22,39,4,7,Compensation,No,No
+E02114,Female,20-29,Engineering,Analyst,Hyderabad,2022-03-11,2024-09-08,30,4,9,Better Opportunity,Yes,No
+E02228,Female,40-49,Sales,Senior Analyst,Mumbai,2023-11-13,2025-02-11,15,4,6,Career Growth,Yes,No
+E02035,Prefer not to say,30-39,Operations,Senior Analyst,Hyderabad,2020-02-12,2024-02-10,48,3,6,Better Opportunity,No,Yes
+E02244,Female,30-39,Customer Support,Senior Analyst,Bengaluru,2020-12-13,2024-10-11,46,4,6,Compensation,Yes,No
+E02167,Female,30-39,Product,Analyst,Pune,2023-03-02,2024-11-29,21,4,7,Work-Life Balance,Maybe,No
+E02126,Male,20-29,Customer Support,Individual Contributor,Bengaluru,2023-01-07,2024-09-06,20,5,8,Career Growth,No,Yes
+E02072,Male,20-29,Customer Support,Analyst,Bengaluru,2022-07-30,2024-10-27,27,3,6,Better Opportunity,Yes,No
+E02080,Male,20-29,Operations,Senior Analyst,Bengaluru,2023-08-25,2024-08-23,12,4,8,Career Growth,Yes,No
+E02078,Female,20-29,Engineering,Senior Analyst,Bengaluru,2019-11-10,2023-12-08,49,2,6,Personal,Yes,No
+E02087,Male,20-29,Customer Support,Analyst,Hyderabad,2023-05-03,2025-01-30,21,5,10,Compensation,No,No
+E02006,Female,30-39,Product,Manager,Bengaluru,2023-12-25,2025-04-24,16,4,10,Compensation,Maybe,No
+E02096,Male,20-29,Engineering,Analyst,Mumbai,2022-03-22,2025-02-18,35,2,6,Compensation,Yes,Yes
+E02069,Female,20-29,Customer Support,Analyst,Mumbai,2022-06-20,2024-05-19,23,3,4,Personal,No,Yes
+E02157,Male,30-39,Customer Support,Individual Contributor,Hyderabad,2022-11-23,2024-01-22,14,3,7,Career Growth,No,No
+E02013,Female,20-29,Sales,Senior Analyst,Delhi,2024-01-21,2024-10-20,9,4,9,Career Growth,No,No
+E02230,Male,40-49,Sales,Manager,Bengaluru,2022-05-31,2024-08-28,27,3,10,Career Growth,Yes,No
+E02085,Female,20-29,Sales,Individual Contributor,Delhi,2023-02-25,2024-04-25,14,2,4,Compensation,No,No
+E02189,Male,30-39,Marketing,Individual Contributor,Delhi,2019-10-24,2023-12-22,50,5,10,Health,No,Yes
+E02158,Male,20-29,Engineering,Analyst,Bengaluru,2022-12-27,2025-04-26,28,3,6,Compensation,Maybe,Yes
+E02103,Female,30-39,Operations,Individual Contributor,Mumbai,2023-03-28,2024-03-26,12,5,10,Better Opportunity,Yes,No
+E02037,Male,30-39,Sales,Manager,Mumbai,2019-09-19,2023-12-17,51,3,6,Manager Issues,Maybe,No
+E02104,Male,20-29,Engineering,Analyst,Mumbai,2023-04-17,2024-09-14,17,2,6,Better Opportunity,No,No
+E02186,Male,30-39,Customer Support,Individual Contributor,Bengaluru,2021-08-20,2023-07-20,23,2,1,Career Growth,No,Yes
+E02211,Male,20-29,Engineering,Analyst,Pune,2023-10-13,2025-02-10,16,2,6,Compensation,Maybe,No
+E02010,Male,30-39,Engineering,Senior Manager,Hyderabad,2022-11-10,2024-12-09,25,4,10,Career Growth,Yes,No
+E02229,Male,20-29,Marketing,Senior Analyst,Bengaluru,2024-02-29,2025-03-30,13,5,10,Career Growth,No,No
+E02156,Female,30-39,Marketing,Individual Contributor,Mumbai,2022-06-01,2024-01-30,20,4,10,Health,Yes,Yes
+E02218,Female,20-29,Customer Support,Individual Contributor,Chennai,2023-09-04,2025-03-04,18,3,7,Compensation,Yes,No
+E02125,Female,20-29,Engineering,Analyst,Remote,2017-05-13,2024-12-08,91,5,10,Career Growth,Yes,Yes
+E02099,Female,20-29,Operations,Analyst,Delhi,2022-07-10,2024-07-08,24,3,9,Better Opportunity,No,No
+E02068,Prefer not to say,30-39,Customer Support,Analyst,Remote,2018-06-23,2025-03-20,81,5,9,Compensation,Yes,No
+E02247,Female,30-39,Sales,Individual Contributor,Delhi,2023-07-05,2024-12-02,17,4,8,Career Growth,No,Yes
+E02250,Male,20-29,Sales,Analyst,Bengaluru,2022-08-02,2023-12-01,16,5,10,Career Growth,No,No
+E02236,Male,30-39,Engineering,Manager,Bengaluru,2022-06-12,2023-11-10,17,5,10,Manager Issues,Yes,No
+E02074,Male,50+,Product,Director,Mumbai,2022-10-03,2024-09-01,23,5,10,Career Growth,Yes,No
+E02170,Male,20-29,Engineering,Senior Analyst,Delhi,2023-06-10,2024-11-07,17,2,6,Career Growth,Yes,No
+E02145,Female,30-39,Customer Support,Individual Contributor,Mumbai,2018-04-14,2024-09-09,77,5,10,Better Opportunity,Yes,Yes
+E02028,Male,20-29,Customer Support,Analyst,Bengaluru,2022-12-08,2024-07-07,19,3,9,Better Opportunity,Yes,No
+E02026,Male,20-29,Finance,Senior Analyst,Bengaluru,2022-01-03,2024-07-03,30,4,5,Career Growth,Yes,No
+E02150,Female,30-39,Engineering,Manager,Hyderabad,2022-07-29,2023-11-27,16,2,2,Career Growth,No,No
+E02182,Non-binary,30-39,Operations,Analyst,Bengaluru,2022-07-11,2024-05-09,22,4,8,Career Growth,No,No
+E02146,Female,50+,Operations,Director,Bengaluru,2022-01-29,2023-08-29,19,4,10,Work-Life Balance,Yes,No
+E02198,Male,30-39,Marketing,Senior Manager,Hyderabad,2023-10-10,2025-02-07,16,5,10,Compensation,No,Yes
+E02039,Male,20-29,Engineering,Analyst,Mumbai,2024-05-03,2024-12-01,7,4,7,Career Growth,No,Yes
+E02107,Female,30-39,Customer Support,Senior Analyst,Mumbai,2023-04-17,2024-07-16,15,5,9,Career Growth,Yes,No
+E02029,Male,20-29,Product,Senior Analyst,Bengaluru,2021-05-01,2023-12-29,32,4,8,Work-Life Balance,Maybe,No
+E02237,Male,40-49,Product,Manager,Remote,2020-07-04,2024-07-02,48,5,8,Compensation,Yes,No
+E02185,Male,20-29,Engineering,Analyst,Chennai,2020-03-26,2024-07-23,52,2,5,Career Growth,No,No
+E02245,Male,20-29,Sales,Individual Contributor,Mumbai,2018-09-05,2023-09-03,60,4,7,Career Growth,Yes,Yes
+E02160,Non-binary,40-49,Engineering,Senior Analyst,Bengaluru,2024-01-15,2024-11-14,10,4,6,Retirement,Maybe,No
+E02180,Female,30-39,Finance,Senior Analyst,Delhi,2023-06-02,2024-07-01,13,3,6,Manager Issues,Yes,No
+E02004,Female,40-49,Marketing,Director,Bengaluru,2023-10-06,2024-11-04,13,4,7,Compensation,Yes,Yes
+E02118,Female,30-39,HR,Individual Contributor,Bengaluru,2020-12-25,2025-05-24,53,4,8,Compensation,Yes,No
+E02238,Male,30-39,Sales,Individual Contributor,Pune,2023-02-01,2023-12-02,10,5,9,Career Growth,No,Yes
+E02071,Female,30-39,Engineering,Individual Contributor,Hyderabad,2023-04-15,2025-05-14,25,3,6,Career Growth,Yes,No
+E02084,Female,40-49,Engineering,Senior Analyst,Chennai,2023-12-20,2025-02-17,14,2,3,Better Opportunity,No,No
+E02243,Male,40-49,Marketing,Director,Bengaluru,2023-10-01,2024-10-30,13,3,7,Better Opportunity,No,Yes
+E02231,Male,30-39,Engineering,Senior Analyst,Chennai,2022-11-17,2024-11-15,24,5,10,Compensation,Yes,No
+E02143,Female,40-49,Customer Support,Manager,Bengaluru,2022-04-30,2024-02-27,22,3,6,Compensation,Yes,Yes
+E02240,Female,20-29,Engineering,Analyst,Hyderabad,2021-05-20,2025-04-17,47,2,7,Manager Issues,Yes,No
+E02023,Female,20-29,Operations,Analyst,Pune,2024-02-12,2025-03-13,13,4,7,Health,Yes,No
+E02018,Male,20-29,Sales,Senior Analyst,Chennai,2018-09-25,2023-08-23,59,3,5,Career Growth,Yes,Yes
+E02187,Male,20-29,Operations,Analyst,Hyderabad,2017-09-04,2023-08-02,71,4,8,Compensation,No,Yes
+E02082,Male,20-29,Sales,Senior Analyst,Chennai,2018-11-11,2023-09-09,58,3,7,Compensation,Yes,No
+E02067,Male,40-49,Product,Senior Analyst,Bengaluru,2021-03-19,2025-05-17,50,3,8,Career Growth,Maybe,No
+E02153,Male,20-29,Engineering,Analyst,Bengaluru,2017-04-16,2023-11-12,79,3,6,Work-Life Balance,No,No
+E02215,Male,20-29,Sales,Analyst,Delhi,2018-06-20,2025-02-15,80,2,6,Personal,Yes,No
+E02161,Female,30-39,Sales,Analyst,Mumbai,2023-04-08,2025-03-07,23,5,10,Compensation,No,Yes
+E02052,Non-binary,30-39,Engineering,Manager,Bengaluru,2021-09-21,2025-03-20,42,4,7,Better Opportunity,Yes,No
+E02112,Male,30-39,Finance,Analyst,Mumbai,2023-05-23,2024-05-21,12,3,6,Career Growth,Maybe,No
+E02175,Male,20-29,Sales,Analyst,Delhi,2023-06-11,2025-04-09,22,2,2,Retirement,No,No
+E02227,Female,30-39,Operations,Individual Contributor,Delhi,2021-11-28,2023-11-27,24,5,10,Better Opportunity,Yes,No
+E02109,Female,40-49,Engineering,Senior Manager,Mumbai,2022-03-16,2023-10-14,19,3,8,Work-Life Balance,Yes,No
+E02011,Male,20-29,Sales,Analyst,Hyderabad,2021-03-31,2024-10-28,43,5,10,Relocation,Maybe,No
+E02033,Male,30-39,Engineering,Senior Analyst,Mumbai,2019-11-06,2024-04-04,53,3,6,Better Opportunity,Yes,Yes
+E02050,Male,20-29,Marketing,Analyst,Mumbai,2024-09-26,2025-03-27,6,4,9,Work-Life Balance,Yes,No
+E02249,Male,20-29,Engineering,Individual Contributor,Remote,2022-05-21,2024-05-19,24,2,5,Better Opportunity,Yes,No
+E02055,Male,20-29,Marketing,Analyst,Delhi,2020-03-28,2024-03-26,48,5,9,Better Opportunity,No,No
+E02043,Non-binary,30-39,Operations,Individual Contributor,Pune,2017-07-08,2023-09-04,74,5,10,Compensation,Yes,No
+E02045,Female,30-39,Engineering,Senior Analyst,Delhi,2021-07-13,2024-06-11,35,2,5,Health,Yes,No
+E02115,Female,20-29,Operations,Analyst,Delhi,2022-10-06,2025-02-03,28,4,8,Better Opportunity,Yes,No
+E02246,Male,20-29,Engineering,Analyst,Mumbai,2022-11-18,2023-12-18,13,5,9,Relocation,Yes,Yes
+E02031,Male,40-49,Marketing,Director,Pune,2022-12-20,2023-08-20,8,5,9,Work-Life Balance,No,No
+E02038,Female,40-49,Engineering,Senior Analyst,Mumbai,2022-05-14,2024-09-11,28,4,9,Compensation,Maybe,No
+E02159,Male,20-29,Engineering,Analyst,Delhi,2017-07-08,2024-06-04,83,2,5,Work-Life Balance,Yes,No
+E02174,Male,20-29,Sales,Individual Contributor,Mumbai,2022-12-12,2024-01-11,13,4,9,Health,Yes,Yes
+E02221,Female,20-29,Engineering,Analyst,Delhi,2023-10-29,2025-06-28,20,5,10,Work-Life Balance,Yes,No
+E02205,Male,40-49,Sales,Manager,Delhi,2023-01-21,2023-09-21,8,4,6,Better Opportunity,Yes,No
+E02133,Male,20-29,Engineering,Analyst,Mumbai,2023-04-10,2024-08-08,16,3,3,Compensation,No,Yes
+E02232,Female,30-39,Engineering,Manager,Bengaluru,2017-10-24,2025-02-19,88,5,10,Compensation,No,No
+E02129,Male,20-29,Operations,Analyst,Delhi,2023-09-05,2025-05-05,20,4,6,Manager Issues,Yes,No
+E02009,Female,20-29,Customer Support,Individual Contributor,Delhi,2023-12-05,2024-09-03,9,3,7,Career Growth,Maybe,Yes
+E02183,Female,40-49,Engineering,Senior Manager,Chennai,2022-10-24,2023-11-23,13,2,4,Work-Life Balance,No,No
+E02219,Female,20-29,Customer Support,Individual Contributor,Bengaluru,2022-03-11,2024-10-08,31,4,9,Personal,No,No
+E02102,Male,30-39,Engineering,Manager,Bengaluru,2019-10-05,2024-06-02,56,2,4,Relocation,No,Yes
+E02021,Female,20-29,Sales,Individual Contributor,Bengaluru,2023-02-21,2025-06-21,28,1,3,Career Growth,No,Yes
+E02077,Male,20-29,Engineering,Individual Contributor,Hyderabad,2023-11-15,2025-01-13,14,3,9,Career Growth,Yes,Yes
+E02233,Non-binary,20-29,Finance,Analyst,Pune,2023-06-08,2025-01-05,19,3,9,Better Opportunity,Yes,No
+E02061,Male,40-49,Finance,Senior Manager,Mumbai,2023-05-30,2024-07-28,14,3,7,Career Growth,No,No
+E02226,Female,20-29,Marketing,Analyst,Mumbai,2018-10-30,2025-03-27,77,5,10,Compensation,No,No
+E02147,Non-binary,30-39,Engineering,Individual Contributor,Delhi,2020-02-14,2024-11-11,57,3,6,Career Growth,Yes,No
+E02122,Female,30-39,Sales,Individual Contributor,Chennai,2020-05-26,2024-06-23,49,2,4,Compensation,No,No
+E02222,Male,20-29,Finance,Individual Contributor,Delhi,2020-09-15,2024-11-13,50,3,7,Health,No,No
+E02176,Male,20-29,Marketing,Analyst,Bengaluru,2022-02-09,2023-09-09,19,4,6,Compensation,Maybe,No
+E02138,Prefer not to say,30-39,Engineering,Director,Mumbai,2023-09-06,2025-02-03,17,4,10,Manager Issues,Yes,No
+E02108,Male,40-49,Engineering,Senior Analyst,Chennai,2022-05-09,2023-10-07,17,4,9,Relocation,Yes,Yes
+E02134,Male,20-29,Marketing,Analyst,Mumbai,2024-04-10,2025-05-10,13,4,9,Career Growth,No,No
+E02210,Male,30-39,Customer Support,Analyst,Mumbai,2022-06-03,2024-04-01,22,5,10,Compensation,No,Yes
+E02100,Male,20-29,Engineering,Analyst,Pune,2016-08-15,2024-03-12,91,4,5,Compensation,Yes,Yes
+E02216,Male,30-39,HR,Analyst,Delhi,2023-05-21,2024-05-19,12,3,6,Compensation,Yes,No
+E02016,Prefer not to say,20-29,Sales,Analyst,Chennai,2023-07-11,2025-02-07,19,3,7,Career Growth,Yes,Yes
+E02142,Female,20-29,Customer Support,Analyst,Hyderabad,2022-11-29,2024-04-28,17,5,10,Compensation,Yes,No
+E02059,Female,30-39,Finance,Individual Contributor,Mumbai,2023-02-04,2024-08-04,18,4,8,Compensation,Yes,No
+E02151,Male,30-39,Marketing,Senior Manager,Bengaluru,2023-03-09,2025-03-07,24,3,8,Better Opportunity,No,No
+E02194,Male,30-39,Sales,Senior Analyst,Mumbai,2022-10-15,2023-09-14,11,3,5,Manager Issues,No,Yes
+E02106,Female,30-39,Engineering,Manager,Bengaluru,2023-10-23,2025-02-20,16,3,4,Better Opportunity,No,No
+E02139,Male,20-29,Sales,Analyst,Delhi,2022-11-09,2024-08-08,21,5,10,Better Opportunity,No,No
+E02207,Female,20-29,Finance,Individual Contributor,Mumbai,2022-03-19,2023-11-17,20,5,10,Career Growth,No,Yes
+E02089,Male,30-39,Sales,Senior Analyst,Bengaluru,2020-10-25,2025-04-23,54,4,8,Personal,Yes,No

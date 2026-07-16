@@ -220,6 +220,15 @@ _ANOMALY = {"anomaly", "anomalies", "outlier", "outliers", "unusual", "abnormal"
             "spike", "spikes", "irregular"}
 _CORRELATION = {"correlation", "correlated", "related", "driver", "drivers",
                 "relationship", "associated"}
+
+# Count / distribution queries — "how many X", "distribution of Y",
+# "breakdown by Z". No numeric measure needed; we just count rows.
+_COUNT = {
+    "how many", "count of", "count by", "number of", "distribution",
+    "breakdown", "split by", "share of", "share by", "percentage of",
+    "percentage by", "proportion", "spread", "makeup", "composition",
+    "who left", "who joined", "who is", "who are",
+}
 _ASCENDING_HINT = {"ascending", "asc", "low to high", "smallest first"}
 _DESCENDING_HINT = {"descending", "desc", "high to low", "largest first"}
 
@@ -255,7 +264,25 @@ _SYNONYM_FAMILIES: list[set[str]] = [
     {"price", "rate", "fee", "tariff", "cost"},
     {"discount", "promo", "promotion", "rebate", "offer"},
     {"return", "refund", "refunds", "chargeback"},
-    {"employee", "staff", "headcount", "worker"},
+    {"employee", "staff", "headcount", "worker", "person", "people", "workforce",
+     "resource", "personnel", "team", "member"},
+    # HR / exit-interview vocabulary
+    {"reason", "cause", "why", "motive", "factor", "driver", "trigger"},
+    {"tenure", "duration", "years", "months", "length", "time",
+     "period", "seniority", "experience"},
+    {"position", "role", "title", "job", "designation", "grade", "level",
+     "band", "rank"},
+    {"department", "team", "unit", "division", "function", "org", "group",
+     "practice", "cohort"},
+    {"gender", "sex", "male", "female"},
+    {"age", "birth", "birthday", "dob"},
+    {"leave", "quit", "resign", "exit", "attrition", "churn", "departure",
+     "left", "leaving", "resignation"},
+    {"joined", "hired", "onboarded", "start", "startdate", "joindate"},
+    {"salary", "pay", "compensation", "ctc", "package", "wage", "income"},
+    {"location", "office", "site", "city", "branch", "workplace"},
+    {"manager", "supervisor", "boss", "lead", "reporting"},
+    {"performance", "rating", "score", "grade", "review", "appraisal"},
 ]
 
 
@@ -520,6 +547,9 @@ def parse(question: str, profile: dict) -> dict:
     elif any(re.search(p, q) for p in _WORST_PATTERNS):
         out["op"] = "top"
         out["ascending"] = True
+        op_confidence = 0.9
+    elif _phrase_hit(q, _COUNT):
+        out["op"] = "count"
         op_confidence = 0.9
     elif _fuzzy_phrase_hit(q, _FORECAST):
         out["op"] = "forecast"

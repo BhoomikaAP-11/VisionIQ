@@ -506,8 +506,11 @@ def anomalies(df: pd.DataFrame, measure: str, date_col: Optional[str] = None,
             f"{safe_val(val)} is {abs(z_val)}σ {direction} the mean "
             f"({round(mean, 2)})"
         )
+        # +2 to match Excel: pandas is 0-indexed and Excel row 1 is the header,
+        # so DataFrame idx 0 == Excel row 2.
         item = {
-            "index": int(idx),
+            "index": int(idx),                  # raw pandas index (used as React key)
+            "row_number": int(idx) + 2,          # what the user sees in Excel
             "value": safe_val(val),
             "z": z_val,
             "reason": reason,
@@ -673,6 +676,38 @@ def root_cause(df: pd.DataFrame, measure: str, dimension: str,
         "pct_change": round(pct_change, 2) if pct_change is not None else None,
         "gainers": records(gainers),
         "decliners": records(decliners.iloc[::-1]),
+    }
+
+
+# ---------------------------------------------------------------------------
+# Count / distribution — for datasets without numeric measures
+# ---------------------------------------------------------------------------
+def count_by(df: pd.DataFrame, dimension: str, n: int = 20,
+              ascending: bool = False) -> dict:
+    """
+    Group by `dimension` and count rows. Used for HR-style data where the
+    question is "how many X" rather than "sum X". Returns records with
+    columns `<dimension>`, `count`, `percentage`.
+    """
+    if dimension not in df.columns:
+        return {"items": [], "total": 0, "dimension": dimension,
+                "note": "missing column"}
+    grouped = (
+        df[dimension].fillna("<null>").astype(str)
+        .value_counts(dropna=False)
+        .head(n)
+        .rename_axis(dimension)
+        .reset_index(name="count")
+    )
+    total = int(df[dimension].notna().sum() + (df[dimension].isna().sum() if df[dimension].isna().any() else 0))
+    grouped["percentage"] = (grouped["count"] / max(total, 1) * 100).round(2)
+    if ascending:
+        grouped = grouped.iloc[::-1].reset_index(drop=True)
+    return {
+        "dimension": dimension,
+        "items": records(grouped),
+        "total": total,
+        "unique_values": int(df[dimension].nunique(dropna=True)),
     }
 
 

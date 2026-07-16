@@ -292,6 +292,59 @@ SEED_DATA: list[tuple[str, str]] = [
     ("hmm", "unclear"),
     ("okay", "unclear"),
     ("test", "unclear"),
+
+    # === HR / exit-interview / survey / count-oriented queries ===
+    # Most map to top_bottom because the analytics engine treats "count-by"
+    # as a special ranking with no measure.
+    ("how many people left the company", "top_bottom"),
+    ("how many male and female employees", "top_bottom"),
+    ("count of employees by department", "top_bottom"),
+    ("how many employees by position", "top_bottom"),
+    ("which position had the most exits", "top_bottom"),
+    ("which department has highest attrition", "top_bottom"),
+    ("main reasons for leaving", "top_bottom"),
+    ("top reasons for exit", "top_bottom"),
+    ("most common reason people leave", "top_bottom"),
+    ("what are the top exit reasons", "top_bottom"),
+    ("show reasons for resignation", "top_bottom"),
+    ("distribution of tenure", "top_bottom"),
+    ("after how many years do people leave", "top_bottom"),
+    ("gender split of leavers", "top_bottom"),
+    ("breakdown by gender", "top_bottom"),
+    ("count by department", "top_bottom"),
+    ("split employees by team", "top_bottom"),
+    ("composition of workforce by role", "top_bottom"),
+    ("which manager loses most people", "top_bottom"),
+    ("share of exits by location", "top_bottom"),
+
+    # HR trend / duration
+    ("attrition trend over time", "trend"),
+    ("exits by month", "trend"),
+    ("resignation trend by quarter", "trend"),
+    ("show attrition over the last year", "trend"),
+
+    # HR root_cause
+    ("why are people leaving", "root_cause"),
+    ("what is causing attrition", "root_cause"),
+    ("which department is driving the exits", "root_cause"),
+    ("why did we see more exits recently", "root_cause"),
+    ("what drove the spike in resignations", "root_cause"),
+    ("who is responsible for turnover", "root_cause"),
+
+    # HR forecast
+    ("forecast attrition for next quarter", "forecast"),
+    ("predict future headcount", "forecast"),
+    ("expected exits next 6 months", "forecast"),
+
+    # HR anomaly
+    ("unusual exit patterns", "anomaly"),
+    ("outlier departments in resignations", "anomaly"),
+    ("odd tenure values", "anomaly"),
+
+    # HR correlation
+    ("does salary correlate with exit", "correlation"),
+    ("relationship between tenure and reason", "correlation"),
+    ("do performance ratings predict who leaves", "correlation"),
 ]
 
 

@@ -479,6 +479,9 @@ def build_schema_context(profile: dict) -> str:
 
 
 def _render_single(p: dict) -> str:
+    measures = set(p["classification"].get("measures", []))
+    dimensions = set(p["classification"].get("dimensions", []))
+    dates = set(p["classification"].get("date_columns", []))
     lines = [
         f"Table: {p['name']}",
         f"  Rows: {p['row_count']}, Columns: {p['column_count']}",
@@ -487,6 +490,17 @@ def _render_single(p: dict) -> str:
         "  Columns:",
     ]
     for c in p["columns"]:
-        samples = ", ".join(str(v) for v in c["sample_values"][:3])
-        lines.append(f"    - {c['name']} :: {c['semantic_type']} ({c['dtype']}) — e.g. {samples}")
+        name = c["name"]
+        role = (
+            "MEASURE (numeric, sum/avg-able)" if name in measures else
+            "DATE (time axis)" if name in dates else
+            "DIMENSION (group-by)" if name in dimensions else
+            "ID / text"
+        )
+        # Widen to 5 samples so the LLM sees typical vs edge values
+        samples = ", ".join(repr(v) for v in c["sample_values"][:5])
+        lines.append(
+            f"    - {name} :: {role} · type={c['semantic_type']} · unique={c['unique_count']} · "
+            f"nulls={c['null_count']} — samples: {samples}"
+        )
     return "\n".join(lines)

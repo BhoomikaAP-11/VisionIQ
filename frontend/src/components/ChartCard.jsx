@@ -262,13 +262,15 @@ function heatColor(v) {
 function AnomalyTable({ rows }) {
   if (!rows.length) return <div className="muted">No anomalies above z=3.</div>
   // Discover context columns dynamically from the first row
-  const skip = new Set(['index', 'value', 'z', 'reason', 'date'])
+  const skip = new Set(['index', 'row_number', 'value', 'z', 'reason', 'date'])
   const contextCols = Object.keys(rows[0]).filter((k) => !skip.has(k))
+  const hasRowNum = rows[0]?.row_number !== undefined
   return (
     <div style={{ overflow: 'auto', maxHeight: 320 }}>
       <table style={{ width: '100%', fontSize: 12, borderCollapse: 'collapse' }}>
         <thead>
           <tr style={{ color: AXIS, textAlign: 'left' }}>
+            {hasRowNum && <th style={{ padding: 4 }} title="Row number in the source Excel/CSV file (header = row 1)">Row</th>}
             {rows[0]?.date && <th style={{ padding: 4 }}>Date</th>}
             {contextCols.map((c) => <th key={c} style={{ padding: 4 }}>{c}</th>)}
             <th style={{ padding: 4 }}>Value</th>
@@ -279,6 +281,7 @@ function AnomalyTable({ rows }) {
         <tbody>
           {rows.slice(0, 50).map((r) => (
             <tr key={r.index} style={{ borderTop: '1px solid ' + GRID }}>
+              {hasRowNum && <td style={{ padding: 4, color: AXIS }}>{r.row_number}</td>}
               {r.date && <td style={{ padding: 4 }}>{String(r.date).slice(0, 10)}</td>}
               {contextCols.map((c) => <td key={c} style={{ padding: 4 }}>{String(r[c] ?? '—')}</td>)}
               <td style={{ padding: 4, fontWeight: 500 }}>{fmtNum(r.value)}</td>
