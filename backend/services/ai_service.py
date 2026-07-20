@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-FALLBACK_ORDER = os.getenv("AI_FALLBACK_ORDER", "openrouter,groq").split(",")
+FALLBACK_ORDER = os.getenv("AI_FALLBACK_ORDER", "company,openrouter,groq").split(",")
 
 # Process-lifetime memo of providers whose keys are exhausted, so we don't
 # waste seconds retrying every request.
@@ -81,7 +81,42 @@ async def _query_groq(prompt: str, context: str = "") -> str:
     return response.choices[0].message.content
 
 
+async def _query_company(prompt: str, context: str = "") -> str:
+    """
+    Company's internal LLM. Assumes an OpenAI-compatible endpoint (vLLM,
+    LiteLLM, Bedrock proxy, private Claude/GPT gateway — most do).
+
+    Configure via .env:
+        COMPANY_LLM_BASE_URL   e.g. https://llm.company.internal/v1
+        COMPANY_LLM_API_KEY    (or "not-needed" for network-restricted gateways)
+        COMPANY_LLM_MODEL      the model name your platform team gave you
+
+    If your company's LLM has a non-OpenAI JSON shape, swap the OpenAI client
+    below for httpx.AsyncClient() and shape the request/response accordingly.
+    """
+    from openai import OpenAI
+
+    base_url = os.getenv("COMPANY_LLM_BASE_URL")
+    api_key = os.getenv("COMPANY_LLM_API_KEY", "not-needed")
+    model = os.getenv("COMPANY_LLM_MODEL", "default")
+    if not base_url:
+        raise RuntimeError("COMPANY_LLM_BASE_URL not set in .env")
+
+    client = OpenAI(base_url=base_url, api_key=api_key)
+    full_prompt = f"{context}\n\n{prompt}" if context else prompt
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": full_prompt},
+        ],
+        max_tokens=2048,
+    )
+    return response.choices[0].message.content
+
+
 PROVIDER_MAP = {
+    "company": _query_company,       # tried FIRST — company LLM before public APIs
     "openrouter": _query_openrouter,
     "groq": _query_groq,
 }
@@ -110,7 +145,9 @@ async def query_ai(prompt: str, context: str = "") -> dict:
             # Terminal errors for this process — don't retry these providers
             if any(t in msg for t in ("insufficient credits", "402",
                                        "all openrouter keys",
-                                       "invalid api key", "401")):
+                                       "invalid api key", "401",
+                                       "not set in .env",       # company URL blank
+                                       "no api key")):
                 _DEAD_PROVIDERS.add(provider)
                 logger.warning(f"Provider {provider} marked dead for this process.")
             last_error = e
